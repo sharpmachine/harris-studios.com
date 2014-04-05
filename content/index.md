@@ -82,7 +82,29 @@ Description: This description will go in the meta description tag
 	</div>
 </section>
 
-<section id="events1" class="eventslayout1">
+<section id="performing-arts" class="layout2 layout3" style="margin-top: 2px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="col-xs-6 one">
+					<h2>Culture</h2>
+					<p class="lead">Lorem ipsum dolor sit amet.</p>
+				</div>
+				<div class="col-xs-5 col-xs-offset-1 three">
+					<h3>Upcoming Culture Classes</h3>
+					<ul class="list-unstyled">
+						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
+						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
+						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
+					</ul>
+					<a href="#" class="btn btn-success btn-block btn-lg">See all Culture classes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section id="events1" class="eventslayout1">
 	<h2 class="text-center">Upcoming Events</h2>
 	<h3 class="text-center">Redding is Alive!</h3>
 	<div class="container">
@@ -114,7 +136,7 @@ Description: This description will go in the meta description tag
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section id="events2" class="eventslayout2">
 	<div class="container">
