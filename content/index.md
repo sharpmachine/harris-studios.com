@@ -1,5 +1,5 @@
 /*
-Title: Harris Studios
+Title: Music, Performing Art &amp; Culture
 Description: This description will go in the meta description tag
 */
 
@@ -132,5 +132,21 @@ Description: This description will go in the meta description tag
 			<p class="bigasshit"><a href="#">See all <br> Upcoming Events</a></p>
 		</div>
 	</div>
+</section>
+
+<section id="newsletter">
+	<h2 class="text-center">Stay in the loop</h2>
+	<p class="lead text-center">Sign up for our newsletter to say in the loop on upcoming classes and events.</p>
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4">
+			<div class="input-group input-group-lg">
+				<input type="text" class="form-control" placeholder="you@youremail.com">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Go!</button>
+				</span>
+			</div><!-- /input-group -->
+		</div>
+	</div>
+
 </section>
 
