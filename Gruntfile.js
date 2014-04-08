@@ -80,6 +80,7 @@ module.exports = function(grunt) {
                 'themes/bootstrap/css/*.css',
                 'themes/bootstrap/js/script.min.js',
                 'content/*.md',
+                'content/*/*.md',
                 'content/*.html',
                 ],
                 options: {
