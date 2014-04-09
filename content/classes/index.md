@@ -87,17 +87,32 @@ Title: Classes
 						<p class="lead">Understanding the building blocks of music</p>
 					</div>
 					<div class="col-md-3 status">
-						blah
+						<div class="date-range">
+							Apr 11th - Apr 13th
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<!-- <div class="col-lg-6"> -->
+						<br><br>
+							<div class="input-group">
+								<!-- <p class="small">sign up to stay informed</p> -->
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Go!</button>
+								</span>
+							</div><!-- /input-group -->
+
 					</div>
 					<div class="col-md-2 price">
-						$
+						$150
 					</div>
 					<div class="col-md-1 class-more-info">
-						<a href="#" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<hr>
 </div>
