@@ -22,6 +22,21 @@ Title: Instructors
 		</div>
 	</div>
 	<hr>
+
+	<div id="the-full-bio" class="text-center">
+		<h2>Jack Vu</h2>
+		<img src="holder.js/200x200" alt="" class="img-circle img-thumbnail center-block">
+		<br>
+		<span class="label label-info">Music</span> 
+		<span class="label label-warning">Performing Arts</span> 
+		<span class="label label-success">Culture</span>
+		<br>
+		<br>
+		<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, delectus!</p>
+		<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, quibusdam perferendis necessitatibus reiciendis possimus ea nihil reprehenderit pariatur similique voluptatum enim obcaecati mollitia sequi ipsam numquam aut earum dolore magnam.</p>
+
+	</div>
+
 	<div class="row">
 
 		<div class="col-md-4 text-center">
@@ -36,7 +51,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -50,7 +65,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -66,7 +81,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -82,7 +97,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -98,7 +113,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -114,7 +129,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -142,7 +157,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -156,7 +171,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 
@@ -172,7 +187,7 @@ Title: Instructors
 				<br>
 				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam autem voluptatem neque fuga placeat veritatis dolorum minima sed dolores.</p>
 				<br>
-				<a href="#" class="btn btn-block btn-info">More info</a>
+				<a href="#full-bio" class="full-bio btn btn-block btn-info">More info</a>
 			</div>
 		</div><!-- END: .instructor -->
 

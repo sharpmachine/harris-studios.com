@@ -9,72 +9,43 @@ Title: Classes
 	</div>	
 </div>
 
-<!-- <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="event">
-				<div class="event-date-wrapper">
-					<div class="event-headline">
-						<h3>Understanding the building blocks of music</h3>
-					</div>
-					<div class="event-date">
-						Apr 11th - Apr 12th						
-					</div>
-				</div>
-				<div class="class-details">
-					
-					<div class="row">
-						<div class="col-md-6 status">
-							<h2>Music Theory Intensive</h2>
-							<p class="lead">Open for Registration</p>
-							<p class="lead">$150</p>
-						</div>
-						<div class="col-md-6 student-testimony">
-							<div class="col-md-6 student-headshot">
-								<img src="holder.js/150x150" class="img-circle" alt="Student Headshot">
-							</div>
-							<div class="col-md-6 student-quote">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, error! <br><span> - Jesse Kade</span></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-more-info">
-					<a href="http://reddingcivic.com/events/2014/04/27/kool-april-nites" target="_blank" class="btn btn-block btn-info"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-</div> -->
-
-<!-- <div class="container">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+<div class="container">
+	<div data-spy="affix" data-offset-top="200">
+		<div class="stuff">
 			<div class="row">
-				<h2>Lorem ipsum dolor sit amet.</h2>
-				<div class="class">
-					<div class="col-md-2 class-dates text-center">
-						<span class="start-date">Apr 12th</span>
-						<span class="to">To</span>
-						<span class="finish-date">Mar 27th</span>
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4 music">
+							<h2><a href="#music">Music</a></h2>
+							<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, veniam.</p>
+						</div>
+						<div class="col-md-4 performing-arts">
+							<h2><a href="#performing-arts">Performing Arts</a></h2>
+							<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, veniam.</p>
+						</div>
+						<div class="col-md-4 culture">
+							<h2><a href="#culture">Culture</a></h2>
+							<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, veniam.</p>
+						</div>
 					</div>
-					<div class="col-md-9 class-details">
-						<h3>Class Title <small>$150</small></h3>
-						<p>Open for registration</p>
-					</div>
-					<div class="col-md-1 class-more-info text-center">
-						<a href="#" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
-					</div>
-					<div class="clearfix"></div>
 				</div>
 			</div>
+			<hr>
 		</div>
 	</div>
-</div> -->
+</div>
+
+<div class="container" id="music">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Music</h2>
+		</div>
+	</div>
+	<hr>
+</div>
 
 <div class="container">
-	<div class="row">
+	<div class="row music">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row">
 				<div class="class-headline">
@@ -88,23 +59,281 @@ Title: Classes
 					</div>
 					<div class="col-md-3 status">
 						<div class="date-range">
-							Apr 11th - Apr 13th
+							<strong>Apr 11th - Apr 13th</strong>
 						</div>
 						<br>
 						<span class="label label-info">Registration Open</span>
-						<!-- <div class="col-lg-6"> -->
-						<br><br>
-							<div class="input-group">
-								<!-- <p class="small">sign up to stay informed</p> -->
-								<input type="text" class="form-control">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Go!</button>
-								</span>
-							</div><!-- /input-group -->
-
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
 					</div>
 					<div class="col-md-2 price">
-						$150
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+		<div class="row music">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<span class="label label-warning">Registration Closed</span>
+						<br>
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container" id="performing-arts">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Performing Arts</h2>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container">
+	<div class="row performing-arts">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container">
+	<div class="row performing-arts">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container" id="culture">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Culture</h2>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container">
+	<div class="row culture">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container">
+	<div class="row culture">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
+					</div>
+					<div class="col-md-1 class-more-info">
+						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<div class="container">
+	<div class="row culture">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="class-headline">
+					<h2>Music Theory Intensive</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="class">
+					<div class="col-md-6 class-title">
+						<p class="lead">Understanding the building blocks of music</p>
+					</div>
+					<div class="col-md-3 status">
+						<div class="date-range">
+							<strong>Apr 11th - Apr 13th</strong>
+						</div>
+						<br>
+						<span class="label label-info">Registration Open</span>
+						<br>
+						<div class="input-group hidden">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-2 price">
+						<p class="lead">Cost: <br> $150</p>
 					</div>
 					<div class="col-md-1 class-more-info">
 						<a href="classes/class" class="btn-block"><span class="glyphicon glyphicon-chevron-right"></span> More Info</a>
