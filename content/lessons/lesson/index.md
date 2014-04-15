@@ -1,10 +1,10 @@
 /*
-Title: Music Theory Intensive
+Title: Piano (Classical)
 */
 
 <div class="container">
 	<div class="page-header">
-		<h1>Music Theory Intensive <span class="badge badge-success">Registration Open</span><br><small>Understanding the building blocks of Music </small></h1>
+		<h1>Piano (Classical)<br><small>Play like Mozart</small></h1>
 		<span class="label label-info">Music</span>
 	</div>	
 </div>
@@ -14,18 +14,11 @@ Title: Music Theory Intensive
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="row">
-					<div class="col-xs-4">
+					<div class="col-xs-6">
 						<h4 class="text-center">Cost:</h4>
-						<p class="lead">$150</p>
+						<p class="lead">$30/mo</p>
 					</div>
-					<div class="col-xs-4">
-						<h4 class="text-center">Schedule:</h4>
-						<p>
-							<strong>January 27th to April 4th</strong> (10 weeks) <br>
-							Mondays: 6:30pm to 7:30pm
-						</p>
-					</div>
-					<div class="col-xs-4">
+					<div class="col-xs-6">
 						<h4 class="text-center">Age:</h4>
 						<p class="lead">12 &amp; Up</p>
 					</div>
@@ -38,7 +31,7 @@ Title: Music Theory Intensive
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 text-right">
-			<a href="../registration" class="btn btn-lg btn-info">Register</a>
+			<a href="#" class="btn btn-lg btn-info">Sign Up</a>
 		</div>
 	</div>
 </div>
@@ -121,7 +114,7 @@ Title: Music Theory Intensive
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 text-right">
-			<a href="../registration" class="btn btn-lg btn-info">Register</a>
+			<a href="#" class="btn btn-lg btn-info">Sign Up</a>
 		</div>
 	</div>
 </div>

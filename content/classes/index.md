@@ -97,13 +97,12 @@ Title: Classes
 						<p class="lead">Understanding the building blocks of music</p>
 					</div>
 					<div class="col-md-3 status">
-						<div class="date-range">
-							<strong>Apr 11th - Apr 13th</strong>
-						</div>
 						<span class="label label-warning">Registration Closed</span>
 						<br>
+						<span class="small">Sign up to be notified when registration opens</span>
+						<br>
 						<div class="input-group">
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" placeholder="you@email.com">
 							<span class="input-group-btn">
 								<button class="btn btn-default" type="button">Go!</button>
 							</span>

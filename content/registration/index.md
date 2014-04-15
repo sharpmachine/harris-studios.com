@@ -65,6 +65,11 @@ Title: Class Registration
 							<label for="exampleInputEmail1">Age</label>
 							<input type="text" class="form-control" id="exampleInputEmail1">
 						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Sign up for our newsletter?
+							</label>
+						</div>
 					</div>
 				</div>
 				<div class="submit text-right">
