@@ -9,32 +9,6 @@ Description: This description will go in the meta description tag
 	</div>
 </div>
 
-<!-- <section id="music" class="layout1">
-	<div class="container">
-		<div class="col-xs-12">
-			<h2>Music</h2>	
-		</div>
-		<div class="col-xs-4">
-			<img src="holder.js/50%x150" alt="">
-			<img src="holder.js/50%x150" alt="">
-			<img src="holder.js/50%x150" alt="">
-			<img src="holder.js/50%x150" alt="">
-		</div>
-		<div class="col-xs-4">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quod, odit, nemo reiciendis illo blanditiis nobis totam minima soluta modi earum temporibus nihil possimus error dolorem voluptatibus fugiat sequi magni saepe ratione deserunt voluptate sunt cupiditate doloremque minus nesciunt explicabo culpa. Aut, blanditiis nesciunt at consequuntur officiis amet excepturi ratione.</p>
-		</div>
-		<div class="col-xs-4">
-			<h3>Upcoming Music Classes</h3>
-			<ul>
-				<li><a href="#">Class 1</a></li>
-				<li><a href="#">Class 2</a></li>
-				<li><a href="#">Class 3</a></li>
-			</ul>
-			<a href="#" class="btn btn-success btn-lg">See all music classes</a>
-		</div>
-	</div>
-</section> -->
-
 <section id="performing-arts" class="layout2 layout3">
 	<div class="container">
 		<div class="row">
@@ -51,6 +25,9 @@ Description: This description will go in the meta description tag
 						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
 					</ul>
 					<a href="#" class="btn btn-success btn-block btn-lg">See all music classes</a>
+					<div class="text-right">
+						<a href="lessons#music"><small>1-on-1 Music lessons also available</small></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -65,9 +42,6 @@ Description: This description will go in the meta description tag
 					<h2>Performing Arts</h2>
 					<p class="lead">Do you love to act, sing and dance?</p>
 				</div>
-				<!-- <div class="col-xs-4 two">
-					<p class="lead">Do you love to act, sing and dance?</p>
-				</div> -->
 				<div class="col-xs-6 three">
 					<h3>Upcoming Performing Arts Classes</h3>
 					<ul class="list-unstyled">
@@ -75,7 +49,10 @@ Description: This description will go in the meta description tag
 						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
 						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
 					</ul>
-					<a href="#" class="btn btn-success btn-lg">See all performing arts classes</a>
+					<a href="#" class="btn btn-success btn-block btn-lg">See all performing arts classes</a>
+					<div class="text-left">
+						<a href="lessons#performing-arts"><small>1-on-1 Performing Arts lessons also available</small></a>						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -98,45 +75,14 @@ Description: This description will go in the meta description tag
 						<li><a href="#"><strong>Understand the building blocks of music</strong><br><em>Music Theory Intensive</em></a></li>
 					</ul>
 					<a href="#" class="btn btn-success btn-block btn-lg">See all Culture classes</a>
+					<div class="text-right">
+						<a href="lessons#culture"><small>1-on-1 Culture lessons also available</small></a>						
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-<!-- <section id="events1" class="eventslayout1">
-	<h2 class="text-center">Upcoming Events</h2>
-	<h3 class="text-center">Redding is Alive!</h3>
-	<div class="container">
-		<div class="col-xs-4">
-			<h3>Event Title</h3>
-			<p>March 28th, 2014</p>
-			<img src="holder.js/100%x100" alt="">
-			<br>
-			<div class="text-left">
-				<a href="#" class="btn btn-block btn-success">More Details</a>
-			</div>
-		</div>
-		<div class="col-xs-4">
-			<h3>Event Title</h3>
-			<p>March 28th, 2014</p>
-			<img src="holder.js/100%x100" alt="">
-			<br>
-			<div class="text-left">
-				<a href="#" class="btn btn-block btn-success">More Details</a>
-			</div>
-		</div>
-		<div class="col-xs-4">
-			<h3>Event Title</h3>
-			<p>March 28th, 2014</p>
-			<img src="holder.js/100%x100" alt="">
-			<br>
-			<div class="text-left">
-				<a href="#" class="btn btn-block btn-success">More Details</a>
-			</div>
-		</div>
-	</div>
-</section> -->
 
 <section id="events2" class="eventslayout2">
 	<div class="container">
@@ -169,6 +115,5 @@ Description: This description will go in the meta description tag
 			</div><!-- /input-group -->
 		</div>
 	</div>
-
 </section>
 

@@ -10,15 +10,15 @@ Title: Instructors
 		<p>Each Harris Studios instructor is distinguished in their respective fields, making them fully equipped to successfully empower each student to grow.  A core value of Harris Studios is that all teachers are expected to continue their own journey professional growth in their respective craft to ensure that they continuously have new and relevant material to pass along to their students.</p>
 	</div>
 	<div class="page-navi">
-		<a href="#class-instructors">Class Instructors</a> | <a href="#private-instructors">Private Instructors</a>
+		<a href="#private-instructors">Private Instructors</a> | <a href="#class-instructors">Class Instructors</a>
 	</div>
 	<hr>
 </div>
 
 <div class="container">
-	<div class="row" id="class-instructors">
+	<div class="row" id="private-instructors">
 		<div class="col-md-12">
-			<h1>Class Instructors</h1>
+			<h1>Private Instructors</h1>
 		</div>
 	</div>
 	<hr>
@@ -137,9 +137,9 @@ Title: Instructors
 </div>
 
 <div class="container">
-	<div class="row" id="private-instructors">
+	<div class="row" id="class-instructors">
 		<div class="col-md-12">
-			<h1>Private Instructors</h1>
+			<h1>Class Instructors</h1>
 		</div>
 	</div>
 	<hr>

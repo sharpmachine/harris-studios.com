@@ -4,7 +4,7 @@ Title: Piano (Classical)
 
 <div class="container">
 	<div class="page-header">
-		<h1>Piano (Classical)<br><small>Play like Mozart</small></h1>
+		<h1>Voice<br><small>Play like Mozart</small></h1>
 		<span class="label label-info">Music</span>
 	</div>	
 </div>
@@ -16,7 +16,7 @@ Title: Piano (Classical)
 				<div class="row">
 					<div class="col-xs-6">
 						<h4 class="text-center">Cost:</h4>
-						<p class="lead">$30/mo</p>
+						<p class="lead">$30 to $1,000/mo</p>
 					</div>
 					<div class="col-xs-6">
 						<h4 class="text-center">Age:</h4>
@@ -31,7 +31,7 @@ Title: Piano (Classical)
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 text-right">
-			<a href="#" class="btn btn-lg btn-info">Sign Up</a>
+			<a href="signup" class="btn btn-lg btn-info">Sign Up</a>
 		</div>
 	</div>
 </div>
@@ -73,16 +73,25 @@ Title: Piano (Classical)
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Instructor:</h3>
+			<h3>Our Voice Instructors:</h3>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-2">
+		<div class="col-xs-3 text-center">
 			<img src="holder.js/151x151" class="img-circle" alt="">
-		</div>
-		<div class="col-xs-10">
 			<h4>Jack Vu</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolores, rerum, unde, dolore quis laudantium fugit quasi sed aperiam id ipsam assumenda cupiditate est provident natus voluptatum commodi dignissimos recusandae quisquam mollitia odio quibusdam molestiae cum dolorem ut necessitatibus consequatur distinctio neque fuga et aliquam at libero corporis tenetur modi!</p>
+		</div>
+		<div class="col-xs-3 text-center">
+			<img src="holder.js/151x151" class="img-circle" alt="">
+			<h4>Jack Vu</h4>
+		</div>
+		<div class="col-xs-3 text-center">
+			<img src="holder.js/151x151" class="img-circle" alt="">
+			<h4>Jack Vu</h4>
+		</div>
+		<div class="col-xs-3 text-center">
+			<img src="holder.js/151x151" class="img-circle" alt="">
+			<h4>Jack Vu</h4>
 		</div>
 	</div>
 	<hr>
@@ -114,7 +123,7 @@ Title: Piano (Classical)
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 text-right">
-			<a href="#" class="btn btn-lg btn-info">Sign Up</a>
+			<a href="signup" class="btn btn-lg btn-info">Sign Up</a>
 		</div>
 	</div>
 </div>

@@ -6,7 +6,7 @@ Title: Payment Confirmation
 	<div class="page-header">
 		<h1><span class="registration-successful glyphicon glyphicon-ok"></span> Thank you for registering</h1>
 		<p class="lead">We're looking forward to seeing you at the studio!</p>
-	</div>	
+	</div>
 </div>
 
 <div class="container">
@@ -14,7 +14,7 @@ Title: Payment Confirmation
 		<div class="col-xs-12">
 			<h3>Here's your details:</h3>
 			<div class="well">
-				<p class="lead">First day of class is <strong>Monday</strong>, <strong>Jan. 27th</strong> at <strong>6:30pm</strong>.</p>
+				<p class="lead">First day of class is <strong>Monday</strong>, <strong>Jan. 27th</strong> at <strong>6:30pm</strong>. <a href="#" class="btn btn-xs btn-success">Add to Calendar</a></p>
 				<div class="row">
 					<div class="col-md-3">
 						<h4>Class:</h4>
