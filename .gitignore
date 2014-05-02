@@ -9,18 +9,22 @@ backups
 # Vagrant
 .vagrant
 
+#Yeopress
+.yeopress
+
 # Wordpress
 .htaccess
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/w3tc/
-wp-content/cache/
-wp-content/backups/
+local-config.php
+content/uploads/
+content/plugins/
+content/blogs.dir/
+content/upgrade/
+content/backup-db/
+content/advanced-cache.php
+content/wp-cache-config.php
+content/w3tc/
+content/cache/
+content/backups/
 
 # Sitemaps
 sitemap.xml

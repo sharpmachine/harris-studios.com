@@ -14,7 +14,7 @@
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "*",
+        "version": "dev-master",
         "type": "webroot",
         "dist": {
           "type": "zip",
@@ -24,10 +24,10 @@
           "fancyguy/webroot-installer": "1.1.0"
         }
       }
-    },
+    }
   ],
   "require": {
-    "wordpress/wordpress": "*",
+    "wordpress/wordpress": "dev-master",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "wpackagist-plugin/admin-menu-editor": "*",
@@ -46,11 +46,11 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "web/wp",
+    "webroot-dir": "wordpress",
     "webroot-package": "wordpress/wordpress"
   }
 }
