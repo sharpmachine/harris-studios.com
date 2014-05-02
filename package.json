@@ -1,34 +1,23 @@
 {
-  "name": "harris-studios",
+  "name": "Vauxhall",
   "version": "1.0.0",
-  "description": "A rapid protype for Harris Studios",
+  "description": "Easy WordPress database migration.",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sharpmachine/harris-studios.com.git"
+    "url": "git://github.com/sharpmachine/vauxhall.git"
   },
-  "keywords": [
-    "clean",
-    "simple",
-    "focused",
-    "beautiful",
-    "modern"
-  ],
   "author": "Jesse Kade",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sharpmachine/harris-studios.com/issues"
+    "url": "https://github.com/sharpmachine/vauxhall/issues"
   },
-  "homepage": "https://github.com/sharpmachine/harris-studios.com",
+  "homepage": "https://github.com/sharpmachine/vauxhall",
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-less": "^0.11.0",
-    "grunt-notify": "^0.2.20"
+    "grunt": "latest",
+    "grunt-deployments": "latest"
   }
 }
