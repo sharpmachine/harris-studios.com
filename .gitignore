@@ -8,7 +8,8 @@ Gruntfile.js
 
 # Vagrant
 .vagrant
-html/
+html
+adminder
 
 #Yeopress
 .yeopress
