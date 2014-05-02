@@ -9,7 +9,7 @@ Gruntfile.js
 # Vagrant
 .vagrant
 html
-adminder
+adminer
 
 #Yeopress
 .yeopress
