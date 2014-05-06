@@ -1,0 +1,466 @@
+// Custom Styles
+
+@purple: #db61cc;
+@purple-light: #f5cdf0;
+
+.navbar {
+  z-index: 99999;
+}
+
+#the-full-bio {
+  display: none;
+  text-align: center !important;
+}
+
+.sidr-inner {
+  text-align: center;
+}
+
+.sidr.left {
+  width: 33.3% !important;
+}
+
+.sidr,
+#full-bio {
+  padding-top: 51px;
+  z-index: 9;
+}
+.affix-top {
+  // .transition(all ease .2s);
+  // overflow: hidden;
+  height: 214px;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.affix {
+  top: 50px;
+  height: 75px;
+  background-color: white;
+  z-index: 1;
+  overflow: hidden;
+  // .transition(all ease .2s);
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+  .stuff {
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  // .col-md-4 {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+}
+
+
+
+.jumbotron {
+  height: 500px;
+  margin-bottom: 2px;
+  background: url(../img/jumbotron.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    margin-top: 250px - 69px;
+    color: white;
+    font-size: 58px;
+  }
+}
+
+section,
+#footer {
+  padding: @padding-base-horizontal*4 0;
+}
+
+.layout1 {
+  // background-color: @purple;
+  img {
+    display: block;
+    float: left;
+  }
+}
+
+.layout3 {
+  background: url(../img/pa-2-bw.jpg) no-repeat 0 -360px;
+}
+
+.layout2 {
+  // padding: 0;
+  background: url(../img/pa-1-bw.jpg) no-repeat 0 -360px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+
+  h2 {
+    // margin-top: 40px;
+    margin-top: 0;
+    font-size: 58px;
+  }
+  h3 {
+    // margin-top: 0;
+  }
+
+  a {
+    // color: @purple-light;
+  }
+
+  ul li {
+    margin-bottom: @padding-base-horizontal;
+  }
+
+  .col-xs-4 {
+    // height: 300px;
+    // padding-top: @padding-base-horizontal*4;
+    // padding-bottom: @padding-base-horizontal*4;
+    // background-color: #f5cdf0;
+  }
+
+  // .one {
+  //   background: url(../img/pa-1.jpg);
+  // }
+
+  // .two {
+  //   background: url(../img/pa-2.jpg);
+  // }
+
+  // .three {
+  //   background: url(../img/pa-3.jpg);
+  // }
+}
+
+.layout3 {
+  background: url(../img/pa-2-bw.jpg) no-repeat 0 -200px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 2px;
+}
+
+.eventslayout1 {
+  // background-color: @purple;
+}
+
+.eventslayout2 {
+  background-color: @gray-lighter;
+
+  p.bigasshit {
+    font-size: 36px;
+  }
+}
+
+#newsletter {
+  background-color: @gray-light;
+}
+
+.page-header {
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+
+/*..................................the events page */
+.event {
+  margin-bottom: 60px;
+  background-color: @gray-light;
+}
+
+.event-date-wrapper {
+  height: 50px;
+  background-color: white;
+}
+
+.event-headline {
+  float: left;
+  width: 55%;
+  height: 100%;
+  padding-top: 5px;
+
+  h3 {
+    margin: 0;
+    font-size: 26px;
+  }
+}
+
+.event-date {
+  float: right;
+  width: 33%;
+  height: 100%;
+  margin-right: 99px;
+  padding: 15px 30px 0 30px;
+  font-size: 28px;
+  line-height: 1;
+  background-color: @brand-success;
+}
+
+.event-photo {
+  float: left;
+  width: 33%;
+  overflow: hidden;
+}
+
+.event-details {
+  float: left;
+  width: 56%;
+  padding: 0 30px;
+}
+
+.event-more-info {
+  float: right;
+  width: 10%;
+  height: 215px;
+
+  .btn {
+    height: 100%;
+    padding-top: 60%;
+
+    span.glyphicon-chevron-right {
+      display: block;
+      margin-bottom: 30px;
+      font-size: 48px;
+    }
+
+    span.glyphicon-new-window {
+      font-size: 12px;
+    }
+  }
+}
+
+/*..................................the classes and lessons landing page */
+.class {
+  height: 100%;
+  // background-color: @gray-lighter;
+  // background-color: lighten(@brand-info, 25%);
+  // border: 2px solid @brand-info;
+}
+@class-height: 67px * 2;
+
+.class-dates {
+  background-color: @brand-success;
+  height: @class-height;
+  padding: 15px;
+
+  span {
+    display: block;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.class-more-info {
+  height: @class-height;
+  background-color: @brand-success;
+
+  a {
+    padding-top: 50%;
+    color: white;
+  }
+}
+
+span.glyphicon-chevron-right {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 38px;
+}
+
+.class-title,
+.status {
+  // border-right: 2px solid @brand-info;
+}
+
+.class-title,
+.status,
+.price {
+  padding-top: 30px;
+  height: @class-height;
+}
+
+.status,
+.price {
+  font-size: 18px;
+  text-align: center;
+}
+
+.music {
+  .class-title {
+    background-color: lighten(@brand-info, 25%);
+  }
+
+  .status {
+    background-color: lighten(@brand-info, 27%);
+  }
+
+  .price {
+    background-color: lighten(@brand-info, 29%);
+  }
+
+  .class-headline h2 {
+    background-color: @brand-info;
+  }
+}
+
+.performing-arts {
+  .class-title {
+    background-color: lighten(@brand-warning, 25%);
+  }
+
+  .status {
+    background-color: lighten(@brand-warning, 27%);
+  }
+
+  .price {
+    background-color: lighten(@brand-warning, 29%);
+  }
+
+  .class-headline h2 {
+    background-color: @brand-warning;
+  }
+}
+
+.culture {
+  .class-title {
+    background-color: lighten(@brand-success, 25%);
+  }
+
+  .status {
+    background-color: lighten(@brand-success, 27%);
+  }
+
+  .price {
+    background-color: lighten(@brand-success, 29%);
+  }
+
+  .class-headline h2 {
+    background-color: @brand-success;
+  }
+}
+
+.stuff {
+  color: white;
+
+  h2 a {
+    color: white;
+  }
+
+  .music {
+    background-color: @brand-info;
+  }
+
+  .performing-arts {
+    background-color: @brand-warning;
+  }
+
+  .culture {
+    background-color: @brand-success;
+  }
+}
+
+.class-headline {
+  // height: 67px;
+  padding-right: 72px;
+
+  h2 {
+    // float: right;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 15px;
+    color: white;
+    // background-color: @brand-info;
+  }
+}
+
+.instructor {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: @gray-lighter;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .img-thumbnail {
+    border-top: 2px solid @brand-info;
+    border-left: 2px solid @brand-info;
+    border-bottom: 2px solid @brand-warning;
+    border-right: 2px solid @brand-warning;
+  }
+
+  .img-thumbnail.culture {
+    border: 2px solid @brand-success;
+  }
+}
+
+/*..................................the about page */
+.about-blurb {
+  height: 236px;
+  padding: 15px;
+  background-color: @gray-lighter;
+
+  p:first-letter {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.team-member {
+  margin-bottom: 60px;
+
+  .img-thumbnail {
+    border: 2px solid @brand-primary;
+  }
+}
+
+.contact-info {
+  padding: 0 15px;
+}
+
+/*..................................the individual classes page */
+.testimony {
+  // padding: 30px;
+  background: @brand-warning;
+
+  blockquote {
+    margin-top: 30px;
+  }
+}
+
+/*..................................the thank you page */
+.registration-successful {
+  color: @brand-success;
+}
+
+
+.video-container {
+  position: relative;
+  // padding-bottom: 56.25%;
+  margin-top: 50px;
+  padding-bottom: 54%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .error-404 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+
+    h1 {
+      color: white;
+    }
+  }
+}

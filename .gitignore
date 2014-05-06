@@ -17,10 +17,14 @@ Thumbs.db
 # User themes
 themes/*
 !themes/index.html
-!themes/bootstrap/*
+!themes/bootstrap
 
 # User config
 config.php
 
 # Node modules
 node_modules/
+
+theme-alias
+
+.vagrant
