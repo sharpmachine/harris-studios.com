@@ -35,3 +35,5 @@ sitemap.xml.gz
 # Misc
 *.log
 .DS_Store
+
+theme-alias
