@@ -6,7 +6,7 @@
  * replace the dash with an underscore when adding it to the object below.
  *
  * .noConflict()
- * The routing is enclosed within an anonymous function so that you can 
+ * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  *
  * Google CDN, Latest jQuery
@@ -14,15 +14,16 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
-(function($) {
+ (function($) {
 
-// Use this variable to set up the common and page specific functions. If you 
+// Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
   // All pages
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+
     }
   },
   // Home page
@@ -35,6 +36,22 @@ var Roots = {
   about_us: {
     init: function() {
       // JavaScript to be fired on the about us page
+    }
+  },
+  // Instructors page
+  instructors: {
+    init: function() {
+
+      // Instructors Ajax
+      $.ajaxSetup({cache:false});
+      $(".post-link").click(function(){
+        var post_link = $(this).attr("href");
+
+        $("#single-post-container").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
+        $("#single-post-container").load(post_link + " .single-instructor");
+        return false;
+      });
+
     }
   }
 };
