@@ -8,8 +8,84 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+  padding-top: 60px;
 
+  &.logged-in {
+
+    .banner {
+      margin-top: 31px;
+    }
+
+    #sidr,
+    #sidr-left {
+      top: 82px;
+    }
+  }
+}
+
+.section-navigation {
+  position: fixed;
+  left: 15px;
+
+  li {
+    position: relative;
+    .square(10px);
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #000;
+
+    a {
+      display: block;
+      .square(100%);
+      padding: 5px;
+    }
+
+    // &:nth-child(2),
+    // &:nth-child(4) {
+    //   left: 15px;
+    // }
+
+    // &:nth-child(3) {
+    //   left: 20px;
+    // }
+  }
+}
+
+.anchor {
+  position: relative;
+  top: -93px;
+  visibility: hidden;
+}
+
+.video-container {
+  position: relative;
+  // padding-bottom: 56.25%;
+  margin-top: 50px;
+  padding-bottom: 54%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .error-404 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+
+    h1 {
+      color: white;
+    }
+  }
+}
 
 
 /* ==========================================================================
@@ -18,7 +94,14 @@ body { }
 
 .banner { }
 
+.navbar {
+  z-index: 9999999;
+}
 
+#sidr,
+#sider-left {
+  top: 82px - 31px;
+}
 
 /* ==========================================================================
    Content
@@ -40,10 +123,12 @@ body { }
 
 
 /* ==========================================================================
-   Sidebar
+   Instructors Page
    ========================================================================== */
 
-.sidebar { }
+#the-full-bio {
+  // display: none;
+}
 
 
 
@@ -88,3 +173,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 @media (min-width: @screen-md-min) { }
 
 @media (min-width: @screen-lg-min) { }
+
+/*..................................the side drawer */
+@import "../../bower_components/sidr/stylesheets/jquery.sidr.light.css";

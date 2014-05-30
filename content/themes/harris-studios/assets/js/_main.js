@@ -24,12 +24,36 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
 
+      // Sidr
+      $('#simple-menu').sidr({
+        side: 'right'
+      });
+
+
+
     }
   },
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+
+      $('nav.section-navigation li a').tooltip();
+
+      $(function() {
+        $('a[href*=#]:not([href=#],[href=#sidr])').click(function() {
+          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
     }
   },
   // About us page, note the change from about-us to about_us.
@@ -43,15 +67,27 @@ var Roots = {
     init: function() {
 
       // Instructors Ajax
-      $.ajaxSetup({cache:false});
-      $(".post-link").click(function(){
-        var post_link = $(this).attr("href");
+      // $.ajaxSetup({cache:false});
+      // $(".post-link").click(function(){
+      //   var post_link = $(this).attr("href");
 
-        $("#single-post-container").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
-        $("#single-post-container").load(post_link + " .single-instructor");
-        return false;
+      //   $("#the-full-bio").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
+      //   $("#the-full-bio").load(post_link + " .single-instructor");
+      //   return false;
+      // });
+
+var post_link = $(".post-link").attr("data-href");
+var site_url = $(".post-link").attr("data-url");
+
+      // Full Instructor Bios
+      $('#remote-content-menu').sidr({
+        name: 'sidr-remote-content',
+        side: 'left',
+        // source: '#the-full-bio',
+        source: site_url + '/' + post_link,
+        renaming: false,
+        displace: false
       });
-
     }
   }
 };
