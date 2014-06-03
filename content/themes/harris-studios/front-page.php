@@ -20,7 +20,8 @@
 
   <div id="music" class="anchor"></div>
   <h2>Music</h2>
-  <?php echo do_shortcode('[EVENT_ESPRESSO_CATEGORY event_category_id="hs_music"]'); ?>
+  <h3><?php echo term_description( '5', 'department') ?></h3>
+  <?php //echo do_shortcode('[EVENT_ESPRESSO_CATEGORY event_category_id="hs_music"]'); ?>
 
   <div id="performing-arts-film" class="anchor"></div>
   <h2>Performing Arts &amp; Culture</h2>
@@ -38,6 +39,8 @@
 
   <?php while ( $latest_updates->have_posts() ) : $latest_updates->the_post(); ?>
   <h3><?php the_title(); ?></h3>
+  <h4><?php the_field('lessons_headline'); ?></h4>
+
 <?php endwhile; ?>
 
 <?php wp_reset_postdata(); ?>

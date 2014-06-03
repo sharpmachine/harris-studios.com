@@ -2,7 +2,17 @@
   <?php // get_template_part('templates/content', 'single'); ?>
   <h1><?php the_title(); ?></h1>
 
-  <h3><?php echo get_the_term_list( $post->ID, 'department'); ?></h3>
+  <h3><?php //echo get_the_terms( $post->ID, 'department'); ?></h3>
+
+  <?php $terms = get_the_terms( $post->ID , 'department' );
+
+ foreach ( $terms as $term ) {
+
+ $term_link = get_term_link( $term, 'department' );
+
+ echo "<h3>" . $term->name . "</h3>";
+
+} ?>
 
   <?php the_field('lessons_headline'); ?>
   <?php the_field('lesson_price'); ?>
