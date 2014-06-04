@@ -6,23 +6,23 @@
 
 <?php get_template_part('templates/page', 'header'); ?>
 
-<div class="container">
-
-  <div class="container">
-
-    <p class="lead">Global CSS settings</p>
-
-    <ol>
-      <li><a href="#typography">Typography</a></li>
-      <li><a href="#tables">Tables</a></li>
-      <li><a href="#forms">Forms</a></li>
-      <li><a href="#buttons">Buttons</a></li>
-    </ol>
-
-    <hr>
+<div class="container text-center">
 
     <h2>Logo</h2>
-
+      <div class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+          <div class="logo-bg">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-purple.svg" alt="" class="img-responsive">
+          </div>
+          <p>Full on light background</p>
+        </div>
+        <div class="col-xs-2">
+          <div class="bg-brand-blue logo-bg">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-white.svg" alt="" class="img-responsive">
+          </div>
+          <p>Full on dark background</p>
+        </div>
+      </div>
     <hr>
 
     <h2>Colors:</h2>
@@ -53,39 +53,41 @@
     <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
     <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
 
-    <h3>Paragraphs</h3>
+    <div class="text-left">
+      <h3>Paragraphs</h3>
 
-    <p class="lead">p.lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+      <p class="lead">p.lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
-    <p class="lead dropcap">Lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+      <p class="lead dropcap">Lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+      <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
-    <h3>Lists</h3>
+      <h3>Lists</h3>
 
-    <ol>
-      <li>Ordered List.</li>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-      <li>Aliquam tincidunt mauris eu risus.</li>
-    </ol>
+      <ol>
+        <li>Ordered List.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+      </ol>
 
-    <ul>
-      <li>Unordered List.</li>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-      <li>Aliquam tincidunt mauris eu risus.</li>
-    </ul>
+      <ul>
+        <li>Unordered List.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+      </ul>
 
-    <h3>Blockquotes</h3>
+      <h3>Blockquotes</h3>
 
-    <blockquote>
-      <p>Blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-    </blockquote>
+      <blockquote>
+        <p>Blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+      </blockquote>
+    </div>
 
     <hr>
 
     <h2><a name="tables" id="tables">Tables</a></h2>
 
-    <table class="table">
+    <table class="table text-left">
       <thead>
         <tr>
           <th>Option 1</th>
@@ -120,7 +122,7 @@
 
     <h2><a name="forms" id="forms">Forms</a></h2>
 
-    <form role="form">
+    <form role="form" class="text-left">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
@@ -216,7 +218,5 @@
       <button type="button" class="btn btn-xs btn-danger">Danger</button>
       <button type="button" class="btn btn-xs btn-link">Link</button>
     </p>
-
-  </div>
 
 </div>
