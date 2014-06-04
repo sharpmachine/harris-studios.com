@@ -25,11 +25,20 @@ var Roots = {
       // JavaScript to be fired on all pages
 
       // Sidr
-      $('#simple-menu').sidr({
+      $('.simple-menu').sidr({
         side: 'right'
       });
 
+      // Navbar
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
 
+        if (scroll >= 75) {
+          $(".navbar-default").addClass("navbar-bg");
+        } else {
+          $(".navbar-default").removeClass("navbar-bg");
+        }
+      });
 
     }
   },

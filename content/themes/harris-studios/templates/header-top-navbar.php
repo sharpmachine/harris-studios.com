@@ -7,14 +7,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+      <a class="brand" href="<?php echo home_url('/') ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-icon-white.svg" alt="<?php bloginfo('title'); ?>"></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav pull-right">
         <li><a href="<?php bloginfo('url'); ?>/events">Classes</a></li>
         <li><a href="<?php bloginfo('url'); ?>/lessons">Lessons</a></li>
-        <li><a id="simple-menu" href="#sidr">More</a></li>
+        <li>
+          <a class="simple-menu" href="#sidr">More
+            <div class="hamburger">
+              <span class="ham-line"></span>
+              <span class="ham-line"></span>
+              <span class="ham-line"></span>
+            </div>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>

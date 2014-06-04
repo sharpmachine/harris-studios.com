@@ -3,9 +3,17 @@
   * Home Page
 */
 ?>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-white.svg" width="150px" alt="<?php bloginfo('title'); ?> Logo" class="center-block">
+    <h1><?php bloginfo('description'); ?></h1>
+  </div>
+</div>
+
 <div class="container">
 
-  <h1><?php bloginfo('description'); ?></h1>
+
   <?php // get_template_part('templates/content', 'page'); ?>
 
   <nav class="section-navigation">

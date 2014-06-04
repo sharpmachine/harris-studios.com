@@ -11,7 +11,7 @@
    ========================================================================== */
 
 body {
-  padding-top: 60px;
+  // padding-top: 60px;
 
   &.logged-in {
 
@@ -24,6 +24,11 @@ body {
       top: 82px;
     }
   }
+}
+
+#sidr,
+#sider-left {
+  top: 0;
 }
 
 .section-navigation {
@@ -97,13 +102,10 @@ body {
 .banner { }
 
 .navbar {
-  z-index: 9999999;
+  // z-index: 9999999;
 }
 
-#sidr,
-#sider-left {
-  top: 82px - 31px;
-}
+
 
 /* ==========================================================================
    Content
@@ -127,7 +129,30 @@ body {
    Home Page
    ========================================================================== */
 
+.jumbotron {
+  position: relative;
+  height: 800px;
+  background-color: @brand-blue;
 
+  img {
+    margin-top: 60px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 940px;
+    height: 86px;
+    padding-bottom: 30px;
+    font-size: 50px;
+    color: white;
+    border-bottom: solid 1px white;
+  }
+}
 
 /* ==========================================================================
    Classes & Lessons Page

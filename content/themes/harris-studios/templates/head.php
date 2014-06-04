@@ -6,6 +6,8 @@
   <title><?php wp_title('|', true, 'right'); ?></title>
   <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/img/ico/favicon.ico">
 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
   <?php wp_head(); ?>
 
   <script type="text/javascript" src="//use.typekit.net/xqv2ltj.js"></script>

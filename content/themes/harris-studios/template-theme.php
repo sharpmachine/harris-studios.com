@@ -10,17 +10,29 @@
 
     <h2>Logo</h2>
       <div class="row">
-        <div class="col-xs-2 col-xs-offset-4">
+        <div class="col-xs-2 col-xs-offset-2">
+          <p>Full on light background</p>
           <div class="logo-bg">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-purple.svg" alt="" class="img-responsive">
           </div>
-          <p>Full on light background</p>
         </div>
         <div class="col-xs-2">
+          <p>Full on dark background</p>
           <div class="bg-brand-blue logo-bg">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-white.svg" alt="" class="img-responsive">
           </div>
-          <p>Full on dark background</p>
+        </div>
+        <div class="col-xs-2">
+          <p>Icon on light background</p>
+          <div class="logo-bg">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-icon-purple.svg" alt="" class="img-responsive">
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <p>Icon on dark background</p>
+          <div class="bg-brand-blue logo-bg">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-icon-white.svg" alt="" class="img-responsive">
+          </div>
         </div>
       </div>
     <hr>
@@ -37,32 +49,22 @@
 
     <h2><a name="typography" id="typography">Typography</a></h2>
 
-    <h3>Headings</h3>
 
-    <h1>h1. Bootstrap heading</h1>
-    <h2>h2. Bootstrap heading</h2>
-    <h3>h3. Bootstrap heading</h3>
-    <h4>h4. Bootstrap heading</h4>
-    <h5>h5. Bootstrap heading</h5>
-    <h6>h6. Bootstrap heading</h6>
-
-    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-    <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
-    <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
-    <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
-    <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
-    <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+    <h1>h1. heading</h1>
+    <h2>h2. heading</h2>
+    <h3>h3. heading</h3>
+    <h4>h4. heading</h4>
+    <h5>h5. heading</h5>
+    <h6>h6. heading</h6>
 
     <div class="text-left">
-      <h3>Paragraphs</h3>
-
-      <p class="lead">p.lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
       <p class="lead dropcap">Lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
+      <p class="lead">p.lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
       <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
-      <h3>Lists</h3>
 
       <ol>
         <li>Ordered List.</li>
@@ -75,8 +77,6 @@
         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
         <li>Aliquam tincidunt mauris eu risus.</li>
       </ul>
-
-      <h3>Blockquotes</h3>
 
       <blockquote>
         <p>Blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
