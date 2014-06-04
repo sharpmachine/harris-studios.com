@@ -1,0 +1,80 @@
+.soleil-light {
+  font-family: "soleil";
+  font-weight: 300;
+  font-style: normal;
+}
+
+.soleil-lightItalic {
+  font-family: "soleil";
+  font-weight: 300;
+  font-style: italic;
+}
+
+.soleil-regular {
+  font-family: "soleil";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.soleil-italic {
+  font-family: "soleil";
+  font-weight: 400;
+  font-style: italic;
+}
+
+.soleil-semiBold {
+  font-family: "soleil";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bodoni';
+  src: url('../fonts/bodoni_becker_med-webfont.eot');
+  src: url('../fonts/bodoni_becker_med-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bodoni_becker_med-webfont.woff') format('woff'),
+       url('../fonts/bodoni_becker_med-webfont.ttf') format('truetype'),
+       url('../fonts/bodoni_becker_med-webfont.svg#bodoni_becker_medregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bodoni {
+  font-family: 'bodoni';
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  .bodoni();
+  text-transform: lowercase;
+}
+
+strong,
+b {
+  .soleil-semiBold();
+}
+
+i,
+em {
+  .soleil-italic();
+}
+
+.lead,
+blockquote p {
+  .soleil-light();
+}
+
+.dropcap {
+  &::first-letter {
+    // margin-top: 50px;
+    .bodoni();
+    font-size: 126px;
+    line-height: 0.5;
+  }
+}
+
+

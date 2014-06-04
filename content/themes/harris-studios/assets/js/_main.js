@@ -68,7 +68,7 @@ var Roots = {
 
       // Instructors Ajax
       // $.ajaxSetup({cache:false});
-      // $(".post-link").click(function(){
+      // $(".post-link").click(function() {
       //   var post_link = $(this).attr("href");
 
       //   $("#the-full-bio").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");

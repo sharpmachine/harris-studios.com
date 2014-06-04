@@ -21,6 +21,20 @@
 
     <hr>
 
+    <h2>Logo</h2>
+
+    <hr>
+
+    <h2>Colors:</h2>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1 brand-colors brand-blue">#003896</div>
+      <div class="col-md-2 brand-colors brand-blueLight">#4E91CD</div>
+      <div class="col-md-2 brand-colors brand-blueDark">#0D117E</div>
+      <div class="col-md-2 brand-colors brand-purple">#5F1A74</div>
+      <div class="col-md-2 brand-colors brand-green">#005820</div>
+    </div>
+
     <h2><a name="typography" id="typography">Typography</a></h2>
 
     <h3>Headings</h3>
@@ -42,6 +56,8 @@
     <h3>Paragraphs</h3>
 
     <p class="lead">p.lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+
+    <p class="lead dropcap">Lead Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
 
     <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
