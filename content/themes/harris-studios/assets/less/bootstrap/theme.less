@@ -287,7 +287,9 @@ a.brand {
 .page-header {
   margin-top: -52px;
   padding: 175px 0;
-  background-color: @brand-blueDark;
+  background-color: @brand-blue;
+  // #gradient>.vertical(@start-color: @brand-blue; @end-color: @brand-purple; @start-percent: 0%; @end-percent: 100%);
+  #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
 
   h1 {
     color: white;
@@ -416,16 +418,6 @@ a.brand {
 .container {
   width: 970px;
   max-width: none !important;
-}
-
-/* Demonstrate the grids */
-.col-xs-4 {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #eee;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
 }
 
 .container .navbar-header,
