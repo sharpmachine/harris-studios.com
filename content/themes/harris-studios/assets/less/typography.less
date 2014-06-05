@@ -51,6 +51,11 @@ h1,
 h2,
 .h2 {
   .bodoni();
+
+  &.border-bottom {
+    margin-bottom: 90px;
+    .border-bottom(@brand-blueLight, 2px);
+  }
 }
 
 strong,
@@ -70,11 +75,14 @@ blockquote p {
 
 .dropcap {
   &::first-letter {
-    // margin-top: 50px;
+    float: left;
+    padding-right: 7px;
     .bodoni();
     font-size: 126px;
     line-height: 0.5;
   }
 }
 
-
+.border-bottom(@border-color: @brand-purple; @border-width: 1px;) {
+  border-bottom: @border-width solid @border-color;
+}

@@ -310,15 +310,21 @@ a.brand {
 
 .page-header {
   margin-top: -52px;
-  padding: 175px 0;
+  padding: 180px 0 90px;
+  color: white;
   background-color: @brand-blue;
   #gradient>.vertical(@start-color: @brand-blue; @end-color: @brand-purple; @start-percent: 0%; @end-percent: 100%);
-  // #gradient>.vertical(@start-color: @brand-blue; @end-color: @brand-purple; @start-percent: 0%; @end-percent: 100%);
   // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
 
   h1 {
+    margin-bottom: 30px;
     color: white;
     border-bottom: 1px solid white;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    .soleil-light();
   }
 }
 
@@ -448,6 +454,10 @@ a.brand {
 
 .text-dark {
   color: @gray-dark;
+}
+
+.text-purple {
+  color: @brand-purple;
 }
 
 /*..................................the remove responsiveness */
