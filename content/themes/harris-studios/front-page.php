@@ -134,12 +134,57 @@
           <?php endif; ?>
         </ul>
         <a href="classes#culture" class="btn btn-default btn-lg btn-block">See All Culture Classes</a>
-        <a href="lessons#culture" class="small pull-right">1-on-1 culture also available</a>
+        <a href="lessons#culture" class="small pull-right">1-on-1 culture lessons also available</a>
       </div>
     </div>
   </div>
 </section>
 
 <div id="redding-events" class="anchor"></div>
-<h1>Events</h1>
+<section id="events" class="bg-brand-yellow">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <h3 class="bodoni">Redding is Alive!</h3>
+        <h4>Upcoming Events:</h4>
+      </div>
+      <div class="col-xs-4">
+        <div class="next-event">
+          <?php $args = array( 'post_type' => 'redding_events' ,'showposts' => 1); ?>
+              <?php $redding_events = new WP_Query( $args ); ?>
+
+              <?php if ( $redding_events->have_posts() ) : ?>
+
+              <?php while ( $redding_events->have_posts() ) : $redding_events->the_post(); ?>
+
+              <div class="next-event-details">
+                <h4 class="soleil-semiBold"><?php the_title(); ?></h4>
+                <div class="event-date">
+                  <?php the_field('re_start_date'); ?>
+                  <?php if (get_field('re_end_date')): ?>
+                  - <?php the_field('re_end_date'); ?>
+                <?php endif; ?>
+                </div>
+                <div class="event-venue">
+                  <?php the_field('re_venue'); ?>
+                </div>
+                <a href="<?php the_field('re_event_registration_link'); ?>" class="btn btn-default btn-sm">Details <i class="fa fa-external-link"></i></a>
+              </div>
+
+              <?php endwhile; ?>
+
+              <?php wp_reset_postdata(); ?>
+
+            <?php else:  ?>
+              <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
+            <?php endif; ?></div>
+      </div>
+      <div class="col-xs-4">
+        <div class="all-events-btn">
+          <a href="redding-events" class="btn btn-default btn-lg btn-block">See All Events</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 

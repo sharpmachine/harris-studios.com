@@ -4,7 +4,7 @@
     <div class="the-loop">
       <div class="row">
         <div class="col-xs-4">
-          <h2>the loop</h2>
+          <h3 class="bodoni">the loop</h3>
         </div>
         <div class="col-xs-4">
           <div class="newsletter">
@@ -30,7 +30,6 @@
       </div>
     </div>
   </div>
-  <p class="text-center hidden">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="<?php bloginfo('url'); ?>/terms-conditions">Terms &amp; Conditions</a> | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a></p>
 </footer>
 
 <?php wp_footer(); ?>

@@ -47,26 +47,17 @@
         .square(100%);
         padding: 5px;
       }
-
-    // &:nth-child(2),
-    // &:nth-child(4) {
-    //   left: 15px;
-    // }
-
-    // &:nth-child(3) {
-    //   left: 20px;
-    // }
+    }
   }
-}
 
-.anchor {
-  position: relative;
-  top: -93px + 15px;
-  visibility: hidden;
-}
+  .anchor {
+    position: relative;
+    top: -93px + 15px;
+    visibility: hidden;
+  }
 
-.video-container {
-  position: relative;
+  .video-container {
+    position: relative;
   // padding-bottom: 56.25%;
   margin-top: 50px;
   padding-bottom: 54%;
@@ -229,6 +220,40 @@
     #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 20%); @deg: 45deg)
   }
 
+  section#events {
+    margin-bottom: 3.5px;
+
+    h3 {
+      padding-bottom: 7px;
+      font-size: 36px;
+      border-bottom: 1px solid @gray-dark;
+    }
+
+    .btn {
+      color: @gray-dark;
+      .opacity(0.8);
+    }
+  }
+
+  .next-event {
+    h4 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  .next-event-details {
+    font-size: 20px;
+  }
+
+  .event-venue {
+    margin-bottom: 15px;
+  }
+
+  .all-events-btn {
+    margin-top: 45px;
+  }
+
 /* ==========================================================================
    Classes & Lessons Page
    ========================================================================== */
@@ -293,8 +318,8 @@
   .soleil-light();
   background-color: @gray-dark;
 
-  h2 {
-    font-size: 50px;
+  h3 {
+    font-size: 36px;
   }
 
   p {
