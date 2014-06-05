@@ -203,7 +203,6 @@ a.brand {
 @sidr-font-size:      22px;
 
 .sidr {
-  // padding-left: 3.5px;
   border-left: @sidr-spacing solid white;
   color: white;
   .soleil-light();
@@ -229,23 +228,6 @@ a.brand {
     }
   }
 
-  .contact-info {
-    padding: @sidr-padding;
-    background-color: @brand-blueLight;
-  }
-
-  .contact-phone,
-  .contact-address,
-  .contact-email {
-    margin-bottom: 14px;
-  }
-
-  address,
-  .contact-email a {
-    color: white;
-    font-size: 16px;
-  }
-
   h4 {
     font-size: @sidr-font-size;
     margin-bottom: 0;
@@ -253,6 +235,32 @@ a.brand {
 
   .btn {
     margin-top: 7px;
+  }
+
+  address,
+  .contact-email a {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.site-info {
+  margin-bottom: @sidr-spacing;
+  padding: @sidr-padding;
+  background-color: @brand-blueLight;
+}
+
+.contact-phone,
+.contact-address,
+.contact-email {
+  margin-bottom: 14px;
+}
+
+.legal {
+  font-size: 14px;
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -266,6 +274,7 @@ a.brand {
   text-shadow: 0 1px 0 rgba(255,255,255,.2);
   @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
+  border-radius: 0;
 }
 
 // Mixin for generating new styles
@@ -307,16 +316,15 @@ a.brand {
 
 .form-control {
   height: 60px;
-
+  border: none;
   border-radius: 0;
 
   .input[type="text"],
   .input[type="email"]
-   {
+  {
     background-color: transparent;
   }
 }
-
 
 
 //
@@ -412,8 +420,8 @@ a.brand {
  * grid system, and navbar.
  */
 
-/* Reset the container */
-.container {
+ /* Reset the container */
+ .container {
   width: 970px;
   max-width: none !important;
 }
