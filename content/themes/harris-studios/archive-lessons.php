@@ -1,6 +1,6 @@
-<div class="container">
-  <?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/page', 'header'); ?>
 
+<div class="container">
   <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
       <?php _e('Sorry, no results were found.', 'roots'); ?>

@@ -48,14 +48,14 @@ add_action('admin_head', 'admin_overrides');
 //Login Logo
 function custom_login_logo() {
   echo '<style type="text/css">
-    h1 a
-    {
-       background-image:url('.get_bloginfo('template_directory').'/assets/img/harris-logo.svg) !important;
-     background-size: 200px 200px !important;
-       width: 200px !important; /* Same width as logo */
-       height: 200px !important; /* Same height as logo */
-   }
-    </style>';
+  h1 a
+  {
+   background-image:url('.get_bloginfo('template_directory').'/assets/img/harris-logo-purple.svg) !important;
+   background-size: 200px 200px !important;
+   width: 200px !important; /* Same width as logo */
+   height: 200px !important; /* Same height as logo */
+ }
+ </style>';
 }
 
 add_action('login_head', 'custom_login_logo');
