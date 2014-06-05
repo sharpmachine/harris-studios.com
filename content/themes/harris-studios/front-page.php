@@ -11,54 +11,135 @@
   </div>
 </div>
 
-<div class="container">
+<!-- Section Navigation -->
+<?php get_template_part('section', 'navigation'); ?>
 
+<div id="music" class="anchor"></div>
+<section id="music" class="bg-music text-light soleil-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 t-and-h">
+        <div class="title-and-headline">
+          <div class="title-and-headline-inner">
+            <h2>Music</h2>
+            <h3 class="h4 soleil-light"><?php echo term_description( '5', 'department') ?></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 pull-right">
+        <h5 class="soleil-light">Upcoming Music Classes</h5>
+        <ul class="list-unstyled">
+            <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'music' ,'showposts' => 3); ?>
+            <?php $class_listing = new WP_Query( $args ); ?>
 
-  <?php // get_template_part('templates/content', 'page'); ?>
+            <?php if ( $class_listing->have_posts() ) : ?>
 
-  <nav class="section-navigation">
-    <ul class="list-unstyled">
-      <li><a href="#music" data-toggle="tooltip" data-placement="right" title="Music"></a></li>
-      <li><a href="#performing-arts-film" data-toggle="tooltip" data-placement="right" title="Performing Arts &amp; Film"></a></li>
-      <li><a href="#culture" data-toggle="tooltip" data-placement="right" title="Culture"></a></li>
-      <li><a href="#redding-events" data-toggle="tooltip" data-placement="right" title="Events"></a></li>
-      <li><a href="#newsletter" data-toggle="tooltip" data-placement="right" title="Newsletter"></a></li>
-    </ul>
-  </nav>
+            <?php while ( $class_listing->have_posts() ) : $class_listing->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <strong><?php the_field('lessons_headline'); ?></strong>
+                <em><?php the_title(); ?></em> <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </li>
+            <?php endwhile; ?>
 
-  <div id="music" class="anchor"></div>
-  <h2>Music</h2>
-  <h3><?php echo term_description( '5', 'department') ?></h3>
-  <?php //echo do_shortcode('[EVENT_ESPRESSO_CATEGORY event_category_id="hs_music"]'); ?>
+            <?php wp_reset_postdata(); ?>
 
-  <div id="performing-arts-film" class="anchor"></div>
-  <h2>Performing Arts &amp; Culture</h2>
-  <?php echo do_shortcode('[EVENT_ESPRESSO_CATEGORY event_category_id="hs_performing_arts_culture"]'); ?>
+          <?php else:  ?>
+            <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
+          <?php endif; ?>
+        </ul>
+        <a href="classes#music" class="btn btn-default btn-lg btn-block">See All Music Classes</a>
+        <a href="lessons#music" class="small pull-right">1-on-1 music lessons also available</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <div id="culture" class="anchor"></div>
-  <h3>Culture</h3>
-  <?php echo do_shortcode('[EVENT_ESPRESSO_CATEGORY event_category_id="hs_culture"]'); ?>
+<div id="performing-arts-film" class="anchor"></div>
+<section id="performing-arts-film" class="bg-performing-arts text-light soleil-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 t-and-h">
+        <div class="title-and-headline">
+          <div class="title-and-headline-inner">
+            <h2>Performing Arts &amp; Film</h2>
+            <h3 class="h4 soleil-light"><?php echo term_description( '6', 'department') ?></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 pull-right">
+        <h5 class="soleil-light">Upcoming PA/F Classes</h5>
+        <ul class="list-unstyled">
+            <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'performing-arts-film' ,'showposts' => 3); ?>
+            <?php $class_listing = new WP_Query( $args ); ?>
 
-  <h2>CPT query</h2>
-  <?php $args = array( 'post_type' => 'espresso_event', 'showposts' => 1); ?>
-  <?php $latest_updates = new WP_Query( $args ); ?>
+            <?php if ( $class_listing->have_posts() ) : ?>
 
-  <?php if ( $latest_updates->have_posts() ) : ?>
+            <?php while ( $class_listing->have_posts() ) : $class_listing->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <strong><?php the_field('lessons_headline'); ?></strong>
+                <em><?php the_title(); ?></em> <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </li>
+            <?php endwhile; ?>
 
-  <?php while ( $latest_updates->have_posts() ) : $latest_updates->the_post(); ?>
-  <h3><?php the_title(); ?></h3>
-  <h4><?php the_field('lessons_headline'); ?></h4>
+            <?php wp_reset_postdata(); ?>
 
-<?php endwhile; ?>
+          <?php else:  ?>
+            <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
+          <?php endif; ?>
+        </ul>
+        <a href="classes#music" class="btn btn-default btn-lg btn-block">See All PA/F Classes</a>
+        <a href="lessons#music" class="small pull-right">1-on-1 pa/f lessons also available</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<?php wp_reset_postdata(); ?>
+<div id="culture" class="anchor"></div>
+<section id="culture" class="bg-culture text-light soleil-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 t-and-h">
+        <div class="title-and-headline">
+          <div class="title-and-headline-inner">
+            <h2>Culture</h2>
+            <h3 class="h4 soleil-light"><?php echo term_description( '7', 'department') ?></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 pull-right">
+        <h5 class="soleil-light">Upcoming Culture Classes</h5>
+        <ul class="list-unstyled">
+            <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'culture' ,'showposts' => 3); ?>
+            <?php $class_listing = new WP_Query( $args ); ?>
 
-<?php else:  ?>
-  <?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+            <?php if ( $class_listing->have_posts() ) : ?>
 
-  <div id="redding-events" class="anchor"></div>
-  <h1>Events</h1>
+            <?php while ( $class_listing->have_posts() ) : $class_listing->the_post(); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <strong><?php the_field('lessons_headline'); ?></strong>
+                <em><?php the_title(); ?></em> <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </li>
+            <?php endwhile; ?>
 
-</div><!-- END: .container -->
+            <?php wp_reset_postdata(); ?>
+
+          <?php else:  ?>
+            <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
+          <?php endif; ?>
+        </ul>
+        <a href="classes#culture" class="btn btn-default btn-lg btn-block">See All Culture Classes</a>
+        <a href="lessons#culture" class="small pull-right">1-on-1 culture also available</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="redding-events" class="anchor"></div>
+<h1>Events</h1>
 

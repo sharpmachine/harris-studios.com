@@ -32,7 +32,8 @@
 
   .section-navigation {
     position: fixed;
-    left: 15px;
+    top: 50%;
+    left: 25px;
 
     li {
       position: relative;
@@ -60,7 +61,7 @@
 
 .anchor {
   position: relative;
-  top: -93px;
+  top: -93px + 15px;
   visibility: hidden;
 }
 
@@ -128,6 +129,7 @@
    .jumbotron {
     position: relative;
     height: 800px;
+    margin-bottom: 0;
     background-color: @brand-blue;
 
     img {
@@ -148,6 +150,83 @@
       color: white;
       border-bottom: solid 1px white;
     }
+  }
+
+  section {
+    margin-top: 3.5px;
+    padding: 60px 0;
+
+    h2 {
+      line-height: 1;
+      border-bottom: 1px solid white;
+    }
+
+    h5 {
+      text-transform: uppercase;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    ul {
+      & > li {
+        margin-bottom: 15px;
+
+        & > a {
+          font-size: 14px;
+
+          strong {
+            display: block;
+            .text-overflow();
+            max-width: 293px;
+          }
+        }
+      }
+    }
+
+    em {
+      .soleil-lightItalic();
+    }
+
+    .small {
+      font-size: 12px;
+    }
+
+    .btn {
+      margin-bottom: 3px;
+      .opacity(0.5);
+    }
+  }
+
+  .t-and-h {
+    height: 282px;
+  }
+
+  .title-and-headline {
+    display: table;
+    height: 100%;
+  }
+
+  .title-and-headline-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  section#music {
+    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 20%); @deg: 45deg)
+  }
+
+  section#performing-arts-film {
+    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 20%); @deg: 45deg)
+  }
+
+  section#culture {
+    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 20%); @deg: 45deg)
   }
 
 /* ==========================================================================
@@ -283,19 +362,6 @@
     }
   }
 }
-
-.mc4wp-alert {
-  .alert();
-  margin-top: 15px;
-  margin-bottom: 0;
-  .small();
-}
-
-.mc4wp-error {
-  .alert-danger();
-}
-
-
 
 /* ==========================================================================
    WordPress Generated Classes

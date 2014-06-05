@@ -289,6 +289,19 @@ a.brand {
 .alert-warning    { .alert-styles(@alert-warning-bg); }
 .alert-danger     { .alert-styles(@alert-danger-bg); }
 
+// Mailchimp for WordPress
+.mc4wp-alert {
+  .alert();
+  margin-top: 15px;
+  margin-bottom: 0;
+  .small();
+}
+
+.mc4wp-error {
+  .alert-danger();
+}
+
+
 
 
 //
@@ -403,14 +416,34 @@ a.brand {
 
 .bg-music {
   background-color: @music;
+
+  .btn {
+    color: @music;
+  }
 }
 
 .bg-performing-arts {
   background-color: @performing-arts;
+
+  .btn {
+    color: @performing-arts;
+  }
 }
 
 .bg-culture {
   background-color: @culture;
+
+  .btn {
+    color: @culture;
+  }
+}
+
+.text-light {
+  color: white;
+}
+
+.text-dark {
+  color: @gray-dark;
 }
 
 /*..................................the remove responsiveness */
