@@ -8,9 +8,7 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <?php if (!have_posts()) : ?>
-        <div class="alert alert-warning">
-          <?php _e('Sorry, no results were found.', 'roots'); ?>
-        </div>
+          <h2><?php _e('There are no upcoming auditions at this time.  Check back soon.', 'roots'); ?></h2>
         <?php get_search_form(); ?>
       <?php endif; ?>
       <?php while (have_posts()) : the_post(); ?>

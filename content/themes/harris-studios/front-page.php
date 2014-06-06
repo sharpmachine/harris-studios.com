@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="col-xs-4 pull-right">
-        <h5 class="soleil-light">Upcoming PA/F Classes</h5>
+        <h5 class="soleil-light">Upcoming PA &amp; F Classes</h5>
         <ul class="list-unstyled">
             <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'performing-arts-film' ,'showposts' => 3); ?>
             <?php $class_listing = new WP_Query( $args ); ?>
@@ -91,8 +91,8 @@
             <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
           <?php endif; ?>
         </ul>
-        <a href="classes#music" class="btn btn-default btn-lg btn-block">See All PA/F Classes</a>
-        <a href="lessons#music" class="small pull-right">1-on-1 pa/f lessons also available</a>
+        <a href="classes#music" class="btn btn-default btn-lg btn-block">See All PA &amp; F Classes</a>
+        <a href="lessons#music" class="small pull-right">1-on-1 PA &amp; F lessons also available</a>
       </div>
     </div>
   </div>
