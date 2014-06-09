@@ -4,12 +4,13 @@
  */
 
 // Redding Events
-// add_image_size('redding-event-photo', 310, 220, true);
 add_image_size('redding-event-photo-retina', 620, 440, true);
 
 // Team
-// add_image_size('team-member-headshot', 233, 233, true);
 add_image_size('team-member-headshot-retina', 466, 466, true);
+
+// Instructors
+add_image_size('instructors-headshot-retina', 466, 466, true);
 
 // add_filter('roots_wrap_base', 'roots_wrap_base_cpts');
 

@@ -294,6 +294,111 @@
   // display: none;
 }
 
+.instructor {
+  margin-bottom: 30px;
+  padding: 30px;
+
+  h3 {
+    margin-top: 5px;
+    font-size: 18px;
+
+    span {
+      display: block;
+      margin-top: 7.5px;
+      .soleil-light();
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+}
+
+.instructor-headshot {
+  padding: 0 15px 15px;
+  img {
+    .square(100%);
+    .img-responsive();
+    .img-circle();
+    .center-block();
+  }
+}
+
+.instructor-department {
+  height: 28px;
+  margin: 15px 0;
+  padding: 0 3px;
+  .bodoni();
+  font-size: 20px;
+  line-height: 1.1;
+  // overflow: hidden;
+}
+
+.instructor {
+  &.department-music {
+    background-color: lighten(@music, 60%);
+
+    a {
+      color: @music;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @music;
+      }
+    }
+
+    .instructor-department {
+      color: @music;
+      // border: 2px solid @music;
+    }
+  }
+
+  // Performing Arts
+  &.department-performing-arts-film {
+    background-color: lighten(@performing-arts, 60%);
+
+    a {
+      color: @performing-arts;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @performing-arts;
+      }
+    }
+
+    .instructor-department {
+      color: @performing-arts;
+      // border: 2px solid @performing-arts;
+    }
+  }
+
+  // Culture
+  &.department-culture {
+    background-color: lighten(@culture, 60%);
+
+    a {
+      color: @culture;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @culture;
+      }
+    }
+
+    .instructor-department {
+      color: @culture;
+      // border: 2px solid @culture;
+    }
+  }
+}
+
 
 /* ==========================================================================
    Events Page
