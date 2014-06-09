@@ -40,15 +40,7 @@ var Roots = {
         }
       });
 
-    }
-  },
-  // Home page
-  home: {
-    init: function() {
-      // JavaScript to be fired on the home page
-
-      $('nav.section-navigation li a').tooltip();
-
+      // Scroll to
       $(function() {
         $('a[href*=#]:not([href=#],[href=#sidr])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -63,6 +55,17 @@ var Roots = {
           }
         });
       });
+
+    }
+  },
+  // Home page
+  home: {
+    init: function() {
+      // JavaScript to be fired on the home page
+
+      $('nav.section-navigation li a').tooltip();
+
+
     }
   },
   // About us page, note the change from about-us to about_us.

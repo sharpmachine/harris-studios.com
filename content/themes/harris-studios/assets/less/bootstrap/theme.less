@@ -201,8 +201,10 @@ a.brand {
 @sidr-padding:        11px 18px;
 @sidr-spacing:        3.5px;
 @sidr-font-size:      22px;
+@sidr-bg:             @brand-blue;
 
 .sidr {
+  // background-color: @sidr-bg;
   border-left: @sidr-spacing solid white;
   color: white;
   .soleil-light();
@@ -213,7 +215,7 @@ a.brand {
 
     li {
       margin-bottom: @sidr-spacing;
-      background-color: @brand-blueLight;
+      background-color: @sidr-bg;
 
       a {
         padding: @sidr-padding;
@@ -223,7 +225,7 @@ a.brand {
 
       &:hover > a,
       &.active > a {
-        background-color: darken(@brand-blueLight, 10%);
+        background-color: @brand-purple;
       }
     }
   }
@@ -235,6 +237,7 @@ a.brand {
 
   .btn {
     margin-top: 7px;
+    color: @sidr-bg;
   }
 
   address,
@@ -247,7 +250,11 @@ a.brand {
 .site-info {
   margin-bottom: @sidr-spacing;
   padding: @sidr-padding;
-  background-color: @brand-blueLight;
+  background-color: @sidr-bg;
+
+  a {
+    color: white;
+  }
 }
 
 .contact-phone,
@@ -257,6 +264,7 @@ a.brand {
 }
 
 .legal {
+  height: 100%;
   font-size: 14px;
 
   p {
@@ -479,6 +487,18 @@ a.brand {
 
 .text-purple {
   color: @brand-purple;
+}
+
+.text-music {
+  color: @music;
+}
+
+.text-performing-arts {
+  color: @performing-arts;
+}
+
+.text-culture {
+  color: @culture;
 }
 
 /*..................................the remove responsiveness */

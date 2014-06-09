@@ -156,13 +156,13 @@
       text-transform: uppercase;
     }
 
-    a {
-      color: white;
+    // a {
+    //   color: white;
 
-      &:hover {
-        color: white;
-      }
-    }
+    //   &:hover {
+    //     color: white;
+    //   }
+    // }
 
     ul {
       & > li {
@@ -209,15 +209,16 @@
   }
 
   section#music {
-    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 20%); @deg: 45deg)
+    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 15%); @deg: 45deg)
   }
 
   section#performing-arts-film {
-    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 20%); @deg: 45deg)
+    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 15%); @deg: 45deg)
   }
 
   section#culture {
-    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 20%); @deg: 45deg)
+    // background-color: @culture;
+    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 15%); @deg: 45deg)
   }
 
   section#events {
@@ -258,6 +259,79 @@
    Classes & Lessons Page
    ========================================================================== */
 
+.class-or-lesson-section-nav  {
+  height: 246px;
+  padding: 0;
+
+  h4 {
+    margin-top: 0;
+    font-size: 52px;
+  }
+
+  a {
+    display: block;
+    .square(100%);
+    padding: 30px;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    .soleil-light();
+  }
+}
+
+@lesson-height: 150px;
+
+.class-or-lesson-title {
+  margin-bottom: 5px;
+
+  h2 {
+    margin-bottom: 1px;
+    a {
+      padding: 7.5px 30px;
+      font-size: 30px;
+      color: white;
+      background-color: @music;
+    }
+  }
+}
+
+.class-or-lesson-headline {
+  width: 550px;
+  height: @lesson-height;
+  margin-right: 3.5px;
+  padding: 30px;
+  background-color: lighten(@music, 50%);
+
+  h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+}
+
+.class-or-lesson-price {
+  width: 286px;
+  height: @lesson-height;
+  // margin-right: 3.5px;
+  padding: 30px 15px;
+  background-color: lighten(@music, 40%);
+}
+
+.class-or-lesson-more {
+  width: 97px;
+  height: @lesson-height !important;
+
+  a.btn {
+    padding-top: 25% !important;
+    background-color: @music !important;
+    background-image: none !important;
+  }
+}
 
 
 /* ==========================================================================
