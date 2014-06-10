@@ -7,7 +7,38 @@ Modified by Chris Reynolds for 3.1.20.P
 */
 
 
-get_header(); ?>
+get_template_part('templates/page-header', 'intro'); ?>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="col-xs-4 class-or-lesson-section-nav">
+      <a href="#music" class="bg-music">
+        <h4 class="h2">Music</h4>
+        <?php echo term_description( '5', 'department') ?>
+      </a>
+    </div>
+    <div class="col-xs-4 class-or-lesson-section-nav bg-performing-arts">
+      <a href="#performing-arts-film">
+        <h4 class="h2">Performing Arts &amp; Film</h4>
+        <?php echo term_description( '6', 'department') ?>
+      </a>
+    </div>
+    <div class="col-xs-4 class-or-lesson-section-nav bg-culture">
+      <a href="#culture">
+        <h4 class="h2">Culture</h4>
+        <?php echo term_description( '7', 'department') ?>
+      </a>
+    </div>
+  </div>
+
+  <?php if (!have_posts()) : ?>
+    <div class="alert alert-warning">
+      <?php _e('Sorry, no results were found.', 'roots'); ?>
+    </div>
+    <?php get_search_form(); ?>
+  <?php endif; ?>
+</div>
+
         <div id="container">
             <div id="content" role="main">
 

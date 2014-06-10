@@ -1,3 +1,4 @@
+<?php get_template_part('templates/page', 'header'); ?>
 <div class="container">
   <?php // get_template_part('templates/content', 'single'); ?>
   <h1><?php the_title(); ?></h1>
