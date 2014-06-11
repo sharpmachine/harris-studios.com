@@ -1,51 +1,74 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/lesson', 'header'); ?>
+
 <div class="container">
-  <?php // get_template_part('templates/content', 'single'); ?>
-  <h1><?php the_title(); ?></h1>
 
-  <h3><?php //echo get_the_terms( $post->ID, 'department'); ?></h3>
+<div class="row">
+  <div class="col-xs-6"><?php $terms = get_the_terms( $post->ID , 'department' );
 
-  <?php $terms = get_the_terms( $post->ID , 'department' );
+     foreach ( $terms as $term ) {
 
- foreach ( $terms as $term ) {
+     $term_link = get_term_link( $term, 'department' );
 
- $term_link = get_term_link( $term, 'department' );
+     echo "<h3>" . $term->name . "</h3>";
 
- echo "<h3>" . $term->name . "</h3>";
+    } ?>
+  </div>
 
-} ?>
+  <div class="col-xs-6 text-right">
+    <a href="#" class="btn btn-lg btn-danger">Sign Up</a>
+  </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-8 single-cl-description">
+      <?php while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
+    <div class="col-xs-4">
+      <div class="single-cl-benefits bg-brand-blueLight text-light">
+        <p class="lead">Benefits:</p>
+        <?php the_field('lesson_benefits'); ?>
+      </div>
+    </div>
+  </div>
+</div><!-- END: .container -->
 
-  <?php the_field('lessons_headline'); ?>
-  <?php the_field('lesson_price'); ?>
-  <?php the_field('lesson_age'); ?>
+<section class="single-cl-testimony bg-brand-blueLight text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <?php get_template_part('templates/student', 'testimony' ); ?>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <a href="#" class="btn btn-default">Sign Up</a>
+<section class="single-lesson-instructor">
+  <div class="container">
+    <div class="row col-xs-12">
+      <?php
+        $posts = get_field('whos_teaching');
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php the_content(); ?>
-<?php endwhile; ?>
+        if( $posts ):
+      ?>
+        <ul>
+        <?php foreach( $posts as $post): ?>
+          <?php setup_postdata($post); ?>
+            <li>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              <img src="<?php the_field('instructor_headshot'); ?>" alt="<?php the_title(); ?>">
+            </li>
+        <?php endforeach; ?>
+        </ul>
+        <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+    <div class="text-right">
+      <a href="#" class="btn btn-lg btn-danger">Sign Up</a>
+    </div>
+  </div>
+</section>
 
-  <?php wp_reset_postdata(); ?>
 
-<?php the_field('lesson_benefits'); ?>
-
-<?php
-
-$posts = get_field('whos_teaching');
-
-if( $posts ): ?>
-    <ul>
-    <?php foreach( $posts as $post): ?>
-        <?php setup_postdata($post); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <img src="<?php the_field('instructor_headshot'); ?>" alt="<?php the_title(); ?>">
-        </li>
-    <?php endforeach; ?>
-    </ul>
-    <?php wp_reset_postdata(); ?>
-<?php endif; ?>
-
-<h1>Testimony</h1>
-<?php get_template_part('templates/student', 'testimony' ); ?>
-</div>

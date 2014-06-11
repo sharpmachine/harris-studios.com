@@ -9,27 +9,9 @@ Modified by Chris Reynolds for 3.1.20.P
 
 get_template_part('templates/page-header', 'intro'); ?>
 
-<div class="container">
-  <div class="row text-center">
-    <div class="col-xs-4 class-or-lesson-section-nav">
-      <a href="#music" class="bg-music">
-        <h4 class="h2">Music</h4>
-        <?php echo term_description( '5', 'department') ?>
-      </a>
-    </div>
-    <div class="col-xs-4 class-or-lesson-section-nav bg-performing-arts">
-      <a href="#performing-arts-film">
-        <h4 class="h2">Performing Arts &amp; Film</h4>
-        <?php echo term_description( '6', 'department') ?>
-      </a>
-    </div>
-    <div class="col-xs-4 class-or-lesson-section-nav bg-culture">
-      <a href="#culture">
-        <h4 class="h2">Culture</h4>
-        <?php echo term_description( '7', 'department') ?>
-      </a>
-    </div>
-  </div>
+<div class="container cl-listings class-listing">
+
+  <?php get_template_part('templates/class_lesson', 'nav' ); ?>
 
   <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
@@ -37,127 +19,79 @@ get_template_part('templates/page-header', 'intro'); ?>
     </div>
     <?php get_search_form(); ?>
   <?php endif; ?>
-</div>
 
-        <div id="container">
-            <div id="content" role="main">
+  <div id="music" class="anchor"></div>
+  <section id="music-lessons">
 
-            <?php global $post, $wp_query;
-                // define some arguments for our Event Espresso query
-                $args = array(
-                        'post_type' => 'espresso_event',
-                        'meta_key' => 'event_start_date',
-                        'meta_query' => array(
-                            array(
-                                'key' => 'event_start_date',
-                                'value' => date('Y-m-d'),
-                                'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
-                                'type' => 'DATE'
-                                )
-                            ),
-                        'orderby' => 'meta_value',
-                        'order' => 'DESC' // change this to ASC if you want newer events on top
-                    );
-            // this saves the query to a temporary location so we can go back to it later after we run our query
-            $temp = $wp_query;
-            $wp_query = null;
-            $wp_query = new WP_Query();
-            $wp_query->query($args);
+    <h2 class="text-music border-bottom text-center">Music</h2>
 
-            // now run the loop
-            while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-              <?php
-              	// GET POST CUSTOM FIELDS //
-                //For more information on the get_post_meta function, check out this page:
-				//http://codex.wordpress.org/Function_Reference/get_post_meta
+    <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'music' ,'showposts' => -1); ?>
+    <?php $lesson_listing = new WP_Query( $args ); ?>
+    <?php if ( $lesson_listing->have_posts() ) : ?>
 
-				//Here's a bunch of variables  you can use in your template
-				$event_identifier = get_post_meta($post->ID, 'event_identifier', true);
-                $event_id = get_post_meta($post->ID, 'event_id', true);
-				$event_start_date = get_post_meta($post->ID, 'event_start_date', true);
-				$event_end_date = get_post_meta($post->ID, 'event_end_date', true);
-				$event_location = get_post_meta($post->ID, 'event_location', true);
-				$event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true);
-				$event_address = get_post_meta($post->ID, 'event_address', true);
-				$event_address2 = get_post_meta($post->ID, 'event_address2', true);
-				$event_city = get_post_meta($post->ID, 'event_city', true);
-				$event_state = get_post_meta($post->ID, 'event_state', true);
-				$event_country = get_post_meta($post->ID, 'event_country', true);
-				$event_phone = get_post_meta($post->ID, 'event_phone', true);
-				$event_externalURL = get_post_meta($post->ID, 'event_externalURL', true);
-				$event_registration_start = get_post_meta($post->ID, 'event_registration_start', true);
-				$event_registration_end = get_post_meta($post->ID, 'event_registration_end', true);
-                $event_cat = do_shortcode('[CATEGORY_NAME event_id="'.$event_id.'"]'); // displays the event category name, not used in this template but you can add it in
-                $event_price = '$' . do_shortcode('[EVENT_PRICE event_id="'.$event_id.'" number="0"]'); // this only displays the first price, change the currency symbol to the one that applies to you
-                $event_date = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_date" format="l, F j, Y"]'); // change the date format if you so desire http://php.net/manual/en/function.date.php
-                $event_time = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_time"]');
-                $event_venue = do_shortcode('[ESPRESSO_VENUE event_id="'.$event_id.'"]'); // modify this shortcode to display the venue however you want http://eventespresso.com/support/documentation/shortcodes-template-variables/#venue
-                $event_attendees_min_max = do_shortcode('[ATTENDEE_NUMBERS event_id="'.$event_id.'" type="num_attendees"]') . '/' . do_shortcode('[ATTENDEE_NUMBERS event_id="'.$event_id.'" type="reg_limit"]');
-                $event_attendees = do_shortcode('[ATTENDEE_NUMBERS event_id="'.$event_id.'" type="available_spaces"]');
-                $show_venue = '0'; // set this to 1 if you want to display the venue (this assumes you have venues set up so the default is to set this to 0 for off)
-                $show_attendees = '1'; // display number of attendees? set this to 0 if you don't want the attendee numbers. to change how they are displayed, change the shortcode in the $event_attendees variable above
-                //the_meta(); //this function displays all the meta values for the post -- more info here: http://codex.wordpress.org/Function_Reference/the_meta
-				//This gets the data that is entered into the custom write panels
-				//http://wefunction.com/2009/10/revisited-creating-custom-write-panels-in-wordpress/
-				//$event_meta = get_post_meta( $post->ID, 'event_meta', true );
-				?>
+      <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
+        <div class="row class-summary">
+          <div class="col-xs-12">
+            <?php get_template_part('templates/class', 'entry' ); ?>
+          </div>
+        </div>
+      <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
 
-                    <?php /* we're not using this section, but you could do something with it if you wanted
-                    <div class="entry-meta">
-                        <?php //twentyten_posted_on(); // uncomment if you're using twentyten ?>
-                    </div><!-- .entry-meta -->
-                    */ ?>
+      <?php else:  ?>
+        <p class="lead">At the moment we are not offering any Music lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+      <?php endif; ?>
 
-                   <!-- <p>Event ID: <?php echo $event_id;  ?></p> -->
-                   <!-- event stuff starts here -->
+  </section>
 
-                <div id="post-<?php the_ID(); ?>" class="event_data <?php echo $event_cat; ?> event-data-display event-list-display event-display-boxes" <?php //post_class(); // if you'd rather use the regular post_class function, comment out all that class stuff there and use this instead ?>>
-                    <h2 id="event_title-<?php echo $event_id ?>" class="event_title entry-title">
-                        <?php if ($event_externalURL != '') { // if there's an alternate registration URL, use that link
-                            echo '<a href="' . $event_externalURL . '" title="' . the_title() . ' class="a_event_title" id="a_event_title-' . $event_id . '">';
-                        } else { // otherwise just use the regular link ?>
-                            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-                        <?php } the_title(); ?></a></h2>
-                    <div class="event_meta">
-                        <?php
-                            $default_price_output = '<p id="p_event_price-' . $event_id . '" class="event_price">';
-                            $default_price_output .= '<span class="section-title">Price: </span>';
-                            $default_price_output .= $event_price . '</p>';
-                            echo apply_filters('filter_hooks_espresso_page_event_list_price_display', $default_price_output, $event_price);
-                        ?>
-                        <p id="event_date-<?php echo $event_id ?>">
-                            <span class="section-title">Date: </span>
-                            <?php echo $event_date; ?><br />
-                            <?php echo $event_time; ?>
-                        </p>
-                    </div>
-                    <div class="event-desc">
-                        <?php the_content(); ?>
-                    </div>
+  <div id="performing-arts-film" class="anchor"></div>
+  <section id="performing-arts-film-lessons">
 
-                    <?php if ( $show_venue == '1' ) { ?>
-                        <p class="event_address" id="event_address-<?php echo $event_id ?>">
-                            <span class="section-title">Address: </span>
-                            <?php echo $event_venue; ?>
-                        </p>
-                    <?php }
-                    if ( $show_attendees == '1' ) { ?>
-                        <p id="available_spaces-<?php echo $event_id ?>">
-                            <span class="section-title">Available Spaces: </span>
-                            <?php echo $event_attendees;
-                            /* if you'd prefer to show the minimum/maximum number of attendees comment out or remove the above lines and use this instead:
-                            <?php echo $event_attendees_min_max; ?>
-                            */ ?>
-                        </p>
-                    <?php } ?>
+    <h2 class="text-performing-arts border-bottom text-center">Performing Arts &amp; Film</h2>
 
-                </div>
+    <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'performing-arts-film' ,'showposts' => -1); ?>
+    <?php $lesson_listing = new WP_Query( $args ); ?>
+    <?php if ( $lesson_listing->have_posts() ) : ?>
 
-                <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
+      <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
+        <div class="row">
+          <div class="col-xs-12 class-summary">
+            <?php get_template_part('templates/class', 'entry' ); ?>
+          </div>
+        </div>
+      <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
 
-                <?php endwhile; // end of the loop. ?>
-                <?php $wp_query = null; $wp_query = $temp; // put the old query back where we left it ?>
-            </div><!-- #content -->
-        </div><!-- #container -->
-<?php //get_sidebar(); //uncomment this if you want to display the sidebar ?>
-<?php get_footer(); ?>
+      <?php else:  ?>
+        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+      <?php endif; ?>
+
+  </section>
+
+  <div id="culture" class="anchor"></div>
+  <section id="culture-lessons">
+
+    <h2 class="text-culture border-bottom text-center">Culture</h2>
+
+    <?php $args = array( 'post_type' => 'espresso_event', 'department' => 'culture' ,'showposts' => -1); ?>
+    <?php $lesson_listing = new WP_Query( $args ); ?>
+    <?php if ( $lesson_listing->have_posts() ) : ?>
+
+      <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
+        <div class="row">
+          <div class="col-xs-12 class-summary">
+            <?php get_template_part('templates/class', 'entry' ); ?>
+          </div>
+        </div>
+      <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+
+      <?php else:  ?>
+        <p class="lead">At the moment we are not offering any Culture lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+      <?php endif; ?>
+
+  </section>
+
+</div><!-- END: .container -->
+
+

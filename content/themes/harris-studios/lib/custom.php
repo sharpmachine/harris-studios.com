@@ -10,7 +10,7 @@ add_image_size('redding-event-photo-retina', 620, 440, true);
 add_image_size('team-member-headshot-retina', 466, 466, true);
 
 // Instructors
-add_image_size('instructors-headshot-retina', 466, 466, true);
+add_image_size('instructors-headshot-retina', 406, 406, true);
 
 // add_filter('roots_wrap_base', 'roots_wrap_base_cpts');
 

@@ -4,17 +4,21 @@
   </h2>
 </div>
 <div class="clearfix"></div>
-<div class="class-or-lesson-headline t-and-h pull-left">
-  <div class="title-and-headline">
-    <div class="title-and-headline-inner">
+<div class="class-or-lesson-headline pull-left">
+  <div class="vertical-align-wrapper">
+    <div class="vertical-align-inner">
       <h3><?php the_field('lessons_headline'); ?></h3>
     </div>
   </div>
 </div>
 <div class="class-or-lesson-price text-center pull-left">
-  <p class="lead"><strong>Cost:</strong> <br> <?php the_field('lesson_price'); ?></p>
+  <div class="vertical-align-wrapper">
+    <div class="vertical-align-inner">
+      <p class="lead"><strong>Cost:</strong> <br> <?php the_field('lesson_price'); ?></p>
+    </div>
+  </div>
 </div>
-<div class="class-or-lesson-more more-info pull-left">
+<div class="class-or-lesson-more pull-left">
   <a href="<?php the_permalink(); ?>" class="btn btn-default">
     <i class="fa fa-angle-right"></i>
     Learn More

@@ -144,6 +144,10 @@
   }
 
   section {
+    padding: 60px 0;
+  }
+
+  section.home {
     margin-top: 3.5px;
     padding: 60px 0;
 
@@ -156,13 +160,13 @@
       text-transform: uppercase;
     }
 
-    // a {
-    //   color: white;
+    a {
+      color: white;
 
-    //   &:hover {
-    //     color: white;
-    //   }
-    // }
+      &:hover {
+        color: white;
+      }
+    }
 
     ul {
       & > li {
@@ -194,18 +198,8 @@
     }
   }
 
-  .t-and-h {
+  .vertical-align {
     height: 282px;
-  }
-
-  .title-and-headline {
-    display: table;
-    height: 100%;
-  }
-
-  .title-and-headline-inner {
-    display: table-cell;
-    vertical-align: middle;
   }
 
   section#music {
@@ -259,13 +253,25 @@
    Classes & Lessons Page
    ========================================================================== */
 
-.class-or-lesson-section-nav  {
-  height: 246px;
+   .cl-listings {
+    .anchor {
+      top: -200px !important;
+    }
+  }
+
+// Navigation
+.class-or-lesson-section-nav {
+  padding: 0 15px;
+}
+
+.class-or-lesson-nav  {
+  height: 236px;
   padding: 0;
+  .transition(height ease 0.2s);
 
   h4 {
     margin-top: 0;
-    font-size: 52px;
+    font-size: 48px;
   }
 
   a {
@@ -282,57 +288,307 @@
   p {
     font-size: 18px;
     .soleil-light();
+    .opacity(1);
+    .transition(opacity ease 0.2s);
   }
 }
 
-@lesson-height: 150px;
+.affix-top {
+  position: absolute;
+  width: 941px;
+}
+
+.affix {
+  z-index: 3;
+  top: 52px;
+  width: 941px;
+
+  .class-or-lesson-nav {
+    height: 170px;
+    .transition(height ease 0.2s);
+
+    p {
+      .opacity(0);
+      .transition(opacity ease 0.2s);
+    }
+  }
+}
+
+body.logged-in {
+  .affix {
+    top: 83px;
+  }
+}
+
+
+// Summary box common
+
+.lesson-summary,
+.class-summary {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p.lead {
+    margin-bottom: 0;
+  }
+}
 
 .class-or-lesson-title {
-  margin-bottom: 5px;
 
   h2 {
-    margin-bottom: 1px;
+    margin: 0 0 2px;
+
     a {
       padding: 7.5px 30px;
-      font-size: 30px;
+      font-size: 36px;
       color: white;
-      background-color: @music;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
 
 .class-or-lesson-headline {
-  width: 550px;
-  height: @lesson-height;
-  margin-right: 3.5px;
   padding: 30px;
-  background-color: lighten(@music, 50%);
+  background-color: #ccc;
 
   h3 {
-    margin-top: 0;
+    margin: 0;
     font-size: 20px;
   }
 }
 
-.class-or-lesson-price {
-  width: 286px;
-  height: @lesson-height;
-  // margin-right: 3.5px;
-  padding: 30px 15px;
-  background-color: lighten(@music, 40%);
-}
+.class-or-lesson-dates {
+  padding: 0 15px;
+  background-color: #eee;
 
-.class-or-lesson-more {
-  width: 97px;
-  height: @lesson-height !important;
-
-  a.btn {
-    padding-top: 25% !important;
-    background-color: @music !important;
-    background-image: none !important;
+  small {
+    display: block;
+    margin: 3px 0;
+    font-size: 12px;
   }
 }
 
+.class-or-lesson-price {
+  padding: 30px 15px;
+  background-color: #ddd;
+}
+
+.class-or-lesson-more {
+
+  a.btn {
+    width: 100%;
+    height: 100%;
+    padding-top: 33%;
+    font-size: 12px;
+    color: white;
+
+    .fa-angle-right {
+      display: block;
+      font-size: 100px;
+      margin-bottom: -5px;
+    }
+  }
+}
+
+// Music
+#music-lessons,
+#music-classes {
+  margin-top: 242px;
+
+  .class-or-lesson-title {
+    a {
+      background-color: @music;
+
+      &:hover {
+        background-color: lighten(@music, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@music, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@music, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @music;
+      #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@music, 10%); @end-color: @music; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Performing Arts & Film
+#performing-arts-film-lessons,
+#performing-arts-film-lessons {
+
+  .class-or-lesson-title {
+    a {
+      background-color: @performing-arts;
+
+      &:hover {
+        background-color: lighten(@performing-arts, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@performing-arts, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@performing-arts, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @performing-arts;
+      #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@performing-arts, 10%); @end-color: @performing-arts; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Culture
+#culture-lessons,
+#culture-classes {
+  .class-or-lesson-title {
+    a {
+      background-color: @culture;
+
+      &:hover {
+        background-color: lighten(@culture, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@culture, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@culture, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @culture;
+      #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@culture, 10%); @end-color: @culture; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Lessons Specific
+.lesson-summary {
+  @lesson-height: 170px;
+
+  .class-or-lesson-headline {
+    width: 550px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-price {
+    width: 290px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-more {
+    width: 100px;
+    height: @lesson-height;
+  }
+}
+
+// Classes Specific
+.class-summary {
+  @lesson-height: 170px;
+
+  .class-or-lesson-headline {
+    width: 500px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-dates {
+    width: 170px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-price {
+    width: 170px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-more {
+    width: 100px;
+    height: @lesson-height;
+  }
+}
+
+// Single Lesson Page
+.lesson-header {
+  padding-bottom: 30px;
+
+  h1 {
+    padding-bottom: 15px;
+    line-height: 1;
+
+    span {
+      .soleil-light();
+      font-size: 26px;
+      text-transform: none;
+    }
+  }
+}
+
+.single-cl-details {
+  .soleil-light();
+  font-size: 26px;
+}
+
+.single-cl-cost {
+  border-right: 1px solid white;
+}
+
+.single-cl {
+  &-description {
+    p {
+      .lead();
+    }
+  }
+
+  &-benefits {
+    padding: 30px;
+    // color: white;
+  }
+
+  &-testimony {
+  }
+}
+
+.quotes-char {
+  line-height: 0;
+  font-size: 50px;
+  .bodoni();
+}
 
 /* ==========================================================================
    About Page
@@ -352,13 +608,13 @@
     margin-bottom: 30px;
 
     img {
-    .square(233px) !important;
-    .img-responsive();
-    .img-circle();
-    .center-block();
-    border: 5px solid @brand-purple;
+      .square(233px) !important;
+      .img-responsive();
+      .img-circle();
+      .center-block();
+      border: 5px solid @brand-purple;
+    }
   }
-}
 
 /* ==========================================================================
    Instructors Page
@@ -535,7 +791,6 @@
       font-size: 12px;
       color: white;
       background-color: @brand-blue;
-      // #gradient > .directional(@start-color: @brand-blue; @end-color: @brand-purple; @deg: 45deg);
 
       .fa-angle-right {
         display: block;
@@ -626,6 +881,9 @@
         background-color: @gray-dark;
         border: 3px solid white;
       }
+    }
+    .form-control {
+      border: 0;
     }
   }
 

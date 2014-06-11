@@ -13,28 +13,9 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container cl-listings lessons-listing">
 
-  <div class="row text-center">
-    <div class="col-xs-4 class-or-lesson-section-nav">
-      <a href="#music" class="bg-music">
-        <h4 class="h2">Music</h4>
-        <?php echo term_description( '5', 'department') ?>
-      </a>
-    </div>
-    <div class="col-xs-4 class-or-lesson-section-nav bg-performing-arts">
-      <a href="#performing-arts-film">
-        <h4 class="h2">Performing Arts &amp; Film</h4>
-        <?php echo term_description( '6', 'department') ?>
-      </a>
-    </div>
-    <div class="col-xs-4 class-or-lesson-section-nav bg-culture">
-      <a href="#culture">
-        <h4 class="h2">Culture</h4>
-        <?php echo term_description( '7', 'department') ?>
-      </a>
-    </div>
-  </div>
+  <?php get_template_part('templates/class_lesson', 'nav' ); ?>
 
   <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
@@ -44,7 +25,7 @@
   <?php endif; ?>
 
   <div id="music" class="anchor"></div>
-  <section id="music-classes-lessons">
+  <section id="music-lessons">
 
     <h2 class="text-music border-bottom text-center">Music</h2>
 
@@ -53,7 +34,7 @@
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row">
+        <div class="row lesson-summary">
           <div class="col-xs-12">
             <?php get_template_part('templates/lesson', 'entry' ); ?>
           </div>
@@ -68,7 +49,7 @@
   </section>
 
   <div id="performing-arts-film" class="anchor"></div>
-  <section id="performing-arts-film-classes-lessons">
+  <section id="performing-arts-film-lessons">
 
     <h2 class="text-performing-arts border-bottom text-center">Performing Arts &amp; Film</h2>
 
@@ -78,7 +59,7 @@
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 lesson-summary">
             <?php get_template_part('templates/lesson', 'entry' ); ?>
           </div>
         </div>
@@ -92,7 +73,7 @@
   </section>
 
   <div id="culture" class="anchor"></div>
-  <section id="culture-classes-lessons">
+  <section id="culture-lessons">
 
     <h2 class="text-culture border-bottom text-center">Culture</h2>
 
@@ -102,7 +83,7 @@
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 lesson-summary">
             <?php get_template_part('templates/lesson', 'entry' ); ?>
           </div>
         </div>
@@ -114,6 +95,4 @@
       <?php endif; ?>
 
   </section>
-
-
 </div>

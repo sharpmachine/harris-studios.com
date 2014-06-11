@@ -15,12 +15,12 @@
 <?php get_template_part('section', 'navigation'); ?>
 
 <div id="music" class="anchor"></div>
-<section id="music" class="bg-music text-light soleil-light">
+<section id="music" class="bg-music text-light soleil-light home">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 t-and-h">
-        <div class="title-and-headline">
-          <div class="title-and-headline-inner">
+      <div class="col-xs-4 vertical-align">
+        <div class="vertical-align-wrapper">
+          <div class="vertical-align-inner">
             <h2>Music</h2>
             <h3 class="h4 soleil-light"><?php echo term_description( '5', 'department') ?></h3>
           </div>
@@ -57,12 +57,12 @@
 </section>
 
 <div id="performing-arts-film" class="anchor"></div>
-<section id="performing-arts-film" class="bg-performing-arts text-light soleil-light">
+<section id="performing-arts-film" class="bg-performing-arts text-light soleil-light home">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 t-and-h">
-        <div class="title-and-headline">
-          <div class="title-and-headline-inner">
+      <div class="col-xs-4 vertical-align">
+        <div class="vertical-align-wrapper">
+          <div class="vertical-align-inner">
             <h2>Performing Arts &amp; Film</h2>
             <h3 class="h4 soleil-light"><?php echo term_description( '6', 'department') ?></h3>
           </div>
@@ -91,20 +91,20 @@
             <li><?php _e( 'Sorry, no posts matched your criteria.' ); ?></li>
           <?php endif; ?>
         </ul>
-        <a href="classes#music" class="btn btn-default btn-lg btn-block">See All PA &amp; F Classes</a>
-        <a href="lessons#music" class="small pull-right">1-on-1 PA &amp; F lessons also available</a>
+        <a href="classes#performing-arts-film" class="btn btn-default btn-lg btn-block">See All PA &amp; F Classes</a>
+        <a href="lessons#performing-arts-film" class="small pull-right">1-on-1 PA &amp; F lessons also available</a>
       </div>
     </div>
   </div>
 </section>
 
 <div id="culture" class="anchor"></div>
-<section id="culture" class="bg-culture text-light soleil-light">
+<section id="culture" class="bg-culture text-light soleil-light home">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 t-and-h">
-        <div class="title-and-headline">
-          <div class="title-and-headline-inner">
+      <div class="col-xs-4 vertical-align">
+        <div class="vertical-align-wrapper">
+          <div class="vertical-align-inner">
             <h2>Culture</h2>
             <h3 class="h4 soleil-light"><?php echo term_description( '7', 'department') ?></h3>
           </div>
@@ -141,7 +141,7 @@
 </section>
 
 <div id="redding-events" class="anchor"></div>
-<section id="events" class="bg-brand-yellow">
+<section id="events" class="bg-brand-yellow home">
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
