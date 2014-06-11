@@ -12,6 +12,9 @@ add_image_size('team-member-headshot-retina', 466, 466, true);
 // Instructors
 add_image_size('instructors-headshot-retina', 406, 406, true);
 
+// Student Headshot
+add_image_size('student-headshot-retina', 478, 478, true);
+
 // add_filter('roots_wrap_base', 'roots_wrap_base_cpts');
 
 // function roots_wrap_base_cpts($templates) {

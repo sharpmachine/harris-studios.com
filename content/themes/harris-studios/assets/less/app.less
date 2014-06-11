@@ -581,13 +581,54 @@ body.logged-in {
   }
 
   &-testimony {
+    .soleil-lightItalic();
+    font-size: 18px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      .square(239px) !important;
+      .img-responsive();
+      .img-circle();
+    }
   }
 }
 
+.t-quote {
+  height: 239px;
+}
+
 .quotes-char {
+  position: relative;
+  top: 20px;
   line-height: 0;
   font-size: 50px;
   .bodoni();
+
+  &:first-child {
+    padding-right: 5px;
+  }
+
+  &:last-child {
+    right: -5px;
+  }
+}
+
+.single-lesson-instructors {
+  margin: 15px 0;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  img {
+    .square(205px) !important;
+    .img-responsive();
+    .img-circle();
+    border: 4px solid @brand-purple;
+  }
 }
 
 /* ==========================================================================
