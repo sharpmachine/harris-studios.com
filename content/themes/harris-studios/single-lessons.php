@@ -15,7 +15,7 @@
       </div>
 
       <div class="col-xs-6 text-right">
-        <a href="#" class="btn btn-lg btn-danger">Sign Up</a>
+        <a href="<?php bloginfo('url'); ?>/lesson-signup" class="btn btn-lg btn-danger">Sign Up</a>
       </div>
     </div>
     <hr>
@@ -52,14 +52,12 @@
     <hr>
     <div class="row">
       <div class="col-xs-12">
-        <?php get_template_part('templates/cl', 'instructors'); ?>
+        <?php get_template_part('templates/lesson', 'instructors'); ?>
       </div>
     </div>
     <hr>
     <div class="text-right">
-      <a href="#" class="btn btn-lg btn-danger">Sign Up</a>
+      <a href="<?php bloginfo('url'); ?>/lesson-signup" class="btn btn-lg btn-danger">Sign Up</a>
     </div>
   </div>
 </section>
-
-

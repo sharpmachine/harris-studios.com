@@ -8,7 +8,7 @@
     <div class="row single-cl-details">
       <div class="col-xs-4 col-xs-offset-2 single-cl-cost">
         <p class="lead"><strong>Cost:</strong></p>
-        <div class="price-tag"><?php the_field('lesson_price'); ?></div>
+        <div class="price-tag"><?php the_field('lessons_price'); ?></div>
       </div>
       <div class="col-xs-4">
         <p class="lead"><strong>Ages:</strong></p>

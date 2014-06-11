@@ -59,7 +59,8 @@
   .video-container {
     position: relative;
   // padding-bottom: 56.25%;
-  margin-top: 50px;
+  // margin-top: 50px;
+  // margin-bottom: -200px;
   padding-bottom: 54%;
   padding-top: 30px;
   height: 0;
@@ -544,7 +545,8 @@ body.logged-in {
 }
 
 // Single Lesson Page
-.lesson-header {
+.lesson-header,
+.class-header {
   padding-bottom: 30px;
 
   h1 {
@@ -559,13 +561,35 @@ body.logged-in {
   }
 }
 
+.lesson-header {
+  .single-cl-cost {
+    border-right: 1px solid white;
+  }
+}
+
+.class-header {
+  .single-class-dates {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .price-tag {
+    .bodoni();
+    font-size: 50px;
+  }
+}
+
+.class-times {
+  font-size: 16px;
+}
+
 .single-cl-details {
   .soleil-light();
   font-size: 26px;
-}
-
-.single-cl-cost {
-  border-right: 1px solid white;
 }
 
 .single-cl {
@@ -616,7 +640,8 @@ body.logged-in {
   }
 }
 
-.single-lesson-instructors {
+.single-lesson-instructors,
+.single-class-instructor {
   margin: 15px 0;
 
   h3 {
@@ -629,6 +654,11 @@ body.logged-in {
     .img-circle();
     border: 4px solid @brand-purple;
   }
+}
+
+.single-class-instructor-excerpt {
+  height: 249px;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -876,7 +906,8 @@ body.logged-in {
    Footer
    ========================================================================== */
 
-   body.home {
+   body.home,
+   body.error404 {
     .content-info {
       margin-top: 0;
     }

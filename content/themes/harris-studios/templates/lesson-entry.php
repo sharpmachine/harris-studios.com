@@ -14,7 +14,7 @@
 <div class="class-or-lesson-price text-center pull-left">
   <div class="vertical-align-wrapper">
     <div class="vertical-align-inner">
-      <p class="lead"><strong>Cost:</strong> <br> <?php the_field('lesson_price'); ?></p>
+      <p class="lead"><strong>Cost:</strong> <br> <?php the_field('lessons_price'); ?></p>
     </div>
   </div>
 </div>

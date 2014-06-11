@@ -39,7 +39,7 @@ get_template_part('templates/page-header', 'intro'); ?>
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Music lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Music classes, though this may change in the future. If you have any ideas for classes, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
       <?php endif; ?>
 
   </section>
@@ -63,7 +63,7 @@ get_template_part('templates/page-header', 'intro'); ?>
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film classes, though this may change in the future. If you have any ideas for classes, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
       <?php endif; ?>
 
   </section>
@@ -87,7 +87,7 @@ get_template_part('templates/page-header', 'intro'); ?>
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Culture lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Culture classes, though this may change in the future. If you have any ideas for classes, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
       <?php endif; ?>
 
   </section>
