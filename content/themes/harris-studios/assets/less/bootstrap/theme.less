@@ -366,14 +366,43 @@ a.brand {
 
 .form-control {
   height: 60px;
-  // border: none;
   border-radius: 0;
+  font-size: 18px;
 
-  .input[type="text"],
-  .input[type="email"]
-  {
-    background-color: transparent;
-  }
+  .form-control-focus(@color: @brand-purple);
+}
+
+span.wpcf7-list-item {
+  .radio();
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.wpcf7-response-output {
+  clear: both;
+  .alert();
+}
+
+div.wpcf7-validation-errors {
+  .alert-warning();
+}
+
+div.wpcf7-mail-sent-ng {
+  .alert-danger();
+}
+
+span.wpcf7-form-control-wrap {
+  display: block !important;
+}
+
+div.wpcf7 img.ajax-loader {
+  float: left;
+  margin: 13px 0 0 350px;
+}
+
+#mc4wp-checkbox input {
+  position: static;
+  margin: 5px 5px 0 245px;
 }
 
 

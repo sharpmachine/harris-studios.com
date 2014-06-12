@@ -68,8 +68,11 @@ var Roots = {
 
     }
   },
-  post_type_archive_lessons: {
+  lesson_signup: {
     init: function() {
+
+      var lesson_title = $('.post-lesson-title').attr('data-lesson');
+      $('.wpcf7-form span.lesson input').val(lesson_title);
 
     }
   },

@@ -1,11 +1,11 @@
 
-  <?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/page', 'header'); ?>
 <div class="container">
-  <h1>Sign up</h1>
-
-  <?php // $post = get_post($_POST['id']) ;?>
-
-  <?php // the_title(); ?>
-
-  <?php get_template_part('templates/content', 'page'); ?>
+  <section>
+    <div class="post-lesson-title hidden" data-lesson="<?php echo $_POST['lesson-title']; ?> Lessons"></div>
+    <?php get_template_part('templates/content', 'page'); ?>
+    <div class="row">
+      <?php echo do_shortcode('[contact-form-7 id="83" title="Lessons Signup"]'); ?>
+    </div>
+  </section>
 </div>

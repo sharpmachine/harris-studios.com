@@ -2,20 +2,14 @@
 <section class="cl-details">
   <div class="container">
     <div class="row">
-      <div class="col-xs-6"><?php //$terms = get_the_terms( $post->ID , 'department' );
-
-      //    foreach ( $terms as $term ) {
-
-      //    $term_link = get_term_link( $term, 'department' );
-
-      //    echo "<h3>" . $term->name . "</h3>";
-
-      //   } ?>
+      <div class="col-xs-9">
       <h3>Description:</h3>
       </div>
-
-      <div class="col-xs-6 text-right">
-        <a href="<?php bloginfo('url'); ?>/lesson-signup" class="btn btn-lg btn-danger">Sign Up</a>
+      <div class="col-xs-3 text-right">
+        <form action="<?php bloginfo('url'); ?>/lesson-signup" method="post">
+          <input type="text" name="lesson-title" class="hidden" value="<?php the_title(); ?>">
+          <input type="submit" value="Sign Up" class="btn btn-lg btn-danger btn-block">
+        </form>
       </div>
     </div>
     <hr>
@@ -56,8 +50,16 @@
       </div>
     </div>
     <hr>
-    <div class="text-right">
-      <a href="<?php bloginfo('url'); ?>/lesson-signup" class="btn btn-lg btn-danger">Sign Up</a>
+    <div class="row text-right">
+      <div class="col-xs-9">
+        <p class="lead">Are you ready to be launched into your brightest future?</p>
+      </div>
+      <div class="col-xs-3">
+        <form action="<?php bloginfo('url'); ?>/lesson-signup" method="post">
+          <input type="text" name="lesson-title" class="hidden" value="<?php the_title(); ?>">
+          <input type="submit" value="Sign Up" class="btn btn-lg btn-danger btn-block">
+        </form>
+      </div>
     </div>
   </div>
 </section>
