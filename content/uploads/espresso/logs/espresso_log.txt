@@ -1,0 +1,14 @@
+[ 2014-06-12 20:05:18 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a051d5950a1.39853619|| registration id: 1-539a051d5c511|| transaction details: a:2:{s:6:"status";i:0;s:9:"error_msg";s:26:"Failed to charge the card.";}
+[ 2014-06-12 20:06:09 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a051d5950a1.39853619|| registration id: 1-539a051d5c511|| transaction details: a:3:{s:6:"status";i:1;s:3:"msg";s:38:"Transaction was completed successfully";s:4:"txid";s:27:"ch_104D4b2H2faAXfmHXVcMPYom";}
+[ 2014-06-12 20:16:22 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a0831c9efa3.91837047|| registration id: 1-539a08e8e43fb|| transaction details: paying by check
+[ 2014-06-12 20:16:22 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a0831c9efa3.91837047|| registration id: 1-539a08e8e43fb|| transaction details: paying by check
+[ 2014-06-12 21:18:31 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a0831c9efa3.91837047|| registration id: 1-539a08e8e43fb|| transaction details: paying by check
+[ 2014-06-12 21:18:48 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a0831c9efa3.91837047|| registration id: 1-539a08e8e43fb|| transaction details: paying by check
+[ 2014-06-12 21:20:40 ]  payment_page.php  -> event_espresso_pay
+	Payment for: Kuntz, Jesse|| attendee_session id: 90cv3jm3apog2r35a9l7t9be84-539a0831c9efa3.91837047|| registration id: 1-539a08e8e43fb|| transaction details: paying by check
