@@ -17,6 +17,7 @@ adminer
 .htaccess
 local-config.php
 content/uploads/
+!content/uploads/espresso/
 content/plugins/
 content/blogs.dir/
 content/upgrade/

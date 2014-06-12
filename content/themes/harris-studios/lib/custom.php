@@ -18,20 +18,11 @@ add_image_size('student-headshot-retina', 478, 478, true);
 // Student Headshot
 add_image_size('single-lesson-instructor-headshot-retina', 410, 410, true);
 
+// Lesson title shortcode for lesson signup page
 function lesson_title(){
   return $_POST['lesson-title'];
 }
 add_shortcode( 'lessontitle', 'lesson_title' );
-
-// add_filter('roots_wrap_base', 'roots_wrap_base_cpts');
-
-// function roots_wrap_base_cpts($templates) {
-//     $cpt = get_post_type();
-//     if ($cpt) {
-//        array_unshift($templates, 'base-' . $cpt . '.php');
-//      }
-//     return $templates;
-//   }
 
 // function example_add_rewrite_rules() {
 

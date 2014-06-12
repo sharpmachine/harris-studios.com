@@ -99,6 +99,7 @@ module.exports = function(grunt) {
         'assets/js/scripts.min.js',
         'templates/*.php',
         '*.php',
+        '../../uploads/espresso/templates/*.php',
         'bower_components/*/*.css',
         'bower_components/*/*/*.css'
         ]
