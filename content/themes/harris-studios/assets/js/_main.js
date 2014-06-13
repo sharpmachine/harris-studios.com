@@ -76,6 +76,37 @@ var Roots = {
 
     }
   },
+  class_registration: {
+    init: function() {
+
+      // $('input#stripe_first_name').val('');
+      // $('input#stripe_last_name').val('');
+      // $('input#stripe_email').val('');
+
+      // For testing billing info
+      $('input#stripe_first_name').val('Jesse');
+      $('input#stripe_last_name').val('Kade');
+      $('input#stripe_email').val('jesse@sharpmachinemdia.com');
+      $('input#stripe_address').val('1452 Oregon St');
+      $('input#stripe_city').val('Redding');
+      $('input#stripe_state').val('Ca');
+      $('input#stripe_zip').val('98901');
+
+      // For testing credit card info
+      $('input#stripe_cc').val('4242424242424242');
+      $('input#stripe_csc').val('098');
+
+
+      // For testing registration details
+      $('input#TEXT_13-1-0-1').val('Jesse Kade');
+      $('input#email-1-0-1').val('jesse@sharpmachinemedia.com');
+      $('input#phone-1-0-1').val('6193987595');
+      $('input#fname-1-0-1').val('Shelly');
+      $('input#lname-1-0-1').val('Kade');
+      $('input#TEXT_12-1-0-1').val('27');
+
+    }
+  },
 
   // About us page, note the change from about-us to about_us.
   about_us: {

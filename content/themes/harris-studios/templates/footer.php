@@ -1,4 +1,4 @@
-<footer class="content-info" role="contentinfo">
+<footer class="content-info hidden-print" role="contentinfo">
   <div class="container">
     <div id="newsletter" class="anchor"></div>
     <div class="the-loop">

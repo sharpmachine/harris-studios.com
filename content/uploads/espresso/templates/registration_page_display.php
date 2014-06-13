@@ -269,8 +269,8 @@ if ($reg_form_only == false) {
 					} 
 					//End use captcha  
 	?>
-				<p class="event_form_submit" id="event_form_submit-<?php echo $event_id; ?>">
-					<input class="btn_event_form_submit ui-button ui-button-big ui-priority-primary ui-state-default ui-state-hover ui-state-focus ui-corner-all" id="event_form_field-<?php echo $event_id; ?>" type="submit" name="Submit" value="<?php _e('Submit', 'event_espresso'); ?>">
+				<p class="event_form_submit text-right" id="event_form_submit-<?php echo $event_id; ?>">
+					<input class="btn_event_form_submit ui-button ui-button-big ui-priority-primary ui-state-default ui-state-hover ui-state-focus ui-corner-all btn btn-lg btn-success" id="event_form_field-<?php echo $event_id; ?>" type="submit" name="Submit" value="<?php _e('Next', 'event_espresso'); ?>">
 				</p>
 				
 	<?php 
@@ -295,3 +295,5 @@ if ($reg_form_only == false) {
 </div>
 </div>
 </div>
+
+

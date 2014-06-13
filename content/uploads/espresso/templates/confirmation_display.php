@@ -8,23 +8,23 @@ do_action('action_hook_espresso_log', __FILE__, 'FILE LOADED', '');
 $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_attendee_count',1);
 
 ?>
-<h1>Verification Page</h1>
+<div class="row">
 	<form id="form1" name="form1" method="post" action="<?php echo get_permalink($org_options['event_page_id']);?>">
 		<div class="event-conf-block event-display-boxes ui-widget" >
-		<h3 class="event_title ui-widget-header ui-corner-top">
-			<?php _e('Verify Registration','event_espresso'); ?>
+		<div class="event-data-display ui-widget-content ui-corner-bottom col-xs-6">
+			<h3 class="event_title ui-widget-header ui-corner-top">
+			<?php _e('Class Details','event_espresso'); ?>
 		</h3>
-		<div class="event-data-display ui-widget-content ui-corner-bottom">
-			<table class="event-display-tables grid"  id="event_espresso_attendee_verify">
+			<table class="event-display-tables grid table"  id="event_espresso_attendee_verify">
 				<tr>
 					<th scope="row" class="header">
-						<?php _e('Event Name:','event_espresso'); ?>
+						<?php _e('Class:','event_espresso'); ?>
 					</th>
 					<td>
 						<span class="event_espresso_value"><?php echo stripslashes_deep($event_name)?></span>
 					</td>
 				</tr>
-<?php
+	<?php
 				// Added for seating chart addon
 				$display_price = true;
 				if ( defined('ESPRESSO_SEATING_CHART')) {
@@ -33,9 +33,9 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 						$display_price = false;
 					}
 				}
-
+	
 				if ( $display_price ) {
-?>	
+	?>	
 					<tr>
 						<th scope="row" class="header" valign="top">
 							<?php echo sprintf( _n( 'Attendee Price', 'Attendee Prices', $total_attendees, 'event_espresso' ), $total_attendees ); ?>
@@ -55,7 +55,7 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 							</span>
 						</td>
 					</tr>
-<?php
+	<?php
 				} else {
 				
 					// Added for seating chart addon
@@ -66,49 +66,15 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 					} else {
 						$price = $org_options['currency_symbol']. number_format($price_range['min'], 2);
 					}
-?>
+	?>
 					<tr>
 						<th scope="row" class="header"><?php _e('Price:', 'event_espresso'); ?></th>
 						<td><span class="event_espresso_value"><?php echo $price; ?></span></td>
 					</tr>
-<?php
+	<?php
 				}
-?>
-					<tr>
-					<th scope="row" class="header">
-						<?php echo sprintf( _n( 'Attendee Name', 'Attendee Names', $total_attendees, 'event_espresso' ), $total_attendees ); ?>
-					</th>
-					<td  valign="top">
-						<span class="event_espresso_value"><?php echo stripslashes_deep($attendee_name)?> (<?php echo $attendee_email?>) 
-<?php 
-						echo '<a href="'.home_url().'/?page_id='.$event_page_id.'&amp;registration_id='.$registration_id.'&amp;id='.$attendee_id.'&amp;regevent_action=edit_attendee&amp;primary='.$attendee_id.'&amp;event_id='.$event_id.'&amp;attendee_num='.$attendee_num.'">'. __('Edit', 'event_espresso').'</a>';
-						
-						//Create additional attendees
-						$sql = "SELECT * FROM " . EVENTS_ATTENDEE_TABLE;
-						$sql .= " WHERE registration_id = '" . espresso_registration_id( $attendee_id ) . "' AND id != '".$attendee_id."' ";
-						//echo $sql;
-						$x_attendees = $wpdb->get_results( $sql, ARRAY_A );
-						
-						if ( $wpdb->num_rows > 0 ) {
-							foreach ($x_attendees as $x_attendee) {
-							
-								$attendee_num++;
-								//echo $attendee_num;
-								//print_r($x_attendees);
-								echo "<br/>" . $x_attendee['fname'] . " " . $x_attendee['lname'] . " ";
-								if ($x_attendee['email'] != '') {
-									echo "(" . $x_attendee['email']  . ") ";
-								}
-								//Create edit link
-								echo '<a href="'.home_url().'/?page_id='.$event_page_id.'&amp;registration_id='.$registration_id.'&amp;id='.$x_attendee['id'].'&amp;regevent_action=register&amp;form_action=edit_attendee&amp;primary='.$attendee_id.'&amp;p_id='.$attendee_id.'&amp;attendee_num='.$attendee_num.'&amp;event_id='.$event_id.'">'. __('Edit', 'event_espresso').'</a>';
-								//Create delete link
-								echo ' | <a href="'.home_url().'/?page_id='.$event_page_id.'&amp;registration_id='.$registration_id.'&amp;id='.$x_attendee['id'].'&amp;regevent_action=register&amp;form_action=edit_attendee&amp;primary='.$attendee_id.'&amp;delete_attendee=true&amp;p_id='.$attendee_id.'&amp;event_id='.$event_id.'">'. __('Delete', 'event_espresso').'</a>';
-							}
-						}
-?>
-						</span>
-					</td>
-				</tr>
+	?>
+
 				<?php if ($attendee_num > 1) { ?>
 				<tr>
 					<th scope="row" class="header">
@@ -128,18 +94,14 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 					</td>
 				</tr>
 			</table>
-</div>
-			<p class="espresso_confirm_registration">
-			<input class="btn_event_form_submit ui-button ui-button-big ui-priority-primary ui-state-default ui-state-hover ui-state-focus ui-corner-all" type="submit" name="confirm" id="confirm" value="<?php _e('Confirm Registration', 'event_espresso'); ?>&nbsp;&raquo;" />
-		    </p>
-		
+	</div>
 		
 		<?php if ($display_questions != '') { ?>
 		
-		<div  id="additional-conf-info" class="additional-conf-info event-display-boxes">
-				<h3 class="event_title ui-widget-header ui-corner-top"><?php echo stripslashes_deep($attendee_name)?></h3>
+		<div  id="additional-conf-info" class="additional-conf-info event-display-boxes col-xs-6">
+				<h3 class="event_title ui-widget-header ui-corner-top">Student &amp; Contact Details</h3>
 				<div id="additional-conf-info" class="additional-conf-info-inner event-data-display ui-widget-content ui-corner-bottom">
-					<table id="event_espresso_attendee_verify_questions" class="event-display-tables grid">
+					<table id="event_espresso_attendee_verify_questions" class="event-display-tables grid table">
 					<?php foreach ($questions as $question) { ?>
 						<tr>
 							<th scope="row" class="header">
@@ -156,8 +118,8 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 			</div>
 			<!-- / .event-display-boxes -->   
 			
-			<p class="espresso_confirm_registration">
-				<input class="btn_event_form_submit ui-priority-primary ui-widget-content ui-corner-all" type="submit" name="confirm2" id="confirm2" value="<?php _e('Confirm Registration', 'event_espresso'); ?>&nbsp;&raquo;" />
+			<p class="espresso_confirm_registration text-right">
+				<input class="btn_event_form_submit ui-priority-primary ui-widget-content ui-corner-all btn btn-lg btn-success" type="submit" name="confirm2" id="confirm2" value="<?php _e('Next', 'event_espresso'); ?>&nbsp;&raquo;" />
 			</p>
 			
 		<?php	} ?>
@@ -171,4 +133,5 @@ $attendee_num = apply_filters('action_hook_espresso_confirmation_page_primary_at
 		<?php wp_nonce_field('reg_nonce', 'reg_form_nonce'); ?>
 		
 	</div>
-</form>
+	</form>
+</div>

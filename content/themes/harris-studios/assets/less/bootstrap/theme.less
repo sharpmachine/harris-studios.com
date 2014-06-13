@@ -415,8 +415,9 @@ div.wpcf7 img.ajax-loader {
 
 // Event Espresso
 
-fieldset#your-contact-details-1402614621 {
+fieldset.event_questions {
   .make-xs-column(6);
+  .pull-right();
 }
 
 .event_form_field {
@@ -427,66 +428,80 @@ fieldset#your-contact-details-1402614621 {
   .form-control();
 }
 
-input.btn_event_form_submit {
-  .btn();
-  .btn-lg();
-  .btn-success();
+
+// Payment form
+a#stripe-payment-option-lnk {
+  cursor: auto !important;
 }
 
-//
-// List groups
-// --------------------------------------------------
-
-.list-group {
-  border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
+#stripe-payment-option-form-dv {
+  display: block !important;
 }
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
-  #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));
-  border-color: darken(@list-group-active-border, 7.5%);
+
+img.off-site-payment-gateway-img,
+#external-link-msg-pg,
+#payment-options-dv h2,
+p.choose-diff-pay-option-pg {
+  display: none;
 }
 
 
-
-//
-// Panels
-// --------------------------------------------------
-
-// Common styles
-.panel {
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+#stripe-payment-option-form-dv {
+  .row();
 }
 
-// Mixin for generating new styles
-.panel-heading-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 5%));
+fieldset#stripe-billing-info-dv,
+fieldset#stripe-credit-card-info-dv {
+  .make-xs-column(6);
+
+  p {
+    .form-group();
+  }
+
+  input,
+  select{
+    .form-control();
+  }
 }
 
-// Apply the mixin to the panel headings only
-.panel-default > .panel-heading   { .panel-heading-styles(@panel-default-heading-bg); }
-.panel-primary > .panel-heading   { .panel-heading-styles(@panel-primary-heading-bg); }
-.panel-success > .panel-heading   { .panel-heading-styles(@panel-success-heading-bg); }
-.panel-info > .panel-heading      { .panel-heading-styles(@panel-info-heading-bg); }
-.panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }
-.panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }
+form#stripe_payment_form {
+  p.event_form_submit {
+    .make-xs-column(6);
+    .pull-right();
 
-
-
-//
-// Wells
-// --------------------------------------------------
-
-.well {
-  #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
-  border-color: darken(@well-bg, 10%);
-  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
+    input {
+      .btn();
+      .btn-lg();
+      .btn-success();
+    }
+  }
 }
 
-/*..................................the backgrounds */
+// HACK!!!!  Moves email field on class signup for from student info fields to person registering fields
+
+.event_form_field > input#email-1-0-1,
+.event_form_field > label[for="email"],
+.event_form_field > label[for="email-1-0-1"] {
+  position: absolute;
+  left: -470px;
+  width: 455px;
+}
+
+.event_form_field > input#email-1-0-1 {
+  z-index: 1;
+  top: 173px;
+}
+
+.event_form_field > label[for="email"] {
+  top: 146px;
+}
+
+.event_form_field > input.TEXT_13 {
+  margin-bottom: 117px;
+}
+
+
+/*..................................the background and text colors */
 .bg-brand-blue {
   background-color: @brand-blue;
 }
@@ -616,12 +631,12 @@ input.btn_event_form_submit {
 
 /*..................................the vertical align */
 .vertical-align-wrapper {
-    display: table;
-    width: 100%;
-    height: 100%;
-  }
+  display: table;
+  width: 100%;
+  height: 100%;
+}
 
-  .vertical-align-inner {
-    display: table-cell;
-    vertical-align: middle;
-  }
+.vertical-align-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
