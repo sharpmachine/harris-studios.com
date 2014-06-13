@@ -1,5 +1,4 @@
 # Grunt
-Gruntfile.js
 /node_modules/
 /backups/
 
@@ -17,7 +16,9 @@ adminer
 # Wordpress
 .htaccess
 local-config.php
-content/uploads/
+!content/uploads
+content/uploads/*
+!content/uploads/espresso/templates
 content/plugins/
 content/blogs.dir/
 content/upgrade/
@@ -35,3 +36,7 @@ sitemap.xml.gz
 # Misc
 *.log
 .DS_Store
+
+theme-alias
+
+img-alias

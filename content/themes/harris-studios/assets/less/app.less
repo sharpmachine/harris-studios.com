@@ -2,21 +2,95 @@
  * Roots 6.5.2
  */
 
-@import "bootstrap/bootstrap.less";
+ @import "bootstrap/bootstrap.less";
+ @import "bootstrap/theme.less";
+ @import "typography.less";
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+   body {
 
+    &.logged-in {
+
+      .banner {
+        margin-top: 31px;
+      }
+
+      #sidr,
+      #sidr-left {
+        top: 31px;
+      }
+    }
+  }
+
+  #sidr,
+  #sider-left {
+    top: 0;
+  }
+
+  .section-navigation {
+    position: fixed;
+    top: 50%;
+    left: 25px;
+
+    li {
+      position: relative;
+      .square(10px);
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background-color: #000;
+
+      a {
+        display: block;
+        .square(100%);
+        padding: 5px;
+      }
+    }
+  }
+
+  .anchor {
+    position: relative;
+    top: -93px + 15px;
+    visibility: hidden;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 54%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .error-404 {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+
+      h1 {
+        color: white;
+      }
+    }
+  }
 
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
-.banner { }
+   .banner { }
+
+   .navbar { }
 
 
 
@@ -24,26 +98,792 @@ body { }
    Content
    ========================================================================== */
 
-.content { }
-
+   .content { }
 
 
 /* ==========================================================================
    Primary Content
    ========================================================================== */
 
-.main { }
+   .main { }
 
-/* Gallery Shortcode */
-.gallery-row { padding: 15px 0; }
-
+   /* Gallery Shortcode */
+   .gallery-row { padding: 15px 0; }
 
 
 /* ==========================================================================
-   Sidebar
+   Home Page
    ========================================================================== */
 
-.sidebar { }
+   .jumbotron {
+    position: relative;
+    height: 800px;
+    margin-bottom: 0;
+    background-color: @brand-blue;
+
+    img {
+      margin-top: 60px;
+    }
+
+    h1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 940px;
+      height: 86px;
+      padding-bottom: 30px;
+      font-size: 43px;
+      color: white;
+      border-bottom: solid 1px white;
+    }
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  section.home {
+    margin-top: 3.5px;
+    padding: 60px 0;
+
+    h2 {
+      line-height: 1;
+      border-bottom: 1px solid white;
+    }
+
+    h5 {
+      text-transform: uppercase;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    ul {
+      & > li {
+        margin-bottom: 15px;
+
+        & > a {
+          font-size: 14px;
+
+          strong {
+            display: block;
+            .text-overflow();
+            max-width: 293px;
+          }
+        }
+      }
+    }
+
+    em {
+      .soleil-lightItalic();
+    }
+
+    .small {
+      font-size: 12px;
+    }
+
+    .btn {
+      margin-bottom: 3px;
+      .opacity(0.5);
+    }
+  }
+
+  .vertical-align {
+    height: 282px;
+  }
+
+  section#music {
+    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 15%); @deg: 45deg)
+  }
+
+  section#performing-arts-film {
+    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 15%); @deg: 45deg)
+  }
+
+  section#culture {
+    // background-color: @culture;
+    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 15%); @deg: 45deg)
+  }
+
+  section#events {
+    margin-bottom: 3.5px;
+
+    h3 {
+      padding-bottom: 7px;
+      font-size: 36px;
+      border-bottom: 1px solid @gray-dark;
+    }
+
+    .btn {
+      color: @gray-dark;
+      .opacity(0.8);
+    }
+  }
+
+  .next-event {
+    h4 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  .next-event-details {
+    font-size: 20px;
+  }
+
+  .event-venue {
+    margin-bottom: 15px;
+  }
+
+  .all-events-btn {
+    margin-top: 45px;
+  }
+
+/* ==========================================================================
+   Classes & Lessons Page
+   ========================================================================== */
+
+   .cl-listings {
+    .anchor {
+      top: -200px !important;
+    }
+  }
+
+// Navigation
+.class-or-lesson-section-nav {
+  padding: 0 15px;
+}
+
+.class-or-lesson-nav  {
+  height: 236px;
+  padding: 0;
+  .transition(height ease 0.2s);
+
+  h4 {
+    margin-top: 0;
+    font-size: 48px;
+  }
+
+  a {
+    display: block;
+    .square(100%);
+    padding: 30px;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    .soleil-light();
+    .opacity(1);
+    .transition(opacity ease 0.2s);
+  }
+}
+
+.affix-top {
+  position: absolute;
+  width: 940px;
+}
+
+.affix {
+  z-index: 3;
+  top: 52px;
+  width: 940px;
+
+  .class-or-lesson-nav {
+    height: 170px;
+    .transition(height ease 0.2s);
+
+    p {
+      .opacity(0);
+      .transition(opacity ease 0.2s);
+    }
+  }
+}
+
+body.logged-in {
+  .affix {
+    top: 83px;
+  }
+}
+
+
+// Summary box common
+
+.lesson-summary,
+.class-summary {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p.lead {
+    margin-bottom: 0;
+  }
+}
+
+.class-or-lesson-title {
+
+  h2 {
+    margin: 0 0 2px;
+
+    a {
+      padding: 7.5px 30px;
+      font-size: 36px;
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.class-or-lesson-headline {
+  padding: 30px;
+  background-color: #ccc;
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
+.class-or-lesson-dates {
+  padding: 0 15px;
+  background-color: #eee;
+
+  small {
+    display: block;
+    margin: 3px 0;
+    font-size: 12px;
+  }
+}
+
+.class-or-lesson-price {
+  padding: 30px 15px;
+  background-color: #ddd;
+}
+
+.class-or-lesson-more {
+
+  a.btn {
+    width: 100%;
+    height: 100%;
+    padding-top: 33%;
+    font-size: 12px;
+    color: white;
+
+    .fa-angle-right {
+      display: block;
+      font-size: 100px;
+      margin-bottom: -5px;
+    }
+  }
+}
+
+// Music
+#music-lessons,
+#music-classes {
+  margin-top: 242px;
+
+  .class-or-lesson-title {
+    a {
+      background-color: @music;
+
+      &:hover {
+        background-color: lighten(@music, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@music, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@music, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @music;
+      #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@music, 10%); @end-color: @music; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Performing Arts & Film
+#performing-arts-film-lessons,
+#performing-arts-film-lessons {
+
+  .class-or-lesson-title {
+    a {
+      background-color: @performing-arts;
+
+      &:hover {
+        background-color: lighten(@performing-arts, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@performing-arts, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@performing-arts, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @performing-arts;
+      #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@performing-arts, 10%); @end-color: @performing-arts; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Culture
+#culture-lessons,
+#culture-classes {
+  .class-or-lesson-title {
+    a {
+      background-color: @culture;
+
+      &:hover {
+        background-color: lighten(@culture, 10%);
+      }
+    }
+  }
+
+  // .class-or-lesson-headline {
+  //   background-color: lighten(@culture, 50%);
+  // }
+
+  // .class-or-lesson-price {
+  //   background-color: lighten(@culture, 40%);
+  // }
+
+  .class-or-lesson-more {
+    a.btn {
+      background-color: @culture;
+      #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 10%); @deg: 45deg);
+
+      &:hover {
+        #gradient > .directional(@start-color: lighten(@culture, 10%); @end-color: @culture; @deg: 45deg);
+      }
+    }
+  }
+}
+
+// Lessons Specific
+.lesson-summary {
+  @lesson-height: 170px;
+
+  .class-or-lesson-headline {
+    width: 550px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-price {
+    width: 290px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-more {
+    width: 100px;
+    height: @lesson-height;
+  }
+}
+
+// Classes Specific
+.class-summary {
+  @lesson-height: 170px;
+
+  .class-or-lesson-headline {
+    width: 500px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-dates {
+    width: 170px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-price {
+    width: 170px;
+    height: @lesson-height;
+  }
+
+  .class-or-lesson-more {
+    width: 100px;
+    height: @lesson-height;
+  }
+}
+
+// Single Lesson Page
+.lesson-header,
+.class-header {
+  padding-bottom: 30px;
+
+  h1 {
+    padding-bottom: 15px;
+    line-height: 1;
+
+    span {
+      .soleil-light();
+      font-size: 26px;
+      text-transform: none;
+    }
+  }
+}
+
+.lesson-header {
+  .single-cl-cost {
+    border-right: 1px solid white;
+  }
+}
+
+.class-header {
+  .single-class-dates {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .price-tag {
+    .bodoni();
+    font-size: 50px;
+  }
+}
+
+.class-times {
+  font-size: 16px;
+}
+
+.single-cl-details {
+  .soleil-light();
+  font-size: 26px;
+}
+
+.single-cl {
+  &-description {
+    p {
+      .lead();
+    }
+  }
+
+  &-benefits {
+    padding: 30px;
+    // color: white;
+  }
+
+  &-testimony {
+    .soleil-lightItalic();
+    font-size: 18px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      .square(239px) !important;
+      .img-responsive();
+      .img-circle();
+    }
+  }
+}
+
+.t-quote {
+  height: 239px;
+}
+
+.quotes-char {
+  position: relative;
+  top: 20px;
+  line-height: 0;
+  font-size: 50px;
+  .bodoni();
+
+  &:first-child {
+    padding-right: 5px;
+  }
+
+  &:last-child {
+    right: -5px;
+  }
+}
+
+.single-lesson-instructors,
+.single-class-instructor {
+  margin: 15px 0;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  img {
+    .square(205px) !important;
+    .img-responsive();
+    .img-circle();
+    border: 4px solid @brand-purple;
+  }
+}
+
+.single-class-instructor-excerpt {
+  height: 249px;
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+   .page-header-content {
+    margin-top: 30px;
+    p.lead {
+      font-size: 110%;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .team-member {
+    margin-bottom: 30px;
+
+    img {
+      .square(233px) !important;
+      .img-responsive();
+      .img-circle();
+      .center-block();
+      border: 5px solid @brand-purple;
+    }
+  }
+
+/* ==========================================================================
+   Instructors Page
+   ========================================================================== */
+
+   #the-full-bio {
+  // display: none;
+}
+
+.instructor {
+  margin-bottom: 30px;
+  padding: 30px;
+
+  h3 {
+    margin-top: 5px;
+    font-size: 18px;
+
+    span {
+      display: block;
+      margin-top: 7.5px;
+      .soleil-light();
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+}
+
+.instructor-headshot {
+  padding: 0 15px 15px;
+  img {
+    .square(100%);
+    .img-responsive();
+    .img-circle();
+    .center-block();
+  }
+}
+
+.instructor-department {
+  height: 28px;
+  margin: 15px 0;
+  padding: 0 3px;
+  .bodoni();
+  font-size: 20px;
+  line-height: 1.1;
+  // overflow: hidden;
+}
+
+.instructor {
+  &.department-music {
+    background-color: lighten(@music, 60%);
+
+    a {
+      color: @music;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @music;
+      }
+    }
+
+    .instructor-department {
+      color: @music;
+      // border: 2px solid @music;
+    }
+  }
+
+  // Performing Arts
+  &.department-performing-arts-film {
+    background-color: lighten(@performing-arts, 60%);
+
+    a {
+      color: @performing-arts;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @performing-arts;
+      }
+    }
+
+    .instructor-department {
+      color: @performing-arts;
+      // border: 2px solid @performing-arts;
+    }
+  }
+
+  // Culture
+  &.department-culture {
+    background-color: lighten(@culture, 60%);
+
+    a {
+      color: @culture;
+    }
+
+    .instructor-headshot {
+      img {
+        border: 4px solid @culture;
+      }
+    }
+
+    .instructor-department {
+      color: @culture;
+      // border: 2px solid @culture;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   Events Page
+   ========================================================================== */
+   .event-post {
+    margin-top: 45px;
+  }
+
+  .event-post-date {
+    margin: 0 101px 3.5px 0;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: @brand-purple;
+  }
+
+  .event-post-photo {
+    width: 310px;
+
+    img {
+      .img-responsive();
+    }
+  }
+
+  .event-post-info {
+    // width: 56%;
+    width: 525px;
+    height: 220px;
+    padding: 0 30px 15px;
+    margin-left: 3.5px;
+    #gradient > .directional(@start-color: @brand-purple; @end-color: @brand-blue; @deg: 45deg);
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      letter-spacing: 1.5px;
+
+      a {
+        color: white;
+      }
+    }
+
+    h2,
+    p.lead {
+      max-width: 465px;
+      .text-overflow();
+    }
+  }
+
+  .more-info {
+    width: 97px;
+    height: 220px;
+    margin-left: 3.5px;
+
+
+
+    a.btn {
+      width: 100%;
+      height: 100%;
+      padding-top: 60%;
+      font-size: 12px;
+      color: white;
+      background-color: @brand-blue;
+
+      .fa-angle-right {
+        display: block;
+        font-size: 100px;
+        margin-bottom: -5px;
+      }
+
+      &:hover {
+        #gradient > .directional(@start-color: @brand-blue; @end-color: @brand-purple; @deg: 45deg);
+      }
+    }
+  }
+
+/* ==========================================================================
+   Audtions Page
+   ========================================================================== */
+
+
+   /* ==========================================================================
+   Theme Page
+   ========================================================================== */
+
+   .logo-bg {
+    padding: 30px;
+  }
 
 
 
@@ -51,11 +891,11 @@ body { }
    Posts
    ========================================================================== */
 
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
+   .hentry header { }
+   .hentry time { }
+   .hentry .byline { }
+   .hentry .entry-content { }
+   .hentry footer { }
 
 
 
@@ -63,19 +903,100 @@ body { }
    Footer
    ========================================================================== */
 
-.content-info { }
+   body.home,
+   body.error404 {
+    .content-info {
+      margin-top: 0;
+    }
+  }
 
+  .content-info {
+    margin-top: 60px;
+    color: white;
+    .soleil-light();
+    background-color: @gray-dark;
 
+    h3 {
+      font-size: 36px;
+    }
+
+    p {
+      margin-bottom: 0;
+      .soleil-light();
+      font-size: 12px;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .the-loop {
+    padding: 60px 0;
+  }
+
+  .newsletter {
+    margin-top: -5px;
+
+    form {
+      margin-top: 5px;
+    }
+
+    .input-group {
+      input.btn,
+      input.btn:hover {
+        padding: 16px;
+        color: white;
+        background-color: @gray-dark;
+        border: 3px solid white;
+      }
+    }
+    .form-control {
+      border: 0;
+    }
+  }
+
+  .social-media {
+    margin-top: 9px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      .square(70px);
+      margin-right: 15px;
+      color: @gray-dark;
+      font-size: 40px;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 50%;
+      .transition(all ease 0.2s);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: white;
+        background-color: transparent;
+        .transition(all ease 0.2s);
+      }
+
+      i {
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
 
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
 
-.aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
+   .aligncenter { display: block; margin: 0 auto; }
+   .alignleft { float: left; }
+   .alignright { float: right; }
+   figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 
@@ -83,8 +1004,11 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+   @media (min-width: @screen-sm-min) { }
 
-@media (min-width: @screen-md-min) { }
+   @media (min-width: @screen-md-min) { }
 
-@media (min-width: @screen-lg-min) { }
+   @media (min-width: @screen-lg-min) { }
+
+   /*..................................the side drawer */
+   @import "../../bower_components/sidr/stylesheets/jquery.sidr.light.css";

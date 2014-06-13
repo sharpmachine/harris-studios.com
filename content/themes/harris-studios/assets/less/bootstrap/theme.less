@@ -7,47 +7,62 @@
 @import "mixins.less";
 
 
+//
+// colors
+// --------------------------------------------------
+.brand-colors {
+  height: 200px;
+  padding-top: 15px;
+  color: white;
+  font-size: 18px;
+  .bodoni();
+}
+
+.brand-blue {
+  background-color: @brand-blue;
+}
+
+.brand-blueLight {
+  background-color: @brand-blueLight;
+}
+
+.brand-blueDark {
+  background-color: @brand-blueDark;
+}
+
+.brand-purple {
+  background-color: @brand-purple;
+}
+
+.brand-green {
+  background-color: @brand-green;
+}
+
 
 //
 // Buttons
 // --------------------------------------------------
 
 // Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
 
-  // Reset the shadow
-  &:active,
-  &.active {
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-  }
-}
 
 // Mixin for generating new styles
 .btn-styles(@btn-color: #555) {
-  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
-  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
-  background-repeat: repeat-x;
-  border-color: darken(@btn-color, 14%);
+  .soleil-light();
+  border: none;
+  border-radius: 0;
 
-  &:hover,
-  &:focus  {
-    background-color: darken(@btn-color, 12%);
-    background-position: 0 -15px;
-  }
+  // &:hover,
+  // &:focus  {
+  //   background-color: darken(@btn-color, 12%);
+  //   background-position: 0 -15px;
+  // }
 
-  &:active,
-  &.active {
-    background-color: darken(@btn-color, 12%);
-    border-color: darken(@btn-color, 14%);
-  }
+  // &:active,
+  // &.active {
+  //   background-color: darken(@btn-color, 12%);
+  //   border-color: darken(@btn-color, 14%);
+  // }
 }
 
 // Common styles
@@ -60,7 +75,7 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.btn-default { .btn-styles(@btn-default-bg); }
 .btn-primary { .btn-styles(@btn-primary-bg); }
 .btn-success { .btn-styles(@btn-success-bg); }
 .btn-info    { .btn-styles(@btn-info-bg); }
@@ -104,35 +119,34 @@
 
 // Default navbar
 .navbar-default {
-  #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
-  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  border-bottom: 0;
   border-radius: @navbar-border-radius;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
+  .transition(background-color ease 0.2s);
 
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: darken(@navbar-default-bg, 5%); @end-color: darken(@navbar-default-bg, 2%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
-  }
-}
-.navbar-brand,
-.navbar-nav > li > a {
-  text-shadow: 0 1px 0 rgba(255,255,255,.25);
-}
-
-// Inverted navbar
-.navbar-inverse {
-  #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
-  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
-
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: @navbar-inverse-bg; @end-color: lighten(@navbar-inverse-bg, 2.5%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
-  }
-
-  .navbar-brand,
   .navbar-nav > li > a {
-    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+    .soleil-light();
+    font-size: 22px;
+    .transition(background-color ease 0.2s);
+
+    &:hover {
+      .transition(background-color ease 0.2s);
+    }
+  }
+}
+
+.navbar-nav {
+  padding-right: 10px;
+}
+
+.navbar-bg {
+  background-color: @brand-blue;
+  // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
+  .transition(background-color ease 0.2s);
+
+  a.brand {
+    background-color: @brand-blue;
+    // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
+    .transition(background-color ease 0.2s);
   }
 }
 
@@ -143,7 +157,140 @@
   border-radius: 0;
 }
 
+.container .navbar-header {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: -48px;
+  float: none;
+  width: 80px;
+}
 
+a.brand {
+  display: block;
+  width: 80px;
+  margin-bottom: -30px;
+  padding: 20px;
+  // background-color: @brand-blue;
+  border-radius: 50%;
+  .transition(background-color ease 0.2s);
+
+  &:hover {
+    background-color: @brand-purple;
+    .transition(background-color ease 0.2s);
+  }
+}
+
+.hamburger {
+  display: inline-block;
+  width: 25px;
+  height: 100%;
+
+  .ham-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    border-top: solid 1px white;
+  }
+}
+
+//
+// Sidr
+// --------------------------------------------------
+
+@sidr-padding:        11px 18px;
+@sidr-spacing:        3.5px;
+@sidr-font-size:      22px;
+@sidr-bg:             @brand-blue;
+
+.sidr {
+  // background-color: @sidr-bg;
+  border-left: @sidr-spacing solid white;
+  color: white;
+  .soleil-light();
+  font-size: @sidr-font-size;
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: @sidr-spacing;
+      background-color: @sidr-bg;
+
+      a {
+        padding: @sidr-padding;
+        color: white;
+        font-size: @sidr-font-size;
+      }
+
+      &:hover > a,
+      &.active > a {
+        background-color: @brand-purple;
+      }
+    }
+  }
+
+  h4 {
+    font-size: @sidr-font-size;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-top: 7px;
+    color: @sidr-bg;
+  }
+
+  address,
+  .contact-email a {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.site-info {
+  margin-bottom: @sidr-spacing;
+  padding: @sidr-padding;
+  background-color: @sidr-bg;
+
+  a {
+    color: white;
+  }
+}
+
+.contact-phone,
+.contact-address,
+.contact-email {
+  margin-bottom: 14px;
+}
+
+.legal {
+  height: 100%;
+  font-size: 14px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  border-radius: 0;
+}
+
+.label-music {
+  background-color: @music;
+}
+
+.label-performing-arts {
+  background-color: @performing-arts;
+}
+
+.label-culture {
+  background-color: @culture;
+}
 
 //
 // Alerts
@@ -154,6 +301,7 @@
   text-shadow: 0 1px 0 rgba(255,255,255,.2);
   @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
+  border-radius: 0;
 }
 
 // Mixin for generating new styles
@@ -168,80 +316,327 @@
 .alert-warning    { .alert-styles(@alert-warning-bg); }
 .alert-danger     { .alert-styles(@alert-danger-bg); }
 
-
-
-//
-// Progress bars
-// --------------------------------------------------
-
-// Give the progress background some depth
-.progress {
-  #gradient > .vertical(@start-color: darken(@progress-bg, 4%); @end-color: @progress-bg)
+// Mailchimp for WordPress
+.mc4wp-alert {
+  .alert();
+  margin-top: 15px;
+  margin-bottom: 0;
+  .small();
 }
 
-// Mixin for generating new styles
-.progress-bar-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 10%));
+.mc4wp-error {
+  .alert-danger();
 }
 
-// Apply the mixin to the progress bars
-.progress-bar            { .progress-bar-styles(@progress-bar-bg); }
-.progress-bar-success    { .progress-bar-styles(@progress-bar-success-bg); }
-.progress-bar-info       { .progress-bar-styles(@progress-bar-info-bg); }
-.progress-bar-warning    { .progress-bar-styles(@progress-bar-warning-bg); }
-.progress-bar-danger     { .progress-bar-styles(@progress-bar-danger-bg); }
 
 
 
 //
-// List groups
+// Page header
 // --------------------------------------------------
 
-.list-group {
-  border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
-  #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));
-  border-color: darken(@list-group-active-border, 7.5%);
-}
+.page-header {
+  margin-top: -52px;
+  padding: 180px 0 90px;
+  color: white;
+  background-color: @brand-blue;
+  #gradient>.vertical(@start-color: @brand-blue; @end-color: @brand-purple; @start-percent: 0%; @end-percent: 100%);
+  // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
 
+  h1 {
+    width: 940px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    color: white;
+    border-bottom: 1px solid white;
+    letter-spacing: 3px;
+    .text-overflow();
+  }
+
+  h3 {
+    text-transform: uppercase;
+    .soleil-light();
+  }
+}
 
 
 //
-// Panels
+// Form
 // --------------------------------------------------
 
-// Common styles
-.panel {
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
+.form-control {
+  height: 60px;
+  border-radius: 0;
+  font-size: 18px;
+
+  .form-control-focus(@color: @brand-purple);
 }
 
-// Mixin for generating new styles
-.panel-heading-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 5%));
+.input-group {
+  .btn {
+    padding: 19px;
+  }
 }
 
-// Apply the mixin to the panel headings only
-.panel-default > .panel-heading   { .panel-heading-styles(@panel-default-heading-bg); }
-.panel-primary > .panel-heading   { .panel-heading-styles(@panel-primary-heading-bg); }
-.panel-success > .panel-heading   { .panel-heading-styles(@panel-success-heading-bg); }
-.panel-info > .panel-heading      { .panel-heading-styles(@panel-info-heading-bg); }
-.panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }
-.panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }
+// Contact Form 7
+span.wpcf7-list-item {
+  .radio();
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.wpcf7-response-output {
+  clear: both;
+  .alert();
+}
+
+div.wpcf7-validation-errors {
+  .alert-warning();
+}
+
+div.wpcf7-mail-sent-ng {
+  .alert-danger();
+}
+
+span.wpcf7-form-control-wrap {
+  display: block !important;
+}
+
+div.wpcf7 img.ajax-loader {
+  float: left;
+  margin: 13px 0 0 350px;
+}
+
+// MC4WP
+#mc4wp-checkbox input {
+  position: static;
+  margin: 5px 5px 0 245px;
+}
+
+// Event Espresso
+
+fieldset.event_questions {
+  .make-xs-column(6);
+  .pull-right();
+}
+
+.event_form_field {
+  .form-group();
+}
+
+.ee-reg-page-text-input {
+  .form-control();
+}
 
 
+// Payment form
+a#stripe-payment-option-lnk {
+  cursor: auto !important;
+}
 
-//
-// Wells
-// --------------------------------------------------
+#stripe-payment-option-form-dv {
+  display: block !important;
+}
 
-.well {
-  #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
-  border-color: darken(@well-bg, 10%);
-  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
+img.off-site-payment-gateway-img,
+#external-link-msg-pg,
+#payment-options-dv h2,
+p.choose-diff-pay-option-pg {
+  display: none;
+}
+
+
+#stripe-payment-option-form-dv {
+  .row();
+}
+
+fieldset#stripe-billing-info-dv,
+fieldset#stripe-credit-card-info-dv {
+  .make-xs-column(6);
+
+  p {
+    .form-group();
+  }
+
+  input,
+  select{
+    .form-control();
+  }
+}
+
+form#stripe_payment_form {
+  p.event_form_submit {
+    .make-xs-column(6);
+    .pull-right();
+
+    input {
+      .btn();
+      .btn-lg();
+      .btn-success();
+    }
+  }
+}
+
+// HACK!!!!  Moves email field on class signup for from student info fields to person registering fields
+
+.event_form_field > input#email-1-0-1,
+.event_form_field > label[for="email"],
+.event_form_field > label[for="email-1-0-1"] {
+  position: absolute;
+  left: -470px;
+  width: 455px;
+}
+
+.event_form_field > input#email-1-0-1 {
+  z-index: 1;
+  top: 173px;
+}
+
+.event_form_field > label[for="email"] {
+  top: 146px;
+}
+
+.event_form_field > input.TEXT_13 {
+  margin-bottom: 117px;
+}
+
+
+/*..................................the background and text colors */
+.bg-brand-blue {
+  background-color: @brand-blue;
+}
+
+.bg-brand-blueLight {
+  background-color: @brand-blueLight;
+}
+
+.bg-brand-blueDark {
+  background-color: @brand-blueDark;
+}
+
+.bg-brand-purple {
+  background-color: @brand-purple;
+}
+
+.bg-brand-green {
+  background-color: @brand-green;
+}
+
+.bg-brand-yellow {
+  background-color: @brand-yellow;
+}
+
+.bg-music {
+  background-color: @music;
+
+  .btn {
+    color: @music;
+  }
+}
+
+.bg-performing-arts {
+  background-color: @performing-arts;
+
+  .btn {
+    color: @performing-arts;
+  }
+}
+
+.bg-culture {
+  background-color: @culture;
+
+  .btn {
+    color: @culture;
+  }
+}
+
+.text-light {
+  color: white;
+}
+
+.text-dark {
+  color: @gray-dark;
+}
+
+.text-purple {
+  color: @brand-purple;
+}
+
+.text-music {
+  color: @music;
+}
+
+.text-performing-arts {
+  color: @performing-arts;
+}
+
+.text-culture {
+  color: @culture;
+}
+
+/*..................................the remove responsiveness */
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+ /* Reset the container */
+ .container {
+  width: 970px;
+  max-width: none !important;
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/*..................................the vertical align */
+.vertical-align-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-align-inner {
+  display: table-cell;
+  vertical-align: middle;
 }

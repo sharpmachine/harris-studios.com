@@ -6,7 +6,7 @@
  * replace the dash with an underscore when adding it to the object below.
  *
  * .noConflict()
- * The routing is enclosed within an anonymous function so that you can 
+ * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  *
  * Google CDN, Latest jQuery
@@ -14,27 +14,132 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
-(function($) {
+ (function($) {
 
-// Use this variable to set up the common and page specific functions. If you 
+// Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
   // All pages
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+
+      // Sidr
+      $('.simple-menu').sidr({
+        side: 'right'
+      });
+
+      // Navbar
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 75) {
+          $(".navbar-default").addClass("navbar-bg");
+        } else {
+          $(".navbar-default").removeClass("navbar-bg");
+        }
+      });
+
+      // Scroll to
+      $(function() {
+        $('a[href*=#]:not([href=#],[href=#sidr])').click(function() {
+          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
     }
   },
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+
+      $('nav.section-navigation li a').tooltip();
+
+
     }
   },
+  lesson_signup: {
+    init: function() {
+
+      var lesson_title = $('.post-lesson-title').attr('data-lesson');
+      $('.wpcf7-form span.lesson input').val(lesson_title);
+
+    }
+  },
+  class_registration: {
+    init: function() {
+
+      // $('input#stripe_first_name').val('');
+      // $('input#stripe_last_name').val('');
+      // $('input#stripe_email').val('');
+
+      // For testing billing info
+      $('input#stripe_first_name').val('Jesse');
+      $('input#stripe_last_name').val('Kade');
+      $('input#stripe_email').val('jesse@sharpmachinemdia.com');
+      $('input#stripe_address').val('1452 Oregon St');
+      $('input#stripe_city').val('Redding');
+      $('input#stripe_state').val('Ca');
+      $('input#stripe_zip').val('98901');
+
+      // For testing credit card info
+      $('input#stripe_cc').val('4242424242424242');
+      $('input#stripe_csc').val('098');
+
+
+      // For testing registration details
+      $('input#TEXT_13-1-0-1').val('Jesse Kade');
+      $('input#email-1-0-1').val('jesse@sharpmachinemedia.com');
+      $('input#phone-1-0-1').val('6193987595');
+      $('input#fname-1-0-1').val('Shelly');
+      $('input#lname-1-0-1').val('Kade');
+      $('input#TEXT_12-1-0-1').val('27');
+
+    }
+  },
+
   // About us page, note the change from about-us to about_us.
   about_us: {
     init: function() {
       // JavaScript to be fired on the about us page
+    }
+  },
+  // Instructors page
+  instructors: {
+    init: function() {
+
+      // Instructors Ajax
+      // $.ajaxSetup({cache:false});
+      // $(".post-link").click(function() {
+      //   var post_link = $(this).attr("href");
+
+      //   $("#the-full-bio").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
+      //   $("#the-full-bio").load(post_link + " .single-instructor");
+      //   return false;
+      // });
+
+var post_link = $(".post-link").attr("data-href");
+var site_url = $(".post-link").attr("data-url");
+
+      // Full Instructor Bios
+      $('#remote-content-menu').sidr({
+        name: 'sidr-remote-content',
+        side: 'left',
+        // source: '#the-full-bio',
+        source: site_url + '/' + post_link,
+        renaming: false,
+        displace: false
+      });
     }
   }
 };
