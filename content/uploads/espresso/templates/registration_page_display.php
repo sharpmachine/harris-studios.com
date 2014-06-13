@@ -10,9 +10,10 @@ $ui_corner = 'ui-corner-all';
 //This tells the system to hide the event title if we only need to display the registration form.
 if ($reg_form_only == false) { 
 ?>
-	<h3 class="event_title ui-widget-header ui-corner-top" id="event_title-<?php echo $event_id; ?>">
-		<?php echo $event_name ?> <?php echo $is_active['status'] == 'EXPIRED' ? ' - <span class="expired_event">Event Expired</span>' : ''; ?> <?php echo $is_active['status'] == 'PENDING' ? ' - <span class="expired_event">Event is Pending</span>' : ''; ?> <?php echo $is_active['status'] == 'DRAFT' ? ' - <span class="expired_event">Event is a Draft</span>' : ''; ?>
+	<h3 class="event_title ui-widget-header ui-corner-top" id="event_title-<?php echo $event_id; ?>"> Register for: <br>
+		<strong><?php echo $event_name ?> <?php echo $is_active['status'] == 'EXPIRED' ? ' - <span class="expired_event">Event Expired</span>' : ''; ?> <?php echo $is_active['status'] == 'PENDING' ? ' - <span class="expired_event">Event is Pending</span>' : ''; ?> <?php echo $is_active['status'] == 'DRAFT' ? ' - <span class="expired_event">Event is a Draft</span>' : ''; ?></strong>
 	</h3>
+	<hr>
 	
 <?php 
 	$ui_corner = 'ui-corner-bottom';
@@ -37,13 +38,13 @@ if ($reg_form_only == false) {
 
 	<?php if ($display_desc == "Y") { //Show the description or not ?>
 	
-	<div class="event_description clearfix">
+	<!-- <div class="event_description clearfix">
 		<p class="section-title">
 			<?php _e('Description:', 'event_espresso') ?>
 		</p>
-		<?php echo espresso_format_content($event_desc); //Code to show the actual description. The Wordpress function "wpautop" adds formatting to your description.   ?>
+		<?php //echo espresso_format_content($event_desc); //Code to show the actual description. The Wordpress function "wpautop" adds formatting to your description.   ?>
 		
-	</div>
+	</div> -->
 	<?php
 	}//End display description
 
@@ -126,36 +127,36 @@ if ($reg_form_only == false) {
 					if ($display_price_dropdown == TRUE) {
 						$price_label = '<span class="section-title">'.__('Choose an Option: ', 'event_espresso').'</span>';
 	?>
-						<p class="event_prices">
+						<!-- <p class="event_prices">
 							<?php do_action( 'espresso_price_select', $event_id, array('show_label'=>TRUE, 'label'=>$price_label) );?>
-						</p>
+						</p> -->
 	<?php
 					} else {
 	?>
-						<p class="event_prices">
+						<!-- <p class="event_prices">
 							<?php do_action( 'espresso_seating_price_select_action', $event_id );?>
-						</p>
+						</p> -->
 	<?php
 						// Seating chart selector
 						do_action('espresso_seating_chart_select', $event_id);
 							
 					}						
 	?>
-				<p class="event_time">
+				<!--<p class="event_time">
 	<?php
 						//This block of code is used to display the times of an event in either a dropdown or text format.
-						if (isset($time_selected) && $time_selected == true) {//If the customer is coming from a page where the time was preselected.
-							echo event_espresso_display_selected_time($time_id); //Optional parameters start, end, default
-						} else {
-							echo event_espresso_time_dropdown($event_id);
-						}//End time selected
+						//if (isset($time_selected) && $time_selected == true) {//If the customer is coming from a page where the time was preselected.
+						//	echo event_espresso_display_selected_time($time_id); //Optional parameters start, end, default
+						//} else {
+							//echo event_espresso_time_dropdown($event_id);
+						//}//End time selected
 	?>
 				</p>
 	<?php
 				}
 	?>
 
-				<p class="start_date">
+				<!-- <p class="start_date">
 					<?php if ($end_date !== $start_date) { ?>
 					<span class="span_event_date_label">
 					<?php _e('Start Date: ', 'event_espresso'); ?>
@@ -178,7 +179,7 @@ if ($reg_form_only == false) {
 					</span> 
 	<?php endif; ?>
 					<?php echo apply_filters('filter_hook_espresso_display_ical', $all_meta); ?>
-				</p>
+				</p> -->
 				
 				<?php
 					/* Display the address and google map link if available */
@@ -202,9 +203,9 @@ if ($reg_form_only == false) {
 				do_action('action_hook_espresso_registration_form_top', $event_id, $event_meta, $all_meta);
 
 	?>
-				<div id="event-reg-form-groups">
+				<div id="event-reg-form-groups" class="row">
 				
-					<h3 class="section-heading"><?php _e('Registration Details', 'event_espresso'); ?></h3>
+					<!-- <h3 class="section-heading"><?php _e('Registration Details', 'event_espresso'); ?></h3> -->
 					
 	<?php
 					//Outputs the custom form questions. This function can be overridden using the custom files addon

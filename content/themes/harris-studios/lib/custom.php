@@ -32,6 +32,8 @@ add_shortcode( 'lessontitle', 'lesson_title' );
 // }
 // add_action( 'init', 'example_add_rewrite_rules' );
 
+remove_filter( 'espresso_get_question_groups_for_event_where', espresso_rp_basic_get_question_groups_for_event_where, 10 );
+
 
   function remove_dashboard_widgets(){
     global$wp_meta_boxes;
