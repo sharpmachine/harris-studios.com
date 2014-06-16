@@ -4,7 +4,7 @@
 */
 ?>
 
-<div class="jumbotron text-center">
+<div id="top" class="jumbotron text-center">
   <div class="container">
     <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-white.svg" width="150px" alt="<?php bloginfo('title'); ?> Logo" class="center-block">
     <h1><?php bloginfo('description'); ?></h1>
