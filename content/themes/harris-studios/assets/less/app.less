@@ -822,6 +822,29 @@ body.logged-in {
   }
 }
 
+.instructor-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  .opacity(0);
+  .transition(opacity ease 0.2s);
+
+  &.active {
+    z-index: 1031;
+    .opacity(0.8);
+    .transition(opacity ease 0.2s);
+  }
+}
+
+.instructors-bio-sidr {
+  // margin-left: 0 !important;
+  // padding: 0;
+  width: 50%;
+  border-left: 0;
+  background-color: @brand-blue;
+}
+
 
 /* ==========================================================================
    Events Page
