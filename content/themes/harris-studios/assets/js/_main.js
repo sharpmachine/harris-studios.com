@@ -64,7 +64,17 @@ var Roots = {
       // JavaScript to be fired on the home page
 
       $('nav.section-navigation li a').tooltip();
-      // $('body').scrollspy({ target: 'nav.section-navigation' });
+
+      // Navbar
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 307) {
+          $(".navbar-default").addClass("navbar-bg");
+        } else {
+          $(".navbar-default").removeClass("navbar-bg");
+        }
+      });
 
 
     }

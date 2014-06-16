@@ -30,105 +30,101 @@
     top: 0;
   }
 
-.section-navigation {
-  position: fixed;
-  top: calc(~'50% - 135px / 2');
-  left: 25px;
+  .section-navigation {
+    position: fixed;
+    top: calc(~'50% - 135px / 2');
+    left: 15px;
 
-  ul {
-    margin-bottom: 0;
-  }
-
-  li {
-    position: relative;
-    .square(15px);
-    margin-bottom: 15px;
-    border-radius: 50%;
-    border: 2px solid white;
-    .box-shadow(0px 0px 5px rgba(0,0,0,0.5));
-
-    &.active {
-      background-color: white;
-    }
-
-    &:last-child {
+    ul {
       margin-bottom: 0;
     }
 
-    a {
-      display: block;
-      .square(100%);
-      padding: 5px;
+    li {
+      position: relative;
+      .square(15px);
+      margin-bottom: 15px;
+      border-radius: 50%;
+      border: 2px solid white;
+      .box-shadow(0px 0px 5px rgba(0,0,0,0.5));
 
-      &:hover {
-        border-radius: 50%;
+      &.active {
+        background-color: white;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: block;
+        .square(100%);
+        padding: 5px;
+
+        &:hover {
+          border-radius: 50%;
+        }
       }
     }
-  }
 
-  .tooltip {
+    .tooltip {
 
-  }
+    }
 
-  .tooltip-inner {
-    padding: 6px 16px;
-    .soleil-light();
-    font-size: 18px;
+    .tooltip-inner {
+      padding: 6px 16px;
+      .soleil-light();
+      font-size: 18px;
     // .box-shadow(0px 0px 2px rgba(0,0,0,0.5));
     border-radius: 0;
   }
 }
 
-  .anchor {
-    position: relative;
-    top: -45px;
-    visibility: hidden;
+.anchor {
+  position: relative;
+  top: -45px;
+  visibility: hidden;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 54%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  .video-container {
-    position: relative;
-    padding-bottom: 54%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+  .error-404 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .error-404 {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 100%;
-
-      h1 {
-        color: white;
-      }
+    h1 {
+      color: white;
     }
   }
+}
 
+body.home {
+  a.brand img {
+    .opacity(0);
+    .transition(opacity ease 0.2s);
+  }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
-   .banner { }
-
-   .navbar { }
-
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
-   .content { }
-
+  .navbar-bg {
+    a.brand img {
+      .opacity(1);
+      .transition(opacity ease 0.2s);
+    }
+  }
+}
 
 /* ==========================================================================
    Primary Content

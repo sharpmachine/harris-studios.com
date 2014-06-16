@@ -1,4 +1,7 @@
 <div id="sidr">
+  <div class="sidr-close">
+    <a class="simple-menu" href="#sidr">&times;</a>
+  </div>
   <!-- Your content -->
    <?php
     if (has_nav_menu('primary_navigation')) :
