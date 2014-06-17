@@ -113,13 +113,17 @@
 }
 
 body.home {
-  a.brand img {
+  a.brand {
     .opacity(0);
     .transition(opacity ease 0.2s);
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   .navbar-bg {
-    a.brand img {
+    a.brand {
       .opacity(1);
       .transition(opacity ease 0.2s);
     }

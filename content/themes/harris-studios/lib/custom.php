@@ -24,9 +24,6 @@ function lesson_title(){
 }
 add_shortcode( 'lessontitle', 'lesson_title' );
 
-// remove_filter( 'espresso_get_question_groups_for_event_where', espresso_rp_basic_get_question_groups_for_event_where, 10 );
-
-
 function remove_dashboard_widgets(){
   global$wp_meta_boxes;
   unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);

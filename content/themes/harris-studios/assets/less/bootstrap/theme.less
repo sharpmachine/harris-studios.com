@@ -126,10 +126,13 @@
   .navbar-nav > li > a {
     .soleil-light();
     font-size: 22px;
-    .transition(background-color ease 0.2s);
+    border-color: transparent;
+    .transition(border-color ease 0.2s);
 
     &:hover {
-      .transition(background-color ease 0.2s);
+      padding-top: 10px;
+      .transition(border-color ease 0.2s);
+      border-top: 5px solid @brand-purple;
     }
   }
 }
@@ -414,6 +417,10 @@ div.wpcf7-validation-errors {
 
 div.wpcf7-mail-sent-ng {
   .alert-danger();
+}
+
+div.wpcf7-mail-sent-ok {
+  .alert-success();
 }
 
 span.wpcf7-form-control-wrap {
