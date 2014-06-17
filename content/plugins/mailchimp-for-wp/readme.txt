@@ -4,7 +4,7 @@ Donate link: http://dannyvankooten.com/mailchimp-for-wordpress/
 Tags: mailchimp,form,shortcode,widget,checkbox,comment,newsletter,buddypress,multisite,bbpress,woocommerce,easy digital downloads,contact form,contact form 7
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -210,6 +210,22 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 
 == Changelog ==
 
+= 2.0.2 =
+
+**Fixes**
+
+- Fix fatal error when using `mc4wp_checkbox()` function
+- No more double API request when integrating with Contact Form 7
+
+**Improvements**
+
+- Template functions are now always loaded when needed
+- A warning will now show when required fields are missing in the form mark-up
+- Required form classes can no longer be accidentally removed
+- Various checkbox integration improvements
+- Various CSS improvements to colored form themes
+- Updated Spanish translations
+
 = 2.0.1 =
 
 **Improvements**
@@ -396,5 +412,5 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 
 == Upgrade Notice ==
 
-= 2.0.1 =
-Added Spanish translation and updated others. Minor code & usability improvements.
+= 2.0.2 =
+Various fixes and improvements regarding form fields, checkbox integrations and form colours
