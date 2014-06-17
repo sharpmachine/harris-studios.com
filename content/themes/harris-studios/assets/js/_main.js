@@ -149,7 +149,7 @@ var Roots = {
       $(".remote-content-menu").click(function() {
         var post_link = $(this).attr("href");
 
-        $("#the-full-bio").html("<img src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
+        $("#the-full-bio").html("<img class='loading-gif' src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>");
         $("#the-full-bio").load(post_link + " .single-instructor");
         $('.instructor-overlay').toggleClass('active');
         return false;

@@ -222,6 +222,11 @@ body.home {
     .btn {
       margin-bottom: 3px;
       .opacity(0.5);
+
+      &:hover {
+        .opacity(0.8);
+        color: @gray-dark;
+      }
     }
   }
 
@@ -759,7 +764,7 @@ body.logged-in {
   height: 28px;
   margin: 15px 0;
   padding: 0 3px;
-  .bodoni();
+  // .bodoni();
   font-size: 20px;
   line-height: 1.1;
   // overflow: hidden;
@@ -830,7 +835,7 @@ body.logged-in {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: black;
+  background-color: @brand-purple;
   .opacity(0);
   .transition(opacity ease 0.2s);
 
@@ -842,11 +847,44 @@ body.logged-in {
 }
 
 .instructors-bio-sidr {
-  // margin-left: 0 !important;
-  // padding: 0;
   width: 50%;
   border-left: 0;
   background-color: @brand-blue;
+
+  a.remote-content-menu {
+    position: absolute;
+    right: 15px;
+    padding: 10px;
+    color: @brand-purple;
+    font-size: 30px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img.loading-gif {
+    position: relative;
+    padding-top: 50%;
+    .center-block();
+  }
+
+  .instructor {
+    margin-bottom: 0;
+
+    h3 {
+      color: @gray-dark;
+    }
+
+    .instructor-headshot {
+      // padding: 400px;
+      img {
+        .square(400px);
+        display: block;
+        .center-block();
+      }
+    }
+  }
 }
 
 

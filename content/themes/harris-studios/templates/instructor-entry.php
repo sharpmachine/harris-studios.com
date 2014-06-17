@@ -36,7 +36,7 @@
   <?php else: ?>
     <p><?php echo wp_trim_words( get_the_content(), 30 ); ?></p>
     <p class="text-center">
-      <a class="remote-content-menu" rel="<?php the_ID(); ?>" href="<?php the_permalink(); ?>">Read More</a>
+      <a class="remote-content-menu" rel="<?php the_ID(); ?>" href="<?php the_permalink(); ?>">Read More...</a>
     </p>
   <?php endif; ?>
 </div>
