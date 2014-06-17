@@ -24,42 +24,34 @@ function lesson_title(){
 }
 add_shortcode( 'lessontitle', 'lesson_title' );
 
-// function example_add_rewrite_rules() {
-
-//     add_rewrite_rule( 'classes', 'events', 'top' );
-//     flush_rewrite_rules();
-
-// }
-// add_action( 'init', 'example_add_rewrite_rules' );
-
-remove_filter( 'espresso_get_question_groups_for_event_where', espresso_rp_basic_get_question_groups_for_event_where, 10 );
+// remove_filter( 'espresso_get_question_groups_for_event_where', espresso_rp_basic_get_question_groups_for_event_where, 10 );
 
 
-  function remove_dashboard_widgets(){
-    global$wp_meta_boxes;
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
-    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
-    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
-    unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);
-  }
+function remove_dashboard_widgets(){
+  global$wp_meta_boxes;
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);
+}
 
-  add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
-  function modify_footer_admin () {
-    echo 'Created by <a href="http://sharpmachinemedia.com">Sharp Machine Media</a>.';
-    echo '  Powered by <a href="http://WordPress.org">WordPress</a>.';
-  }
+function modify_footer_admin () {
+  echo 'Created by <a href="http://sharpmachinemedia.com">Sharp Machine Media</a>.';
+  echo '  Powered by <a href="http://WordPress.org">WordPress</a>.';
+}
 
-  add_filter('admin_footer_text', 'modify_footer_admin');
+add_filter('admin_footer_text', 'modify_footer_admin');
 
 //Admin style overrides
-  function admin_overrides() {
-    echo '<style type="text/css">
+function admin_overrides() {
+  echo '<style type="text/css">
   #cpt_info_box {
-    display: none !important; /* Hides Custom Post Type info box */
-  }
-  </style>';
+  display: none !important; /* Hides Custom Post Type info box */
+}
+</style>';
 }
 
 add_action('admin_head', 'admin_overrides');
