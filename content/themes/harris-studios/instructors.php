@@ -17,9 +17,7 @@ Template Name: Instructors
 
   <!-- Full Bios -->
 <div id="sidr-remote-content" class="instructors-bio-sidr">
-  <!-- <div class="bg-brand-lightBlue text-right"> -->
-    <a class="remote-content-menu" href="#">&times;</a>
-  <!-- </div> -->
+  <a class="remote-content-menu" href="#">&times;</a>
   <div class="bg-brand-lightBlue hidden">
     <img class="loading-gif" src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>
   </div>

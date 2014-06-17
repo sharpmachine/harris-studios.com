@@ -59,14 +59,14 @@
     <div class="row text-right">
       <?php if ($todays_date >= $event_registration_start && $todays_date <= $event_registration_end): ?>
         <div class="col-xs-9">
-          <p class="lead text-purple bodoni">Are you ready to be launched into your brightest future?</p>
+          <p class="lead text-purple">Are you ready to be launched into your brightest future?</p>
         </div>
         <div class="col-xs-3">
           <a href="<?php bloginfo('url'); ?>/class-registration/?ee=<?php echo get_post_meta($post->ID, 'event_id', true); ?>" class="btn btn-lg btn-danger btn-block">Register</a>
         </div>
       <?php else: ?>
         <div class="col-xs-8">
-          <p class="lead text-purple bodoni"><strong><span class="text-danger">Registration Closed.</span></strong> Get notified when it opens.</p>
+          <p class="lead text-purple"><strong><span class="text-danger">Registration Closed.</span></strong> Get notified when it opens.</p>
         </div>
         <div class="col-xs-4">
           <?php echo do_shortcode('[mc4wp_form]'); ?>

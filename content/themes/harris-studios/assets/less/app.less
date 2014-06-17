@@ -34,6 +34,7 @@
     position: fixed;
     top: calc(~'50% - 135px / 2');
     left: 15px;
+    z-index: 1;
 
     ul {
       margin-bottom: 0;
@@ -67,14 +68,15 @@
     }
 
     .tooltip {
-
+      &.right {
+        margin-left: 5px;
+      }
     }
 
     .tooltip-inner {
       padding: 6px 16px;
       .soleil-light();
       font-size: 18px;
-    // .box-shadow(0px 0px 2px rgba(0,0,0,0.5));
     border-radius: 0;
   }
 }
@@ -134,8 +136,6 @@ body.home {
    Primary Content
    ========================================================================== */
 
-   .main { }
-
    /* Gallery Shortcode */
    .gallery-row { padding: 15px 0; }
 
@@ -148,10 +148,11 @@ body.home {
     position: relative;
     height: 800px;
     margin-bottom: 0;
-    background-color: @brand-blue;
+    background: url(../img/jumbotron.jpg) center top no-repeat @brand-blue;
+    background-size: cover;
 
     img {
-      margin-top: 60px;
+      margin-top: 120px;
     }
 
     h1 {
@@ -159,7 +160,7 @@ body.home {
       top: 0;
       right: 0;
       left: 0;
-      bottom: 0;
+      bottom: -120px;
       margin: auto;
       width: 940px;
       height: 86px;
@@ -175,8 +176,10 @@ body.home {
   }
 
   section.home {
+    position: relative;
     margin-top: 3.5px;
     padding: 60px 0;
+    overflow: hidden;
 
     h2 {
       line-height: 1;
@@ -234,17 +237,32 @@ body.home {
     height: 282px;
   }
 
+  .bg-img {
+    height: 420px;
+  }
+
   section#music {
-    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 15%); @deg: 45deg)
+    #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 15%); @deg: 45deg);
+
+    .bg-img {
+      background: url(../img/SheetMusic@2x.png) center center no-repeat;
+    }
   }
 
   section#performing-arts-film {
-    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 15%); @deg: 45deg)
+    #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 15%); @deg: 45deg);
+
+    .bg-img {
+      background: url(../img/Dancer@2x.png) center center no-repeat;
+    }
   }
 
   section#culture {
-    // background-color: @culture;
-    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 15%); @deg: 45deg)
+    #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 15%); @deg: 45deg);
+
+    .bg-img {
+      background: url(../img/Gondola@2x.png) center center no-repeat;
+    }
   }
 
   section#events {
@@ -392,6 +410,7 @@ body.logged-in {
   h3 {
     margin: 0;
     font-size: 20px;
+    letter-spacing: 1px;
   }
 }
 
@@ -443,14 +462,6 @@ body.logged-in {
     }
   }
 
-  // .class-or-lesson-headline {
-  //   background-color: lighten(@music, 50%);
-  // }
-
-  // .class-or-lesson-price {
-  //   background-color: lighten(@music, 40%);
-  // }
-
   .class-or-lesson-more {
     a.btn {
       background-color: @music;
@@ -477,14 +488,6 @@ body.logged-in {
     }
   }
 
-  // .class-or-lesson-headline {
-  //   background-color: lighten(@performing-arts, 50%);
-  // }
-
-  // .class-or-lesson-price {
-  //   background-color: lighten(@performing-arts, 40%);
-  // }
-
   .class-or-lesson-more {
     a.btn {
       background-color: @performing-arts;
@@ -509,14 +512,6 @@ body.logged-in {
       }
     }
   }
-
-  // .class-or-lesson-headline {
-  //   background-color: lighten(@culture, 50%);
-  // }
-
-  // .class-or-lesson-price {
-  //   background-color: lighten(@culture, 40%);
-  // }
 
   .class-or-lesson-more {
     a.btn {
@@ -598,7 +593,24 @@ body.logged-in {
   }
 }
 
+// .page-header {
+//   overflow: hidden;
+//   .bg-img {
+//     height: 100%;
+//     background: url(../img/SheetMusic@2x.png) -200px center no-repeat;
+//     overflow: hidden;
+//     .opacity(0.1);
+//     // background-size: cover;
+//   }
+
+// }
+
 .class-header {
+
+  .bg-img {
+    background: url(../img/SheetMusic@2x.png) center center no-repeat;
+  }
+
   .single-class-dates {
     border-right: 1px solid white;
     border-left: 1px solid white;
@@ -632,7 +644,6 @@ body.logged-in {
 
   &-benefits {
     padding: 30px;
-    // color: white;
   }
 
   &-testimony {
@@ -722,10 +733,6 @@ body.logged-in {
    Instructors Page
    ========================================================================== */
 
-   #the-full-bio {
-  // display: none;
-}
-
 .instructor {
   margin-bottom: 30px;
   padding: 30px;
@@ -764,10 +771,8 @@ body.logged-in {
   height: 28px;
   margin: 15px 0;
   padding: 0 3px;
-  // .bodoni();
   font-size: 20px;
   line-height: 1.1;
-  // overflow: hidden;
 }
 
 .instructor {
@@ -786,7 +791,6 @@ body.logged-in {
 
     .instructor-department {
       color: @music;
-      // border: 2px solid @music;
     }
   }
 
@@ -806,7 +810,6 @@ body.logged-in {
 
     .instructor-department {
       color: @performing-arts;
-      // border: 2px solid @performing-arts;
     }
   }
 
@@ -826,7 +829,6 @@ body.logged-in {
 
     .instructor-department {
       color: @culture;
-      // border: 2px solid @culture;
     }
   }
 }
@@ -877,7 +879,6 @@ body.logged-in {
     }
 
     .instructor-headshot {
-      // padding: 400px;
       img {
         .square(400px);
         display: block;
@@ -911,12 +912,11 @@ body.logged-in {
   }
 
   .event-post-info {
-    // width: 56%;
     width: 525px;
     height: 220px;
     padding: 0 30px 15px;
     margin-left: 3.5px;
-    #gradient > .directional(@start-color: @brand-purple; @end-color: @brand-blue; @deg: 45deg);
+    background-color: @brand-purple;
 
     h2 {
       font-size: 32px;
@@ -940,8 +940,6 @@ body.logged-in {
     height: 220px;
     margin-left: 3.5px;
 
-
-
     a.btn {
       width: 100%;
       height: 100%;
@@ -962,11 +960,6 @@ body.logged-in {
     }
   }
 
-/* ==========================================================================
-   Audtions Page
-   ========================================================================== */
-
-
    /* ==========================================================================
    Theme Page
    ========================================================================== */
@@ -974,19 +967,6 @@ body.logged-in {
    .logo-bg {
     padding: 30px;
   }
-
-
-
-/* ==========================================================================
-   Posts
-   ========================================================================== */
-
-   .hentry header { }
-   .hentry time { }
-   .hentry .byline { }
-   .hentry .entry-content { }
-   .hentry footer { }
-
 
 
 /* ==========================================================================

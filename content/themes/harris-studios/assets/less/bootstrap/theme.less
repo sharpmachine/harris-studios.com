@@ -51,18 +51,6 @@
   .soleil-light();
   border: none;
   border-radius: 0;
-
-  // &:hover,
-  // &:focus  {
-  //   background-color: darken(@btn-color, 12%);
-  //   background-position: 0 -15px;
-  // }
-
-  // &:active,
-  // &.active {
-  //   background-color: darken(@btn-color, 12%);
-  //   border-color: darken(@btn-color, 14%);
-  // }
 }
 
 // Common styles
@@ -81,36 +69,6 @@
 .btn-info    { .btn-styles(@btn-info-bg); }
 .btn-warning { .btn-styles(@btn-warning-bg); }
 .btn-danger  { .btn-styles(@btn-danger-bg); }
-
-
-
-//
-// Images
-// --------------------------------------------------
-
-.thumbnail,
-.img-thumbnail {
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
-
-
-
-//
-// Dropdowns
-// --------------------------------------------------
-
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  #gradient > .vertical(@start-color: @dropdown-link-hover-bg; @end-color: darken(@dropdown-link-hover-bg, 5%));
-  background-color: darken(@dropdown-link-hover-bg, 5%);
-}
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
-  background-color: darken(@dropdown-link-active-bg, 5%);
-}
-
 
 
 //
@@ -143,12 +101,10 @@
 
 .navbar-bg {
   background-color: @brand-blue;
-  // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
   .transition(background-color ease 0.2s);
 
   a.brand {
     background-color: @brand-blue;
-    // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
     .transition(background-color ease 0.2s);
   }
 }
@@ -173,7 +129,6 @@ a.brand {
   width: 80px;
   margin-bottom: -30px;
   padding: 20px;
-  // background-color: @brand-blue;
   border-radius: 50%;
   .transition(background-color ease 0.2s);
 
@@ -207,7 +162,6 @@ a.brand {
 @sidr-bg:             @brand-blue;
 
 .sidr {
-  // background-color: @sidr-bg;
   border-left: @sidr-spacing solid white;
   color: white;
   .soleil-light();
@@ -297,10 +251,6 @@ a.brand {
 // Labels
 // --------------------------------------------------
 
-.label {
-  // border-radius: 0;
-}
-
 .label-music {
   background-color: @music;
 }
@@ -350,8 +300,6 @@ a.brand {
 }
 
 
-
-
 //
 // Page header
 // --------------------------------------------------
@@ -362,7 +310,6 @@ a.brand {
   color: white;
   background-color: @brand-blue;
   #gradient>.vertical(@start-color: @brand-blue; @end-color: @brand-purple; @start-percent: 0%; @end-percent: 100%);
-  // #gradient>.vertical-three-colors(@start-color: @brand-blue; @mid-color: @brand-blueDark; @color-stop: 50%; @end-color: @brand-purple);
 
   h1 {
     width: 940px;
@@ -439,7 +386,6 @@ div.wpcf7 img.ajax-loader {
 }
 
 // Event Espresso
-
 fieldset.event_questions {
   .make-xs-column(6);
   .pull-right();
@@ -469,7 +415,6 @@ img.off-site-payment-gateway-img,
 p.choose-diff-pay-option-pg {
   display: none;
 }
-
 
 #stripe-payment-option-form-dv {
   .row();
@@ -525,6 +470,22 @@ form#stripe_payment_form {
   margin-bottom: 117px;
 }
 
+.event_form_field > label[for="TEXT_13-1-0-1"].error {
+  position: relative;
+  top: 0;
+  margin-bottom: 95px;
+}
+
+.event_form_field > label[for="email-1-0-1"].error {
+  position: absolute;
+  top: 233px;
+  left: -470px;
+  width: 455px;
+}
+
+.event_form_field>input.TEXT_13.error {
+  margin-bottom: 0px;
+}
 
 /*..................................the background and text colors */
 .bg-brand-blue {
@@ -664,4 +625,14 @@ form#stripe_payment_form {
 .vertical-align-inner {
   display: table-cell;
   vertical-align: middle;
+}
+
+// Background images helper
+.bg-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 420px;
+  .opacity(0.2);
+  background-repeat: no-repeat;
 }
