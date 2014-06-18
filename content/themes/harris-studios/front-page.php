@@ -4,7 +4,7 @@
 */
 ?>
 
-<div class="jumbotron text-center">
+<div id="top" class="jumbotron text-center">
   <div class="container">
     <img src="<?php bloginfo('template_directory'); ?>/assets/img/harris-logo-white.svg" width="150px" alt="<?php bloginfo('title'); ?> Logo" class="center-block">
     <h1><?php bloginfo('description'); ?></h1>
@@ -16,6 +16,7 @@
 
 <div id="music" class="anchor"></div>
 <section id="music" class="bg-music text-light soleil-light home">
+  <div class="bg-img"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4 vertical-align">
@@ -58,6 +59,7 @@
 
 <div id="performing-arts-film" class="anchor"></div>
 <section id="performing-arts-film" class="bg-performing-arts text-light soleil-light home">
+  <div class="bg-img"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4 vertical-align">
@@ -100,6 +102,7 @@
 
 <div id="culture" class="anchor"></div>
 <section id="culture" class="bg-culture text-light soleil-light home">
+  <div class="bg-img"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4 vertical-align">
@@ -142,6 +145,7 @@
 
 <div id="redding-events" class="anchor"></div>
 <section id="events" class="bg-brand-yellow home">
+  <div class="bg-img"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4">

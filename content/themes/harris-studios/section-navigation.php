@@ -1,5 +1,6 @@
 <nav class="section-navigation">
-  <ul class="list-unstyled">
+  <ul class="nav list-unstyled">
+    <li class="active hidden"><a href="#top" data-toggle="tooltip" data-placement="right" title="Top"></a></li>
     <li><a href="#music" data-toggle="tooltip" data-placement="right" title="Music"></a></li>
     <li><a href="#performing-arts-film" data-toggle="tooltip" data-placement="right" title="Performing Arts &amp; Film"></a></li>
     <li><a href="#culture" data-toggle="tooltip" data-placement="right" title="Culture"></a></li>

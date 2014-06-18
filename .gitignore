@@ -19,7 +19,6 @@ local-config.php
 !content/uploads
 content/uploads/*
 !content/uploads/espresso/templates
-content/plugins/
 content/blogs.dir/
 content/upgrade/
 content/backup-db/

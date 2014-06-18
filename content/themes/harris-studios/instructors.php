@@ -5,7 +5,7 @@ Template Name: Instructors
 ?>
 
 <?php get_template_part('templates/page-header', 'intro'); ?>
-
+<div class="instructor-overlay"></div>
 <div class="container">
   <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
@@ -14,18 +14,16 @@ Template Name: Instructors
     <?php get_search_form(); ?>
   <?php endif; ?>
 
-  <!-- Page intro -->
-  <div class="row hidden">
-    <div class="col-xs-12">
-      <?php while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-      <?php endwhile; ?>
-      <?php wp_reset_query(); ?>
-    </div>
-  </div>
 
   <!-- Full Bios -->
-  <!-- <div id="sidr-remote-content"></div> -->
+<div id="sidr-remote-content" class="instructors-bio-sidr">
+  <a class="remote-content-menu" href="#">&times;</a>
+  <div class="bg-brand-lightBlue hidden">
+    <img class="loading-gif" src='/content/themes/harris-studios/assets/img/ajax-loader.gif'>
+  </div>
+  <div id="the-full-bio"></div>
+</div>
+
 
 <div class="row">
   <h2 class="text-purple border-bottom text-center">Say hello</h2>

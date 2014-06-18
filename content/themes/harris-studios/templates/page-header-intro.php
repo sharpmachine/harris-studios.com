@@ -1,4 +1,5 @@
 <div class="page-header">
+  <div class="bg-img"></div>
   <div class="container">
     <h1 class="text-center">
       <?php echo roots_title(); ?>

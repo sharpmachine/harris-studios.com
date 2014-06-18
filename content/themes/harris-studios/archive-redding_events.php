@@ -15,7 +15,12 @@
   <div class="row event-post text-light">
 
     <div class="col-xs-12">
-      <div class="event-post-date pull-right"><?php the_field('re_start_date'); ?> - <?php the_field('re_end_date'); ?></div>
+      <div class="event-post-date pull-right">
+        <?php the_field('re_start_date'); ?>
+        <?php if (get_field('re_end_date')): ?>
+        - <?php the_field('re_end_date'); ?>
+        <?php endif; ?>
+      </div>
       <div class="clearfix"></div>
       <div class="event-post-photo pull-left">
         <a href="<?php the_field('re_event_registration_link'); ?>">
