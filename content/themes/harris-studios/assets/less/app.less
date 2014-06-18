@@ -77,60 +77,87 @@
       padding: 6px 16px;
       .soleil-light();
       font-size: 18px;
-    border-radius: 0;
-  }
-}
-
-.anchor {
-  position: relative;
-  top: -45px;
-  visibility: hidden;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 54%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .error-404 {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-
-    h1 {
-      color: white;
-    }
-  }
-}
-
-body.home {
-  a.brand {
-    .opacity(0);
-    .transition(opacity ease 0.2s);
-
-    &:hover {
-      cursor: default;
+      border-radius: 0;
     }
   }
 
-  .navbar-bg {
+  .anchor {
+    position: relative;
+    top: -45px;
+    visibility: hidden;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 54%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .error-404 {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+
+      h1 {
+        color: white;
+      }
+    }
+  }
+
+  body.home {
     a.brand {
-      .opacity(1);
+      .opacity(0);
       .transition(opacity ease 0.2s);
+
+      &:hover {
+        cursor: default;
+      }
+    }
+
+    .navbar-bg {
+      a.brand {
+        .opacity(1);
+        .transition(opacity ease 0.2s);
+      }
+    }
+  }
+
+  body.classes,
+  body.post-type-archive-lessons {
+    .page-header {
+      .bg-img {
+        height: calc(~'100% - 175px');
+      }
+    }
+  }
+
+  body.classes {
+  .page-header {
+    .bg-img {
+      background: url(../img/SheetMusic-2x.png) -200px center no-repeat;
+      .opacity(0.1);
     }
   }
 }
+
+body.post-type-archive-lessons {
+  .page-header {
+    .bg-img {
+      background: url(../img/Mask-2x.png) -200px center no-repeat;
+    }
+  }
+}
+
 
 /* ==========================================================================
    Primary Content
@@ -245,7 +272,7 @@ body.home {
     #gradient > .directional(@start-color: @music; @end-color: lighten(@music, 15%); @deg: 45deg);
 
     .bg-img {
-      background: url(../img/SheetMusic@2x.png) center center no-repeat;
+      background: url(../img/SheetMusic-2x.png) center center no-repeat;
     }
   }
 
@@ -253,7 +280,7 @@ body.home {
     #gradient > .directional(@start-color: @performing-arts; @end-color: lighten(@performing-arts, 15%); @deg: 45deg);
 
     .bg-img {
-      background: url(../img/Dancer@2x.png) center center no-repeat;
+      background: url(../img/Dancer-2x.png) center -155px no-repeat;
     }
   }
 
@@ -261,12 +288,18 @@ body.home {
     #gradient > .directional(@start-color: @culture; @end-color: lighten(@culture, 15%); @deg: 45deg);
 
     .bg-img {
-      background: url(../img/Gondola@2x.png) center center no-repeat;
+      background: url(../img/Gondola-2x.png) center -220px no-repeat;
     }
   }
 
   section#events {
     margin-bottom: 3.5px;
+
+    .bg-img {
+      background: url(../img/bubble.jpg) center -220px no-repeat;
+      background-size: cover;
+      .opacity(0.15);
+    }
 
     h3 {
       padding-bottom: 7px;
@@ -593,23 +626,7 @@ body.logged-in {
   }
 }
 
-// .page-header {
-//   overflow: hidden;
-//   .bg-img {
-//     height: 100%;
-//     background: url(../img/SheetMusic@2x.png) -200px center no-repeat;
-//     overflow: hidden;
-//     .opacity(0.1);
-//     // background-size: cover;
-//   }
-
-// }
-
 .class-header {
-
-  .bg-img {
-    background: url(../img/SheetMusic@2x.png) center center no-repeat;
-  }
 
   .single-class-dates {
     border-right: 1px solid white;
@@ -733,51 +750,57 @@ body.logged-in {
    Instructors Page
    ========================================================================== */
 
-.instructor {
-  margin-bottom: 30px;
-  padding: 30px;
+   .instructor {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: @gray-lighter;
 
-  h3 {
-    margin-top: 5px;
-    font-size: 18px;
+    h3 {
+      margin-top: 5px;
+      font-size: 18px;
 
-    span {
-      display: block;
-      margin-top: 7.5px;
-      .soleil-light();
+      span {
+        display: block;
+        margin-top: 7.5px;
+        .soleil-light();
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      font-size: 16px;
     }
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  .instructor-bio-short {
+    height: 66px;
+    overflow: hidden;
   }
 
-  .label {
-    font-size: 16px;
+  .instructor-headshot {
+    padding: 0 15px 15px;
+    img {
+      .square(100%);
+      .img-responsive();
+      .img-circle();
+      .center-block();
+    }
   }
-}
 
-.instructor-headshot {
-  padding: 0 15px 15px;
-  img {
-    .square(100%);
-    .img-responsive();
-    .img-circle();
-    .center-block();
+  .instructor-department {
+    height: 28px;
+    margin: 15px 0;
+    padding: 0 3px;
+    font-size: 20px;
+    line-height: 1.1;
   }
-}
 
-.instructor-department {
-  height: 28px;
-  margin: 15px 0;
-  padding: 0 3px;
-  font-size: 20px;
-  line-height: 1.1;
-}
-
-.instructor {
-  &.department-music {
-    background-color: lighten(@music, 60%);
+  .instructor {
+    &.department-music {
+    // background-color: lighten(@music, 60%);
 
     a {
       color: @music;
@@ -796,7 +819,7 @@ body.logged-in {
 
   // Performing Arts
   &.department-performing-arts-film {
-    background-color: lighten(@performing-arts, 60%);
+    // background-color: lighten(@performing-arts, 60%);
 
     a {
       color: @performing-arts;
@@ -815,7 +838,7 @@ body.logged-in {
 
   // Culture
   &.department-culture {
-    background-color: lighten(@culture, 60%);
+    // background-color: lighten(@culture, 60%);
 
     a {
       color: @culture;

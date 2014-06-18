@@ -145,6 +145,7 @@
 
 <div id="redding-events" class="anchor"></div>
 <section id="events" class="bg-brand-yellow home">
+  <div class="bg-img"></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
