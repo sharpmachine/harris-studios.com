@@ -39,12 +39,19 @@
 
     <h2>Colors:</h2>
 
+    <h3>Primary Colors</h3>
+
     <div class="row">
-      <div class="col-md-2 col-md-offset-1 brand-colors brand-blue">#003896</div>
+      <div class="col-md-2 col-md-offset-3 brand-colors bg-music">Music</div>
+      <div class="col-md-2 brand-colors bg-performing-arts">Performing Arts &amp; Film</div>
+      <div class="col-md-2 brand-colors bg-culture">Culture</div>
+    </div>
+
+    <h3>Secondary Colors</h3>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-4 brand-colors brand-blue">#003896</div>
       <div class="col-md-2 brand-colors brand-blueLight">#4E91CD</div>
-      <div class="col-md-2 brand-colors brand-blueDark">#0D117E</div>
-      <div class="col-md-2 brand-colors brand-purple">#5F1A74</div>
-      <div class="col-md-2 brand-colors brand-green">#005820</div>
     </div>
 
     <h2><a name="typography" id="typography">Typography</a></h2>

@@ -9,6 +9,8 @@
 .vagrant
 html
 adminer
+/puphpet/
+/puppet/
 
 #Yeopress
 .yeopress
