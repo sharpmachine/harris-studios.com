@@ -44,7 +44,7 @@
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Music lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Music lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  Also, <a href="<?php bloginfo('url'); ?>/classes#music">check out our Music classes</a>.</p>
       <?php endif; ?>
 
   </section>
@@ -59,8 +59,8 @@
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row">
-          <div class="col-xs-12 lesson-summary">
+        <div class="row lesson-summary">
+          <div class="col-xs-12">
             <?php get_template_part('templates/lesson', 'entry' ); ?>
           </div>
         </div>
@@ -68,7 +68,7 @@
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  Also, <a href="<?php bloginfo('url'); ?>/classes#performing-arts-film">check out our Performing Arts &amp; Film classes</a>.</p>
       <?php endif; ?>
 
   </section>
@@ -83,8 +83,8 @@
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row">
-          <div class="col-xs-12 lesson-summary">
+        <div class="row lesson-summary">
+          <div class="col-xs-12">
             <?php get_template_part('templates/lesson', 'entry' ); ?>
           </div>
         </div>
@@ -92,7 +92,7 @@
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Culture lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a></p>
+        <p class="lead">At the moment we are not offering any Culture lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  Also, <a href="<?php bloginfo('url'); ?>/classes#culture">check out our culture classes</a>.</p>
       <?php endif; ?>
 
   </section>
