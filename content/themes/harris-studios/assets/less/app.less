@@ -404,7 +404,9 @@
     padding: 30px;
     color: white;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       text-decoration: none;
     }
   }
@@ -1113,7 +1115,8 @@ body.logged-in {
     .input-group {
       input.btn,
       input.btn:hover {
-        padding: 16px;
+        height: 60px;
+        padding: 14px 16px;
         color: white;
         background-color: @gray-dark;
         border: 3px solid white;
