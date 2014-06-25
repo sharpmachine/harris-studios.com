@@ -30,15 +30,8 @@
   </div><!-- END: .container -->
 </section>
 
-<section class="single-cl-testimony bg-brand-blueLight text-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <?php get_template_part('templates/student', 'testimony' ); ?>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Student Testimonies -->
+<?php get_template_part('templates/student', 'testimony' ); ?>
 
 <section class="single-lesson-instructor">
   <div class="container">

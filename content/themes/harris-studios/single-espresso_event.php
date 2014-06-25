@@ -26,25 +26,21 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       </div>
+      <?php if (get_field('lesson_benefits')): ?>
       <div class="col-xs-4">
         <div class="single-cl-benefits bg-brand-blueLight text-light">
           <p class="lead">Benefits:</p>
           <?php the_field('lesson_benefits'); ?>
         </div>
       </div>
+      <?php endif; ?>
     </div>
   </div><!-- END: .container -->
 </section>
 
-<section class="single-cl-testimony bg-brand-blueLight text-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <?php get_template_part('templates/student', 'testimony' ); ?>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Student Testimony -->
+<?php get_template_part('templates/student', 'testimony' ); ?>
+
 
 <section class="single-lesson-instructor">
   <div class="container">
