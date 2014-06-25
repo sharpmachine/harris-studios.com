@@ -35,7 +35,6 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
-
   <?php get_template_part('newsticker'); ?>
   <?php get_template_part('templates/footer'); ?>
 

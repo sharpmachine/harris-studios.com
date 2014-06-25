@@ -33,7 +33,7 @@
         </div>
       <?php else: ?>
         <div class="label label-danger">
-          Registration Closed
+          Registration Closed - Opens <?php echo date('M j', strtotime($event_registration_start)); ?>
         </div>
         <!-- <small>Get notified when registration opens</small>
         <div class="input-group input-group-sm">
