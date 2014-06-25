@@ -76,6 +76,16 @@ var Roots = {
         }
       });
 
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 500) {
+          $(".newsticker").fadeOut('slow');
+        } else {
+          $(".newsticker").fadeIn('slow');
+        }
+      });
+
 
     }
   },

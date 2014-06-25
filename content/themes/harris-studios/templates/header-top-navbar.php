@@ -11,9 +11,6 @@
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav newsticker">
-        <?php get_template_part('newsticker'); ?>
-      </ul>
       <ul class="nav navbar-nav pull-right">
         <li><a href="<?php bloginfo('url'); ?>/classes">Classes</a></li>
         <li><a href="<?php bloginfo('url'); ?>/lessons">Lessons</a></li>
