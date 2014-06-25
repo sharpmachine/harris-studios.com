@@ -1,6 +1,7 @@
 <?php
   $event_registration_start = get_post_meta($post->ID, 'event_registration_start', true);
   $event_registration_end = get_post_meta($post->ID, 'event_registration_end', true);
+  $event_externalURL = get_post_meta($post->ID, 'event_externalURL', true);
   $todays_date = date('Y-m-d');
   get_template_part('templates/class', 'header');
 ?>
@@ -14,7 +15,11 @@
 
       <?php if ($todays_date >= $event_registration_start && $todays_date <= $event_registration_end): ?>
       <div class="col-xs-3 pull-right text-right">
-        <a href="<?php bloginfo('url'); ?>/class-registration/?ee=<?php echo get_post_meta($post->ID, 'event_id', true); ?>" class="btn btn-lg btn-danger btn-block">Register</a>
+        <?php if ($event_externalURL): ?>
+          <a href="<?php echo $event_externalURL; ?>" class="btn btn-lg btn-danger btn-block" target="_blank" title="Registeration for this class is on an external site.">Register <i class="fa fa-external-link"></i></a>
+        <?php else: ?>
+          <a href="<?php bloginfo('url'); ?>/class-registration/?ee=<?php echo get_post_meta($post->ID, 'event_id', true); ?>" class="btn btn-lg btn-danger btn-block">Register</a>
+        <?php endif; ?>
       </div>
       <?php endif; ?>
     </div>
@@ -58,7 +63,11 @@
           <p class="lead text-purple">Are you ready to be launched into your brightest future?</p>
         </div>
         <div class="col-xs-3">
-          <a href="<?php bloginfo('url'); ?>/class-registration/?ee=<?php echo get_post_meta($post->ID, 'event_id', true); ?>" class="btn btn-lg btn-danger btn-block">Register</a>
+          <?php if ($event_externalURL): ?>
+            <a href="<?php echo $event_externalURL; ?>" class="btn btn-lg btn-danger btn-block" target="_blank" title="Registeration for this class is on an external site.">Register <i class="fa fa-external-link"></i></a>
+          <?php else: ?>
+            <a href="<?php bloginfo('url'); ?>/class-registration/?ee=<?php echo get_post_meta($post->ID, 'event_id', true); ?>" class="btn btn-lg btn-danger btn-block">Register</a>
+          <?php endif; ?>
         </div>
       <?php else: ?>
         <div class="col-xs-8">
