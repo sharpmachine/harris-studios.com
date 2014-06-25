@@ -132,9 +132,11 @@ var Roots = {
       });
 
       // Give overlay proper height
-      var body_height = $('body').height();
-      var overlay_height = body_height - 100;
-      $('.instructor-overlay').height(overlay_height);
+      $(window).load(function(){
+        var body_height = $('body').outerHeight();
+        var overlay_height = body_height -52;
+        $('.instructor-overlay').height(overlay_height);
+      });
 
       // Instructors Ajax
       $.ajaxSetup({cache:false});

@@ -24,7 +24,7 @@ $student_testimonies = get_posts(array(
       <div class="vertical-align-wrapper">
         <div class="vertical-align-inner">
           <div class="testimony-quote">
-            <p><span class="quotes-char">&#8220;</span><?php echo get_post_field('post_content', $student_testimony->ID); ?><span class="quotes-char">&#8221;</span></p>
+            <p><span class="quotes-char">&#8220;</span><?php echo wp_trim_words(get_post_field('post_content', $student_testimony->ID), 70); ?><span class="quotes-char">&#8221;</span></p>
           </div>
           <div class="testimony-name text-right">
             <cite>- <?php echo get_the_title( $student_testimony->ID ); ?></cite>

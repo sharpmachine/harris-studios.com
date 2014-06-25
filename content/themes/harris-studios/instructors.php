@@ -28,7 +28,7 @@ Template Name: Instructors
 <div class="row">
   <h2 class="text-purple border-bottom text-center">Say hello</h2>
 
-  <?php $args = array( 'post_type' => 'instructors'); ?>
+  <?php $args = array( 'post_type' => 'instructors', 'showposts' => -1); ?>
   <?php $instructors = new WP_Query( $args ); ?>
   <?php if ( $instructors->have_posts() ) : ?>
     <?php while ( $instructors->have_posts() ) : $instructors->the_post(); ?>
