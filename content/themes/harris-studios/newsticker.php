@@ -1,0 +1,1 @@
+<li><strong>What's next?:</strong> <a href="#"><?php echo wp_trim_words("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit incidunt quos ipsa eligendi necessitatibus quaerat sunt quisquam ipsam recusandae consequatur!", 6); ?></a></li>

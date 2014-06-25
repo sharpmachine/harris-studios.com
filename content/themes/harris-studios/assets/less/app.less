@@ -167,6 +167,38 @@
     }
   }
 
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+   .navbar-nav.newsticker {
+    padding: 15px 0;
+    color: white;
+    .opacity(1);
+    .transition(opacity ease 0.2s);
+
+    & > li {
+      & > a {
+        display: inline;
+        padding: 0;
+        font-size: 14px;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+          border-top: 0;
+        }
+      }
+    }
+   }
+
+   .navbar-bg {
+    .newsticker {
+      .opacity(0);
+      .transition(opacity ease 0.2s);
+    }
+   }
+
 
 /* ==========================================================================
    Primary Content
