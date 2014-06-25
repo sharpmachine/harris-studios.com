@@ -127,9 +127,9 @@ if ($reg_form_only == false) {
 					if ($display_price_dropdown == TRUE) {
 						$price_label = '<span class="section-title">'.__('Choose an Option: ', 'event_espresso').'</span>';
 	?>
-						<!-- <p class="event_prices">
+						<p class="event_prices">
 							<?php do_action( 'espresso_price_select', $event_id, array('show_label'=>TRUE, 'label'=>$price_label) );?>
-						</p> -->
+						</p>
 	<?php
 					} else {
 	?>
@@ -185,13 +185,13 @@ if ($reg_form_only == false) {
 					/* Display the address and google map link if available */
 					if ($location != '' && (empty($org_options['display_address_in_regform']) || $org_options['display_address_in_regform'] != 'N')) {
 	?>
-						<p class="event_address" id="event_address-<?php echo $event_id ?>"><span class="section-title"><?php echo __('Address:', 'event_espresso'); ?></span> <br />
+						<!-- <p class="event_address" id="event_address-<?php echo $event_id ?>"><span class="section-title"><?php echo __('Address:', 'event_espresso'); ?></span> <br />
 							<span class="address-block">
 								<?php echo stripslashes_deep($venue_title); ?><br />
 								<?php echo stripslashes_deep($location); ?><br />
 								<span class="google-map-link"><?php echo $google_map_link; ?></span>
 							</span>
-						</p>
+						</p> -->
 	<?php
 					}
 		}

@@ -15,7 +15,7 @@ do_action('action_hook_espresso_log', __FILE__, 'FILE LOADED', '');	?>
 			<td><?php echo stripslashes_deep($event_name) ?></td>
 		</tr>
 		<tr>
-			<td><strong><?php _e('Student:', 'event_espresso'); ?></strong></td>
+			<td><strong><?php _e('Primary Student:', 'event_espresso'); ?></strong></td>
 			<td><?php echo stripslashes_deep($fname . ' ' . $lname) ?></td>
 		</tr>
 		<!-- <tr>

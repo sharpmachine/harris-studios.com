@@ -1,7 +1,9 @@
 <?php
+  $event_id = get_post_meta($post->ID, 'event_id', true);
   $event_registration_start = get_post_meta($post->ID, 'event_registration_start', true);
   $event_registration_end = get_post_meta($post->ID, 'event_registration_end', true);
   $event_externalURL = get_post_meta($post->ID, 'event_externalURL', true);
+  $event_venue = do_shortcode('[ESPRESSO_VENUE show_map_image=false show_google_map_link=false event_id="'.$event_id.'"]');
   $todays_date = date('Y-m-d');
   get_template_part('templates/class', 'header');
 ?>
@@ -28,6 +30,9 @@
       <div class="col-xs-8 single-cl-description">
         <?php while (have_posts()) : the_post(); ?>
           <?php the_content(); ?>
+          <?php if($event_venue): ?>
+          <?php echo $event_venue; ?>
+        <?php endif; ?>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       </div>

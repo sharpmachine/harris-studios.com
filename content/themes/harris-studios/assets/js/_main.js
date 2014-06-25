@@ -109,13 +109,12 @@ var Roots = {
 
 
       // For testing registration details
-      $('input#TEXT_13-1-0-1').val('Jesse Kade');
-      $('input#email-1-0-1').val('jesse@sharpmachinemedia.com');
-      $('input#phone-1-0-1').val('6193987595');
-      $('input#fname-1-0-1').val('Shelly');
-      $('input#lname-1-0-1').val('Kade');
-      $('input#TEXT_12-1-0-1').val('27');
-
+      $('input.TEXT_13').val('Jesse Kade');
+      $('input.email').val('jesse@sharpmachinemedia.com');
+      $('input.phone').val('6193987595');
+      $('input.fname').val('Shelly');
+      $('input.lname').val('Kade');
+      $('input.TEXT_12').val('27');
     }
   },
 
