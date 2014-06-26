@@ -1,10 +1,10 @@
 === MailChimp for WordPress ===
 Contributors: DvanKooten
-Donate link: http://dannyvankooten.com/mailchimp-for-wordpress/
+Donate link: https://dannyvankooten.com/mailchimp-for-wordpress/
 Tags: mailchimp,form,shortcode,widget,checkbox,comment,newsletter,buddypress,multisite,bbpress,woocommerce,easy digital downloads,contact form,contact form 7
-Requires at least: 3.5
+Requires at least: 3.6
 Tested up to: 3.9.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,7 +37,7 @@ Add sign-up checkboxes to *any* form on your website. The plugin offers built-in
 > 
 > Multiple forms, AJAX, form designer, custom themes, detailed statistics, more built-in checkbox integrations and priority support.
 > 
-> [More information](http://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link) | [Form demo's](http://dannyvankooten.com/mailchimp-for-wordpress/demo/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link) | [Upgrade now >>](http://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link)
+> [More information](https://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link) | [Form demo's](https://dannyvankooten.com/mailchimp-for-wordpress/demo/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link) | [Upgrade now >>](https://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-features-link)
 
 **Translators**
 
@@ -78,7 +78,7 @@ If you have created your own language pack (or have an update of an existing one
 Need help? Please take a look at the [frequently asked questions](http://wordpress.org/plugins/mailchimp-for-wp/faq/) first
 
 = Upgrade to Pro =
-If you like the plugin, upgrade to [MailChimp for WordPress Pro](http://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=installation-instructions-link) for an even better plugin.
+If you like the plugin, upgrade to [MailChimp for WordPress Pro](https://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=installation-instructions-link) for an even better plugin.
 
 == Frequently Asked Questions ==
 
@@ -91,7 +91,7 @@ If you like the plugin, upgrade to [MailChimp for WordPress Pro](http://dannyvan
 > 1. Custom color themes and a form designer (CSS Builder)
 > 1. Statistics & log. Learn when, where and how your visitors subscribed.
 > 
-> [More Pro features](http://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-link) | [Demo](http://dannyvankooten.com/mailchimp-for-wordpress/demo/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-link)
+> [More Pro features](https://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-link) | [Demo](https://dannyvankooten.com/mailchimp-for-wordpress/demo/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=faq-link)
 
 = How to display a form in posts or pages? =
 Use the `[mc4wp_form]` shortcode.
@@ -133,7 +133,7 @@ You can use CSS rules to style the sign-up form, use the following CSS selectors
 
 Add your custom CSS rules to the end of your theme stylesheet, **/wp-content/themes/your-theme-name/style.css**. Do not add them to the plugin stylesheet as they will be automatically overwritten on the next plugin update.
 
-[PS: With the Pro version, you can design beautiful forms easily >>](http://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-css-link)
+[PS: With the Pro version, you can design beautiful forms easily >>](https://dannyvankooten.com/mailchimp-for-wordpress/#utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=after-css-link)
 
 = Where can I find my MailChimp API key? =
 [Here](http://kb.mailchimp.com/article/where-can-i-find-my-api-key)
@@ -210,7 +210,17 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 
 == Changelog ==
 
-= 2.0.2 =
+= 2.0.3 - June 17, 2014 =
+
+**Fixes**
+
+- Fixed undefined index notice in Contact Form 7 integration class
+
+**Improvements**
+
+- Reset form width in all stylesheets
+
+= 2.0.2 - June 12, 2014 =
 
 **Fixes**
 
@@ -226,7 +236,7 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 - Various CSS improvements to colored form themes
 - Updated Spanish translations
 
-= 2.0.1 =
+= 2.0.1 - May 15, 2014 =
 
 **Improvements**
 
@@ -367,7 +377,7 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 * Added: filter to add more variables to Checkbox Sign-Ups.
 * Improved: more fields unlocked in "add field" tool when editing forms.
 * Improved: smarter auto-detection of name fields when integrating with third-party forms like Contact Form 7
-* Changed: links point to new [MailChimp for WordPress](http://dannyvankooten.com/mailchimp-for-wordpress/) page now.
+* Changed: links point to new [MailChimp for WordPress](https://dannyvankooten.com/mailchimp-for-wordpress/) page now.
 
 = 1.3.1 - October 20, 2013 =
 * Fixed: bug when calling MailChimp API for PHP 5.2
@@ -412,5 +422,5 @@ Your theme folder can be found by browsing to `/wp-content/themes/your-theme-nam
 
 == Upgrade Notice ==
 
-= 2.0.2 =
-Various fixes and improvements regarding form fields, checkbox integrations and form colours
+= 2.0.3 =
+Fix undefined index notice in Contact Form 7 integrations.
