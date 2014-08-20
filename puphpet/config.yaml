@@ -2,35 +2,45 @@
 vagrantfile-local:
     vm:
         box: ubuntu-precise12042-x64-vbox43
-        box_url: 'http://box.puphpet.com/ubuntu-precise12042-x64-vbox43.box'
-        hostname: null
+        box_url: puphpet/debian75-x64
+        hostname: ''
+        memory: '512'
+        cpus: '1'
+        chosen_provider: virtualbox
         network:
             private_network: 192.168.56.101
             forwarded_port:
-                Oyek8J59TY4F:
+                YB0w2DnBE4BO:
                     host: '8080'
                     guest: '22'
+        post_up_message: ''
         provider:
             virtualbox:
                 modifyvm:
                     natdnshostresolver1: on
-                    memory: '512'
-                setextradata:
-                    VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root: 1
+            vmware:
+                numvcpus: 1
+            parallels:
+                cpus: 1
         provision:
             puppet:
                 manifests_path: puphpet/puppet
-                manifest_file: manifest.pp
+                manifest_file: site.pp
+                module_path: puphpet/puppet/modules
                 options:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            B7XnOI7wZ2Ps:
+            NBRR0l60CjJ6:
                 source: ./
                 target: /var/www
-                nfs: 'false'
-        usable_port_range: 2200..2250
+                sync_type: default
+                rsync:
+                    auto: 'false'
+        usable_port_range:
+            start: 10200
+            stop: 10500
     ssh:
         host: null
         port: null
@@ -44,20 +54,11 @@ vagrantfile-local:
     vagrant:
         host: detect
 server:
-    packages: {  }
-    dot_files:
-        -
-            bash_aliases: null
-    _prevent_empty: ''
-mailcatcher:
     install: '1'
-    settings:
-        smtp_ip: 0.0.0.0
-        smtp_port: 1025
-        http_ip: 0.0.0.0
-        http_port: '1080'
-        mailcatcher_path: /usr/local/bin
-        log_path: /var/log/mailcatcher/mailcatcher.log
+    packages: {  }
+firewall:
+    install: '1'
+    rules: null
 apache:
     install: '1'
     settings:
@@ -68,11 +69,10 @@ apache:
         manage_group: false
         sendfile: 0
     modules:
-        - php
         - rewrite
         - ssl
     vhosts:
-        QPx1lwr0e9dh:
+        3cCbkQ2FFbzt:
             servername: sharpmachine.dev
             serveraliases:
                 - www.sharpmachine.dev
@@ -82,32 +82,41 @@ apache:
                 - 'APP_ENV dev'
             override:
                 - All
+            engine: ''
             custom_fragment: ''
             ssl_cert: ''
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
     mod_pagespeed: 0
-    mod_spdy: 0
 nginx:
-    install: 0
+    install: '0'
+    settings:
+        default_vhost: 1
+        proxy_buffer_size: 128k
+        proxy_buffers: '4 256k'
     vhosts:
-        2eTbMrRSPMfP:
+        Y7oyNvn1YVZz:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
             www_root: /var/www/awesome.dev
             listen_port: '80'
+            location: .php$
             index_files:
                 - index.html
                 - index.htm
                 - index.php
             envvars:
                 - 'APP_ENV dev'
+            engine: ''
+            ssl_cert: ''
+            ssl_key: ''
 php:
     install: '1'
     version: '55'
-    composer: 1
+    composer: '1'
+    composer_home: ''
     modules:
         php:
             - cli
@@ -121,8 +130,19 @@ php:
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
     timezone: America/Los_Angeles
+    mod_php: 0
+hhvm:
+    install: '0'
+    nightly: 0
+    composer: '1'
+    composer_home: ''
+    settings:
+        host: '0'
+        port: '0'
+    ini: {  }
+    timezone: null
 xdebug:
-    install: 0
+    install: '0'
     settings:
         xdebug.default_enable: '1'
         xdebug.remote_autostart: '0'
@@ -130,17 +150,27 @@ xdebug:
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp
         xdebug.remote_port: '9000'
+xhprof:
+    install: '0'
 drush:
-    install: 0
-    settings:
-        drush.tag_branch: 6.x
+    install: '0'
+    version: ''
+ruby:
+    install: '1'
+    versions: {  }
+nodejs:
+    install: '0'
+    npm_packages: {  }
+python:
+    install: '1'
+    packages: {  }
+    versions: {  }
 mysql:
     install: '1'
     root_password: password
-    phpmyadmin: 0
     adminer: '1'
     databases:
-        3kngLhKuqUqg:
+        8tF4j7yo3lMO:
             grant:
                 - ALL
             name: projectdb
@@ -149,7 +179,7 @@ mysql:
             password: password
             sql_file: ''
 postgresql:
-    install: 0
+    install: '0'
     settings:
         root_password: '123'
         user_group: postgres
@@ -158,24 +188,36 @@ postgresql:
     databases: {  }
     adminer: 0
 mariadb:
-    install: 0
+    install: '0'
     root_password: '123'
-    phpmyadmin: 0
     adminer: 0
     databases: {  }
     version: '10.0'
+sqlite:
+    install: '0'
+    adminer: 0
+    databases: {  }
 mongodb:
-    install: 0
+    install: '0'
     settings:
         auth: 1
         port: '27017'
     databases: {  }
 redis:
-    install: 0
+    install: '0'
     settings:
         conf_port: '6379'
+mailcatcher:
+    install: '1'
+    settings:
+        smtp_ip: 0.0.0.0
+        smtp_port: 1025
+        http_ip: 0.0.0.0
+        http_port: '1080'
+        mailcatcher_path: /usr/local/rvm/wrappers/default
+        from_email_method: inline
 beanstalkd:
-    install: 0
+    install: '0'
     settings:
         listenaddress: 0.0.0.0
         listenport: '13000'
@@ -187,7 +229,12 @@ beanstalkd:
     beanstalk_console: 0
     binlogdir: /var/lib/beanstalkd/binlog
 rabbitmq:
-    install: 0
+    install: '0'
     settings:
         port: '5672'
+elastic_search:
+    install: '0'
+    settings:
+        java_install: true
+        autoupgrade: true
 
