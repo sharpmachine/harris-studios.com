@@ -1,42 +1,34 @@
-# Grunt
-/node_modules/
-/backups/
+# WordPress
+web/wp
+web/.htaccess
 
-# Composer
-/vendor/
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/disallow-indexing.php
+!web/app/mu-plugins/register-theme-directory.php
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
 
 # Vagrant
+bin
 .vagrant
-html
-adminer
-/puphpet/
-
-#Yeopress
-.yeopress
-
-# Wordpress
-.htaccess
-local-config.php
-!content/uploads
-content/uploads/*
-!content/uploads/espresso/templates
-content/blogs.dir/
-content/upgrade/
-content/backup-db/
-content/advanced-cache.php
-content/wp-cache-config.php
-content/w3tc/
-content/cache/
-content/backups/
-
-# Sitemaps
-sitemap.xml
-sitemap.xml.gz
-
-# Misc
-*.log
-.DS_Store
-
-theme-alias
-
-img-alias

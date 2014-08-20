@@ -1,24 +1,52 @@
 {
-  "name": "Vauxhall",
-  "description": "Fetch common WordPress plugins used by Sharp Machine",
-  "repositories":[
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "A modern WordPress stack",
+  "homepage": "http://roots.io/wordpress-stack/",
+  "authors": [
     {
-      "type":"composer",
-      "url":"http://wpackagist.org"
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
     },
     {
-      "type":"git",
-      "url":"https://github.com/sharpmachine/custompress.git"
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "capistrano", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "http://discourse.roots.io/category/bedrock"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "generate-salts": true
+  },
+  "autoload": {
+    "psr-0": {"Bedrock\\Installer": "scripts"}
+  },
+  "scripts": {
+    "post-root-package-install": ["Bedrock\\Installer::addSalts"]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
     },
     {
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "dev-master",
+        "version": "3.9.2",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://wordpress.org/latest.zip"
+          "url": "https://wordpress.org/wordpress-3.9.2.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -27,16 +55,19 @@
     }
   ],
   "require": {
-    "wordpress/wordpress": "dev-master",
-    "fancyguy/webroot-installer": "1.1.0"
+    "php": ">=5.3.2",
+    "wordpress/wordpress": "3.9.2",
+    "fancyguy/webroot-installer": "1.1.0",
+    "composer/installers": "v1.0.12",
+    "vlucas/phpdotenv": "~1.0.6"
   },
   "extra": {
     "installer-paths": {
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "wordpress",
+    "webroot-dir": "web/wp",
     "webroot-package": "wordpress/wordpress"
   }
 }
