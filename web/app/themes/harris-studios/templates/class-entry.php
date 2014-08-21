@@ -9,7 +9,6 @@
   $todays_date = date('Y-m-d');
 ?>
 
-<?php if ($event_end_date && $todays_date < $event_end_date2): ?>
 <div class="row class-summary">
   <div class="col-xs-12">
     <div class="class-or-lesson-title">
@@ -30,7 +29,15 @@
         <div class="vertical-align-inner">
           <p class="lead">
             <strong>Dates:</strong></p>
-            <?php echo $event_start_date; ?> to <?php echo $event_end_date; ?>
+            <?php if ($event_start_date): ?>
+              <?php if ($event_start_date == $event_end_date): ?>
+                <?php echo $event_start_date; ?>
+              <?php else: ?>
+                <?php echo $event_start_date; ?> to <?php echo $event_end_date; ?>
+              <?php endif; ?>
+            <?php else: ?>
+              TBA
+            <?php endif; ?>
             <br>
             <br>
           <?php if ($todays_date >= $event_registration_start && $todays_date <= $event_registration_end): ?>
@@ -69,4 +76,3 @@
     </div>
   </div>
 </div>
-<?php endif; ?>

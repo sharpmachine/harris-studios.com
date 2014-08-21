@@ -24,8 +24,18 @@
       </div>
       <div class="col-xs-4 single-class-dates">
         <p class="lead"><strong>Dates:</strong></p>
-        <div class="class-dates"><?php echo $event_start_date; ?> to <?php echo $event_end_date; ?></div>
-        <div class="class-times"><?php echo $event_start_time; ?> - <?php echo $event_end_time; ?></div>
+        <?php if ($event_start_date): ?>
+              <?php if ($event_start_date == $event_end_date): ?>
+                <div class="class-dates"><?php echo $event_start_date; ?></div>
+                <div class="class-times"><?php echo $event_start_time; ?> - <?php echo $event_end_time; ?></div>
+              <?php else: ?>
+                <div class="class-dates"><?php echo $event_start_date; ?> to <?php echo $event_end_date; ?></div>
+                <div class="class-times"><?php echo $event_start_time; ?> - <?php echo $event_end_time; ?></div>
+              <?php endif; ?>
+            <?php else: ?>
+              TBA <br>
+            <?php endif; ?>
+
 
       <?php if ($todays_date >= $event_registration_start && $todays_date <= $event_registration_end): ?>
         <div class="label label-success">
