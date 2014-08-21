@@ -22,7 +22,7 @@
     <!-- Sidr Nav Drawer -->
     <?php get_template_part('sidr'); ?>
 
-    <div class="wrap" role="document">
+    <div class="wrap" id="main-wrapper" role="document">
       <div class="content">
         <main class="main" role="main">
           <?php include roots_template_path(); ?>

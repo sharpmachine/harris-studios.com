@@ -24,6 +24,9 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
 
+      //smoothState
+      // $('#main-wrapper').smoothState();
+
       // Sidr
       $('.simple-menu').sidr({
         side: 'right'
@@ -105,26 +108,26 @@ var Roots = {
       // $('input#stripe_email').val('');
 
       // For testing billing info
-      $('input#stripe_first_name').val('Jesse');
-      $('input#stripe_last_name').val('Kade');
-      $('input#stripe_email').val('jesse@sharpmachinemdia.com');
-      $('input#stripe_address').val('1452 Oregon St');
-      $('input#stripe_city').val('Redding');
-      $('input#stripe_state').val('Ca');
-      $('input#stripe_zip').val('98901');
+      // $('input#stripe_first_name').val('Jesse');
+      // $('input#stripe_last_name').val('Kade');
+      // $('input#stripe_email').val('jesse@sharpmachinemdia.com');
+      // $('input#stripe_address').val('1452 Oregon St');
+      // $('input#stripe_city').val('Redding');
+      // $('input#stripe_state').val('Ca');
+      // $('input#stripe_zip').val('98901');
 
       // For testing credit card info
-      $('input#stripe_cc').val('4242424242424242');
-      $('input#stripe_csc').val('098');
+      // $('input#stripe_cc').val('4242424242424242');
+      // $('input#stripe_csc').val('098');
 
 
       // For testing registration details
-      $('input.TEXT_13').val('Jesse Kade');
-      $('input.email').val('jesse@sharpmachinemedia.com');
-      $('input.phone').val('6193987595');
-      $('input.fname').val('Shelly');
-      $('input.lname').val('Kade');
-      $('input.TEXT_12').val('27');
+      // $('input.TEXT_13').val('Jesse Kade');
+      // $('input.email').val('jesse@sharpmachinemedia.com');
+      // $('input.phone').val('6193987595');
+      // $('input.fname').val('Shelly');
+      // $('input.lname').val('Kade');
+      // $('input.TEXT_12').val('27');
     }
   },
 

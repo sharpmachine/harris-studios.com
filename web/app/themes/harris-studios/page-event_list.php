@@ -6,7 +6,6 @@ Template for displaying a list of event posts.
 Modified by Chris Reynolds for 3.1.20.P
 */
 
-
 get_template_part('templates/page-header', 'intro'); ?>
 
 <div class="container cl-listings class-listing">
@@ -30,11 +29,7 @@ get_template_part('templates/page-header', 'intro'); ?>
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row class-summary">
-          <div class="col-xs-12">
-            <?php get_template_part('templates/class', 'entry' ); ?>
-          </div>
-        </div>
+        <?php get_template_part('templates/class', 'entry' ); ?>
       <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
 
@@ -54,11 +49,7 @@ get_template_part('templates/page-header', 'intro'); ?>
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row class-summary">
-          <div class="col-xs-12">
-            <?php get_template_part('templates/class', 'entry' ); ?>
-          </div>
-        </div>
+        <?php get_template_part('templates/class', 'entry' ); ?>
       <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
 
@@ -78,11 +69,7 @@ get_template_part('templates/page-header', 'intro'); ?>
     <?php if ( $lesson_listing->have_posts() ) : ?>
 
       <?php while ( $lesson_listing->have_posts() ) : $lesson_listing->the_post(); ?>
-        <div class="row class-summary">
-          <div class="col-xs-12">
-            <?php get_template_part('templates/class', 'entry' ); ?>
-          </div>
-        </div>
+          <?php get_template_part('templates/class', 'entry' ); ?>
       <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
 

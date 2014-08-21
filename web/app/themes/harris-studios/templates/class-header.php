@@ -25,7 +25,7 @@
       <div class="col-xs-4 single-class-dates">
         <p class="lead"><strong>Dates:</strong></p>
         <div class="class-dates"><?php echo $event_start_date; ?> to <?php echo $event_end_date; ?></div>
-        <div class="class-times"><?php echo $event_day_of_week; ?>s <?php echo $event_start_time; ?> - <?php echo $event_end_time; ?></div>
+        <div class="class-times"><?php echo $event_start_time; ?> - <?php echo $event_end_time; ?></div>
 
       <?php if ($todays_date >= $event_registration_start && $todays_date <= $event_registration_end): ?>
         <div class="label label-success">

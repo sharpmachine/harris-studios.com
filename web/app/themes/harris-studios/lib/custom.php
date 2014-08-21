@@ -178,3 +178,34 @@ function help_add_dashboard_widgets() {
 
 // Hook into the 'wp_dashboard_setup' action to register our other functions
 add_action('wp_dashboard_setup', 'help_add_dashboard_widgets' );
+
+// Custom Excerpt
+function custom_trim_words( $text, $num_words = 55, $more = null ) {
+  if ( null === $more )
+    $more = __( '&hellip;' );
+
+  $original_text = $text;
+  $text = strip_shortcodes( $text );
+    // Add tags that you don't want stripped
+  $text = strip_tags( $text, '<strong>, <b>, <em>, <a>' );
+
+  if ( 'characters' == _x( 'words', 'word count: words or characters?' ) && preg_match( '/^utf\-?8$/i', get_option( 'blog_charset' ) ) ) {
+    $text = trim( preg_replace( "/[\n\r\t ]+/", ' ', $text ), ' ' );
+    preg_match_all( '/./u', $text, $words_array );
+    $words_array = array_slice( $words_array[0], 0, $num_words + 1 );
+    $sep = '';
+  } else {
+    $words_array = preg_split( "/[\n\r\t ]+/", $text, $num_words + 1, PREG_SPLIT_NO_EMPTY );
+    $sep = ' ';
+  }
+
+  if ( count( $words_array ) > $num_words ) {
+    array_pop( $words_array );
+    $text = implode( $sep, $words_array );
+    $text = $text . $more;
+  } else {
+    $text = implode( $sep, $words_array );
+  }
+
+  return apply_filters( 'custom_trim_words', $text, $num_words, $more, $original_text );
+}

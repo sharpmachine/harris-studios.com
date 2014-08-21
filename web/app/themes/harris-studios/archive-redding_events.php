@@ -41,7 +41,7 @@
       <div class="event-post-info pull-left">
         <h2><a href="<?php the_field('re_event_registration_link'); ?>"><?php the_title(); ?></a></h2>
         <p class="lead"><?php the_field('re_venue'); ?></p>
-         <p><?php echo wp_trim_words( get_the_content(), 24 ); ?></p>
+         <p><?php echo custom_trim_words( get_the_content(), 30 ); ?></p>
       </div>
       <div class="more-info pull-left">
           <a href="<?php the_field('re_event_registration_link'); ?>" class="btn btn-default">

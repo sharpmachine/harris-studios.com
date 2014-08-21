@@ -68,7 +68,7 @@
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Performing Arts &amp; Film lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  Also, <a href="<?php bloginfo('url'); ?>/classes#performing-arts-film">check out our Performing Arts &amp; Film classes</a>.</p>
+        <p class="lead">For inquiries on private acting lessons email us at <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  If you have any ideas for lessons, we'd love to hear them. Email us your ideas! Also, <a href="<?php bloginfo('url'); ?>/classes#performing-arts-film">check out our Performing Arts &amp; Film classes</a>.</p>
       <?php endif; ?>
 
   </section>
@@ -92,7 +92,7 @@
         <?php wp_reset_postdata(); ?>
 
       <?php else:  ?>
-        <p class="lead">At the moment we are not offering any Culture lessons, though this may change in the future. If you have any ideas for lessons, we'd love to hear them. Email your ideas to <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>.  Also, <a href="<?php bloginfo('url'); ?>/classes#culture">check out our culture classes</a>.</p>
+        <p class="lead">For inquiries on private Italian Language lessons email us at <a href="mailto:<?php the_field('email_address', 'options'); ?>"><?php the_field('email_address', 'options'); ?></a>. If you have any ideas for lessons, we'd love to hear them. Email us your ideas! Also, <a href="<?php bloginfo('url'); ?>/classes#culture">check out our culture classes</a>.</p>
       <?php endif; ?>
 
   </section>
