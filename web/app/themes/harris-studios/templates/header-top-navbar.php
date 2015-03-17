@@ -12,7 +12,7 @@
 
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav pull-right">
-        <li><a href="<?php bloginfo('url'); ?>/redding-events">Events</a></li>
+        <li><a href="<?php bloginfo('url'); ?>/classes">Classes</a></li>
         <li><a href="<?php bloginfo('url'); ?>/lessons">Lessons</a></li>
         <li>
           <a class="simple-menu" href="#sidr">More
